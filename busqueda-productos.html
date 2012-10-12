@@ -12,24 +12,48 @@
 	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
     <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
     
-    <!-- Keyboard  -->
-    <link rel="stylesheet" type="text/css" href="src/css/keyboard/jsKeyboard.css" />
-    <script type="text/javascript" src="src/js/keyboard/jsKeyboard.js"></script>
-    
     <!-- Fancybox 2.0.6 -->
     <link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>
     
     <!-- iScroll 4.0 -->
     <script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>
-    
+ 
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="src/css/jquery.ui/jquery-ui.css" />
+    <script src="src/js/jquery.ui/jquery-ui.min.js"></script>
+    <!-- Final Keyboard -->
+    <link rel="stylesheet" href="src/css/finalkeyboard/keyboard.css" />
+    <script src="src/js/finalkeyboard/jquery.keyboard.min.js"></script>
+
     <!-- Estilo Base -->
     <link rel="stylesheet" href="src/css/base/estilo.base.css" />
     </head> 
 
 <body> 
-<!----------------------------------------------------- Busqueda: Por Rubro ---------------------------------------------->
+
 <div data-role="page" id="busqueda-productos" class="mall-inicio-bg">
+
+
+    <script>
+    $(document).ready(function() {
+        //$(".efecto-pagina").css("display", "none");
+        //$('.efecto-pagina').fadeIn(800);
+        $("input:text, textarea").keyboard({
+            usePreview: false,
+            autoAccept   : true,
+            position: {
+                of: "#emailContainer",
+                //my: 'center top',
+                //at: 'center bottom',
+                //at2: 'center bottom'
+            }
+        });
+    });
+    </script>
+
+
 	<div data-role="content">
     <div class="titulos">
     <div class="volver-btn"><span><a href="inicio.html" rel="external"></a></span></div>
@@ -57,9 +81,9 @@
 </div>
 
 <div class="bg-busquedas">
-
-<input name="tiendas" type="text" class="search" id="txtContent" onfocus="jsKeyboard.focus(this);clean(this);">
-
+<div id="emailContainer">
+<input type="text" name="tiendas" class="search" id="txtContent" value="" placeholder="Nombre"/>
+</div>
 <div class="subtitulos">
 <h1>Resultados para: </h1>
 </div>
@@ -117,96 +141,14 @@
 </div><!-- /content -->
 </div><!-- /page -->
 
-<div id="virtualKeyboard" style="z-index:1000;"></div>
-
-<!------------------------------------------------ Javascript: iScroll 4.0 ----------------------------------------->
 <script type="text/javascript">
-
 var myScroll;
 function loaded() {
 	myScroll = new iScroll('wrapper');
 }
-
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-/* * * * * * * *
- *
- * Use this for high compatibility (iDevice + Android)
- *
- */
 document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
-/*
- * * * * * * * */
-
-
-/* * * * * * * *
- *
- * Use this for iDevice only
- *
- */
-//document.addEventListener('DOMContentLoaded', loaded, false);
-/*
- * * * * * * * */
-
-
-/* * * * * * * *
- *
- * Use this if nothing else works
- *
- */
-//window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
-/*
- * * * * * * * */
-
 </script>
 
-
-<!------------------------------------------------ Javascript: Keyboard ----------------------------------------->      
-     <script type="text/javascript">
-     $(function () {
-         jsKeyboard.init("virtualKeyboard");
-         $("#txtContent").val(initText);
-     });
-
-     function focusIt(t) {
-        // define where the cursor is to write character clicked.
-         jsKeyboard.currentElement = $(t);
-         jsKeyboard.show();
-     }
-
-     function showKeyboard(id) {
-         clean($("#" + id));
-         jsKeyboard.currentElement = $("#"+id);
-         jsKeyboard.show();
-     }
-
-     var isCleaned = false;
-     function clean(t) {
-         if (!isCleaned) {
-             $(t).text("");
-             isCleaned = true;
-         }
-     }
-
-     var initText = "";
-
-     function send() {
-         if ( $("#txtContent").val() != initText && $("#txtContent").val().length > 0) {
-             $("#requestForm").css("display", "none");
-             window.setTimeout('$("#feedback").html("Your request has been processing. Please wait...").css("display","block");', 100);
-             window.setTimeout('$("#feedback").html("Your request has been sent. You will see request form in 5 seconds").css("display","block");', 2000);
-             window.setTimeout('showRequestForm()', 7000);
-         }
-         else {
-             $("#feedback").html("Please write your request...").css("display","block");
-         }
-     }
-
-     function showRequestForm() {
-         $("#requestForm").css("display", "block");
-         $("#feedback").css("display", "none");
-         $("#feedback").html("");
-     }
- </script> 
 </body>
 </html>
