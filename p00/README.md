@@ -1,2 +1,2 @@
-pbb - bio bio
+p00 - tótem base
 ==========
