@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+    <meta charset="UTF-8" />
+	<title>Mall Plaza</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    </head> 
+
+<body> 
+<div data-role="page" id="accesos" class="mall-inicio-bg">
+	<script>
+	  $(document).ready(function() {
+			$(".click-verde").bind("vclick",function(){
+			  $("div.mapa-vehiculo").toggle("slow");
+			   $("div.verde-activo").toggle("slow"); 
+			});
+			//$(".click-morado").bind("vclick",function(){
+			//	$("div.mapa-bicicleta").toggle("slow");
+			//	$("div.morado-activo").toggle("slow");
+			//});
+			$(".click-celeste").bind("vclick",function(){
+				$("div.mapa-acceso").toggle("slow");
+				$("div.celeste-activo").toggle("slow");
+			});
+			$(".click-amarillo").bind("vclick",function(){
+				$("div.mapa-estacionamiento").toggle("slow");
+				$("div.amarillo-activo").toggle("slow");
+			});							
+	  });
+	</script>
+    
+	<div data-role="content">
+    <div class="titulos">
+    <div class="volver-btn"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
+    <div class="titulo-txt">
+    <h1>Accesos</h1>
+    </div>
+    </div>
+    
+	<div id="efecto-pagina" class="contenedor-busqueda">
+	<div class="bg-paginas">
+	<h1 style="text-align:center; margin:0 0 15px 0; color:#666; font-weight:normal; font-size:36px">Nivel -1</h1>
+
+<a class="btn-servicios-mapa"></a>
+<a class="btn-servicios-mapa"></a>
+<a class="click-celeste btn-servicios-mapa"><img src="src/img/servicios-accesos.jpg" width="140" height="170"></a>
+<a class="click-amarillo btn-servicios-mapa"><img src="src/img/servicios-estacionamiento.jpg" width="140" height="170"></a>
+<a class="btn-servicios-mapa"></a>
+<a class="btn-servicios-mapa"></a>
+
+<div class="btn-seleccionado">
+<div class="celeste-activo btn-activo pos-tres"></div>
+<div class="amarillo-activo btn-activo pos-cuatro"></div>
+</div>
+
+<div class="accesos-fondo-mapa-nivel-menos-uno">
+    <div class="mapa-estacionamiento"><img src="src/img/accesos-1-estacionamientos.png" width="920" height="700"></div>
+    <div class="mapa-acceso"><img src="src/img/accesos2.png" width="920" height="700"></div>
+</div>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+
+
+<div style="margin:0 auto; text-align:left; clear:both; width:100%">
+<a href="accesos.html" data-transition="fade" style="margin:0 0 0 400px; padding:0; text-decoration:none;"><img src="src/img/btn-nivel1-gris.jpg" width="71" height="75"></a>
+<a href="#" data-transition="fade" style="margin:0; padding:0; text-decoration:none;"><img src="src/img/btn-nivel-1-rojo.jpg" width="71" height="75"></a>
+</div>
+
+</div>
+</div><!-- /contenedor-busqueda -->
+
+    <div class="volver-bottom">
+    <div class="volver-btn-bottom"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
+    </div>
+
+</div><!-- /content -->
+</div><!-- /page -->
+</body>
+</html>

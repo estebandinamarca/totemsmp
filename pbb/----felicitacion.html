@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+    <meta charset="UTF-8" />
+	<title>Mall Plaza</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Jquery Library 1.7.1 -->
+	<script src="src/js/jquery-1.7.1.min.js"></script>
+    <!-- Jquery Mobile 1.1.0 -->
+	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
+	<link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />
+    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="src/css/jquery.ui/jquery-ui.css" />
+    <script src="src/js/jquery.ui/jquery-ui.min.js"></script>
+    <!-- Final Keyboard -->
+    <link rel="stylesheet" href="src/css/finalkeyboard/keyboard.css" />
+    <script src="src/js/finalkeyboard/jquery.keyboard.min.js"></script>
+    <script src="src/js/finalkeyboard/jquery.keyboard.extension-mobile.js"></script>    
+    <!-- Estilo Base -->
+    <link rel="stylesheet" href="src/css/base/estilo.base.css" />
+    
+   	<script>
+	$(document).ready(function() {
+		//$(".efecto-pagina").css("display", "none");
+		//$('.efecto-pagina').fadeIn(800);
+        $("input:text, textarea").keyboard({
+            usePreview: false,
+            autoAccept   : true,
+            position: {
+                of: "#emailContainer",
+                //my: 'center top',
+                //at: 'center bottom',
+                //at2: 'center bottom'
+            }
+        });
+	});
+    </script>
+	
+	<script type="text/JavaScript">
+	var timeout;
+	document.onmousemove = function(){
+  	clearTimeout(timeout);
+  	timeout = setTimeout(function(){top.location.href='protector.html'}, 360000);
+	}
+	</script> 
+    </head> 
+
+<body>
+
+<div data-role="page" id="felicitacion" class="mall-inicio-bg ">
+
+    <div data-role="content">
+    <div class="titulos">
+    <div class="volver-btn"><span><a href="inicio.html" rel="external"></a></span></div>
+    <div class="titulo-txt">
+    <h1>Ayuda</h1>
+    </div>
+    </div>
+    
+    <div class="contenedor-busqueda efecto-pagina">
+	<div class="bg-busquedas bg-busquedas-large-padding">
+    <h1 class="titulos-ayuda">Ingresa tu Felicitación</h1>
+
+    <div id="emailContainer">
+        <form id="formulario" class="ayuda-campo">
+        <p style="text-align:center;">
+        <!--<input type="text" name="nom" class="ayuda-campo" id="mensaje-nombre" onfocus="jsKeyboard.focus(this);clean(this);" value="" placeholder="Nombre"/>-->
+        <input type="text" name="nom" class="ayuda-campo" id="mensaje-nombre" value="" placeholder="Nombre"/>
+        </p>
+
+        <p style="text-align:right; width:415px; float:left; padding-left:85px">
+        <!-- <input type="text" name="rut" class="ayuda-campo" id="mensaje-rut" onfocus="jsKeyboard.focus(this);clean(this);" value="" placeholder="Rut"/> -->
+        <input type="text" name="rut" class="ayuda-campo ayuda-campo-mitad-left" id="mensaje-rut" value="" placeholder="Rut"/>
+        </p>
+        <p style="text-align:left; width:415px; float:right; padding-right:85px">
+        <!-- <input type="text" name="tel" class="ayuda-campo" id="mensaje-tel" onfocus="jsKeyboard.focus(this);clean(this);" value="" placeholder="Teléfono"/> -->
+        <input type="text" name="tel" class="ayuda-campo ayuda-campo-mitad-right" id="mensaje-tel" value="" placeholder="Teléfono"/>
+        </p>
+
+        <p style="text-align:center;">
+        <!-- <input type="text" name="correo" class="ayuda-campo" id="mensaje-correo" onfocus="jsKeyboard.focus(this);clean(this);" value="" placeholder="Correo"/> -->
+        <input type="text" name="correo" class="ayuda-campo" id="mensaje-correo" value="" placeholder="Correo"/>
+        </p>
+
+        <p style="text-align:center;">
+        <input type="text" name="tipo" value="Felicitacion" style="display:none;"/>
+        <!-- <textarea name="mensaje" class="ayuda-mensaje" id="mensaje" onfocus="jsKeyboard.focus(this);clean(this);" value="" placeholder="Mensaje"></textarea> -->
+        <textarea name="mensaje" class="ayuda-mensaje" id="mensaje" value="" placeholder="Mensaje"></textarea>        
+        </p>
+        </form>
+    </div>
+
+    <p style="text-align:center;">
+    <a href="mensaje-enviado.html" rel="external"><input type="submit" class="boton-enviar-correo" value="Enviar" onclick="enviaCorreo();" /></a></p> 
+
+    <div style="text-align:center; margin:30px 0 0 0">
+        <img src="src/img/fono-mall-plaza.jpg">
+    </div>
+
+ 	</div>
+	</div>
+    </div><!-- /contenedor-busqueda -->
+
+    <div class="volver-bottom">
+    <div class="volver-btn-bottom"><span><a href="inicio.html" rel="external"></a></span></div>
+    </div>
+
+</div><!-- /content -->
+</body>
+</html>

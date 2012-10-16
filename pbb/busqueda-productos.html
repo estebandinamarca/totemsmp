@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+    <meta charset="UTF-8" />
+	<title>Mall Plaza</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<!-- Jquery Library 1.7.1 -->
+	<script src="src/js/jquery-1.7.1.min.js"></script>
+	
+    <!-- Jquery Mobile 1.1.0 -->
+	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
+    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
+    
+    <!-- Fancybox 2.0.6 -->
+    <link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>
+    
+    <!-- iScroll 4.0 -->
+    <script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>
+ 
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="src/css/jquery.ui/jquery-ui.css" />
+    <script src="src/js/jquery.ui/jquery-ui.min.js"></script>
+    <!-- Final Keyboard -->
+    <link rel="stylesheet" href="src/css/finalkeyboard/keyboard.css" />
+    <script src="src/js/finalkeyboard/jquery.keyboard.min.js"></script>
+
+    <!-- Estilo Base -->
+    <link rel="stylesheet" href="src/css/base/estilo.base.css" />
+    </head> 
+
+<body> 
+
+<div data-role="page" id="busqueda-productos" class="mall-inicio-bg">
+
+
+    <script>
+    $(document).ready(function() {
+        //$(".efecto-pagina").css("display", "none");
+        //$('.efecto-pagina').fadeIn(800);
+        $("input:text, textarea").keyboard({
+            usePreview: false,
+            autoAccept   : true,
+            position: {
+                of: "#emailContainer",
+                //my: 'center top',
+                //at: 'center bottom',
+                //at2: 'center bottom'
+            }
+        });
+    });
+    </script>
+
+
+	<div data-role="content">
+    <div class="titulos">
+    <div class="volver-btn"><span><a href="inicio.html" rel="external"></a></span></div>
+    <div class="titulo-txt">
+    <h1>Busca como quieras</h1>
+    </div>
+    </div>
+    
+    
+<div class="contenedor-busqueda">
+<div class="contenedor-busquedas-btn">
+<ul class="busquedas">
+<li><a href="busquedaTiendas.php" rel="external">Por Tienda</a></li>
+<li><a href="busqueda-rubros.html" rel="external">Por Rubro</a></li>
+<li><a href="busqueda-marcas.html" rel="external">Por Marca</a></li>
+<li class="current"><a href="#">Por Producto</a></li>
+</ul> 
+</div>
+
+<div class="contenedor-flechas">
+<div class="flecha"></div>
+<div class="flecha"></div>
+<div class="flecha"></div>
+<div class="flecha flecha-current"></div>
+</div>
+
+<div class="bg-busquedas">
+<div id="emailContainer">
+<input type="text" name="tiendas" class="search" id="txtContent" value="" placeholder="Nombre"/>
+</div>
+<div class="subtitulos">
+<h1>Resultados para: </h1>
+</div>
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="thelist">
+        	<li class="divisor">A</li>
+            <li><img src="src/img/adidas.jpg" width="99" height="99"><div class="nombre-tienda"><p><span>Adidas</span>Piso 3</p></div></li>
+			<li><img src="src/img/img-afex.jpg" width="99" height="99"><p><span>Afex</span>Piso 3 </p></li>
+			<li><img src="src/img/img-ripley.jpg" width="99" height="99"><p><span>Ripley</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+            <li class="divisor">B</li>
+			<li><img src="src/img/umbrale.jpg" width="99" height="99"><p><span>Umbrale</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>Adidas</span>Piso 3 </p></li>
+			<li><img src="src/img/img-afex.jpg" width="99" height="99"><p><span>Afex</span>Piso 3 </p></li>
+            <li><img src="src/img/img-ripley.jpg" width="99" height="99"><p><span>Ripley</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>Adidas</span>Piso 3 </p></li>
+			<li><img src="src/img/img-afex.jpg" width="99" height="99"><p><span>Afex</span>Piso 3 </p></li>
+            <li class="divisor">C</li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>Adidas</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Helados San Francisco de Loncomilla</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>El Baul de la Abuela</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>Adidas</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>El Baul de la Abuela</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>Adidas</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>El Baul de la Abuela</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+            <li class="divisor">D</li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>Adidas</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>El Baul de la Abuela</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>Adidas</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>
+			<li><img src="src/img/adidas.jpg" width="99" height="99"><p><span>El Baul de la Abuela</span>Piso 3 </p></li>
+			<li><img src="src/img/img-paris.jpg" width="99" height="99"><p><span>Paris</span>Piso 3 </p></li>                        
+
+		</ul>
+	</div>
+</div>
+
+
+</div>
+</div>
+
+</div><!-- /contenedor-busqueda -->
+</div><!-- /content -->
+</div><!-- /page -->
+
+<script type="text/javascript">
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper');
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+</script>
+
+</body>
+</html>
