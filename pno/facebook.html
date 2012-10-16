@@ -1,79 +1,81 @@
 <!DOCTYPE html> 
 <html> 
-	<head> 
+    <head> 
     <meta charset="UTF-8" />
-	<title>Mall Plaza</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-    
+    <title>Mall Plaza</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Jquery Library 1.7.1 -->
-	<script src="src/js/jquery-1.7.1.min.js"></script>
-    
-    <!-- Jquery Mobile 1.1.0 -->
-	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
-    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
+    <script src="src/js/jquery-1.7.1.min.js"></script>
+    <!-- Jquery Mobile 1.1.0 
+    <script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
     <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />
+    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />-->
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="src/css/jquery.ui/jquery-ui.css" />
+    <script src="src/js/jquery.ui/jquery-ui.min.js"></script>
 
-    <!-- iScroll 4.0 -->
-    <script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>
-    
-    <!-- Fancybox -->    
-    <script src="src/js/fancybox/jquery.fancybox.pack.js"></script>
-    <link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" />  
-    
-    <!-- Keyboard  -->
-    <link rel="stylesheet" type="text/css" href="src/css/keyboard/jsKeyboard.css" />
-    <script type="text/javascript" src="src/js/keyboard/jsKeyboard.js"></script>     
-
+    <!-- Final Keyboard -->
+    <link rel="stylesheet" href="src/css/finalkeyboard/jquery.mobile-1.1.0-rc.1.min.css" />
+    <script src="src/js/finalkeyboard/jquery.mobile-1.1.0-rc.1.min.js"></script>
+    <link rel="stylesheet" href="src/css/finalkeyboard/keyboard.css" />
+    <script src="src/js/finalkeyboard/jquery.keyboard.js"></script>
+    <script src="src/js/finalkeyboard/jquery.keyboard.extension-mobile.js"></script>    
     <!-- Estilo Base -->
     <link rel="stylesheet" href="src/css/base/estilo.base.css" />
-    <script type="text/JavaScript">
-	var timeout;
-	document.onmousemove = function(){
-  	clearTimeout(timeout);
-  	timeout = setTimeout(function(){top.location.href='protector.html'}, 360000);
-	}
+    
+    <script>
+    $(document).ready(function() {
+
+    var k = $('.keyboard'),
+    s = $('#switcher').find('input'),
+    set = $('#switcher').find('.ui-controlgroup-controls'),
+    kbOptions = {
+        keyBinding : 'mousedown touchstart',
+        //alwaysOpen : false,
+        usePreview  : false,
+        autoAccept  : true,
+        position: {
+            of: ".emailContainer",
+        },
+        css : {
+            input          : '',
+            container      : '',
+            buttonDefault  : '',
+            buttonHover    : '',
+            buttonActive   : '',
+            buttonDisabled : ''
+        }       
+    };
+
+    k
+        .keyboard(kbOptions)
+        .addMobile({
+            container    : { theme:'c' },
+            buttonMarkup : { theme:'c', shadow:'true', inline:'true', corners:'false' },
+            buttonAction : { theme:'b' },
+            buttonActive : { theme:'e' },
+        });
+        
+    });
+
+    //$(".efecto-pagina").css("display", "none");
+    //$('.efecto-pagina').fadeIn(800);
     </script>
-    </head> 
+    
+    <script type="text/JavaScript">
+    var timeout;
+    document.onmousemove = function(){
+    clearTimeout(timeout);
+    timeout = setTimeout(function(){top.location.href='protector.html'}, 360000);
+    }
+    </script>
+
+    </head>
+
 
 <body> 
 <div data-role="page" id="facebook" class="mall-inicio-bg">
-	<script>
-	$(document).ready(function() {
-		$("#efecto-pagina").css("display", "none");
-		$('#efecto-pagina').fadeIn(480);	
-	  });
-	</script>
     
-    <script type="text/javascript">
-     $(function () {
-         jsKeyboard.init("virtualKeyboard");
-         $("#txtContent").val(initText);
-     });
-
-     function focusIt(t) {
-        // define where the cursor is to write character clicked.
-         jsKeyboard.currentElement = $(t);
-         jsKeyboard.show();
-     }
-
-     function showKeyboard(id) {
-         clean($("#" + id));
-         jsKeyboard.currentElement = $("#"+id);
-         jsKeyboard.show();
-     }
-
-     var isCleaned = false;
-     function clean(t) {
-         if (!isCleaned) {
-             $(t).text("");
-             isCleaned = true;
-         }
-     }
-
-     var initText = "";
-	</script> 
-    
-   
 	<div data-role="content">
     <div class="titulos">
     <div class="volver-btn"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
@@ -86,33 +88,38 @@
 <div class="contenedor-busqueda" id="efecto-pagina">
 <div class="bg-paginas">
 <div class="imagen-facebook"></div>
+<div class="emailContainer"> 
 <form id="formulario">
-<input name="facebook" type="text" class="search" id="txtContent" onfocus="jsKeyboard.focus(this);clean(this);"></input>
+<input type="text" name="facebook" class="keyboard facebook" id="txtContent"></input>
 </form>
+</div>
 <div class="boton-facebook">
-<a href="mensaje-facebook.html" rel="external"><input class="boton-enviar-correo" type="submit" value="Enviar Correo" onclick="enviaCorreo();" /></a>
+<p style="text-align:center; margin: 0 auto; width: 300px;">    
+<a href="mensaje-facebook.html" rel="external" onclick="enviaCorreo();">
+<input class="boton-enviar-correo" type="submit" value="Enviar Correo" onclick="enviaCorreo();" />
+</a>
+</p>
 <script>
 function enviaCorreo()
-      {
-	
+    {
 	$.ajaxSetup({async: false});
 	//$.('.envio-loading').click(function(){});
 	//alert($('#formulario').serialize());
 	$.get("enviaCorreo.php",$('#formulario').serialize(),function(data){});
-	
-      }
+    }
 </script>
+
 </div>  
 </div>
 </div>
-</div><!-- /contenedor-busqueda -->
 
     <div class="volver-bottom">
     <div class="volver-btn-bottom"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
     </div>
 
+</div><!-- /contenedor-busqueda -->
+
 </div><!-- /content -->
 </div><!-- /page -->
-<div style="margin:0 auto; width:100%"><div id="virtualKeyboard" style="z-index:1000;"></div></div>
 </body>
 </html>

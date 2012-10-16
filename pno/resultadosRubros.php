@@ -22,7 +22,7 @@ if ($rub!=null)
 				<span><a href="#" data-transition="slide" data-direction="reverse"  onclick="cargaResultados(null,0)"></a></span></div>
 				<?php echo $rubros->getnombre();?>
 			</div>
-			<div id="wrapper" class="wrapper-extendido-rubros">
+	<div id="wrapper" class="wrapper-extendido-rubros">
  <?php 
 } 
 else 
@@ -34,7 +34,7 @@ else
 ?>
 		<div id="scroller">
 			<ul id="thelist">
-    		<div id="resultadosRubros" class="ui-widget-content ui-corner-all">
+    		<div id="resultadosRubros">
 		
 	   	<?php
     	$inicial=null;

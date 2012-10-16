@@ -8,9 +8,8 @@
 
 <body> 
 <div data-role="page" id="accesos" class="mall-inicio-bg">
-	<script>
-	  $(document).ready(function() {
-
+<script>
+	$(document).ready(function() {
 			$(".click-rojo").bind("vclick",function(){
 				$("div.mapa-metro").toggle("slow");
 				$("div.rojo-activo").toggle("slow");
@@ -30,14 +29,8 @@
 				$("div.mapa-taxi").toggle("slow");
 				$("div.morado-activo").toggle("slow");
 			});
-			
-			$(".click-celeste").bind("vclick",function(){
-			   $("div.mapa-banos").toggle("slow");
-			   $("div.celeste-activo").toggle("slow"); 
-			});			
-				
-	  });
-	</script>
+    });
+</script>
     
 	<div data-role="content">
     <div class="titulos">
@@ -53,20 +46,24 @@
 <h1 style="text-align:center; margin:0 0 15px 0; color:#666; font-weight:normal; font-size:36px">Nivel 1</h1>
 
 <a class="btn-servicios-mapa"></a>
-<a class="btn-servicios-mapa"></a>
+<a class="click-morado btn-servicios-mapa"><img src="src/img/servicios-taxi.jpg" width="140" height="170"></a>
+<a class="click-rojo btn-servicios-mapa"><img src="src/img/servicios-metro.jpg" width="140" height="170"></a>
 <a class="click-amarillo btn-servicios-mapa"><img src="src/img/servicios-estacionamiento.jpg" width="140" height="170"></a>
-<a class="click-celeste btn-servicios-mapa"><img src="src/img/accesos-biotren.jpg" width="140" height="170"></a>
-<a class="btn-servicios-mapa"></a>
+<a class="click-verde btn-servicios-mapa"><img src="src/img/servicios-transantiago.jpg" width="140" height="170"></a>
 <a class="btn-servicios-mapa"></a>
 
 <div class="btn-seleccionado">
-<div class="amarillo-activo btn-activo pos-tres"></div>
-<div class="celeste-activo btn-activo pos-cuatro"></div>
+<div class="morado-activo btn-activo pos-dos"></div>	
+<div class="rojo-activo btn-activo pos-tres"></div>
+<div class="amarillo-activo btn-activo pos-cuatro"></div>
+<div class="verde-activo btn-activo pos-cinco"></div>
 </div>
 
 <div class="accesos-fondo-mapa-nivel-uno">
+    <div class="mapa-metro"><img src="src/img/metro.png" width="920" height="700"></div>
     <div class="mapa-estacionamiento"><img src="src/img/estacionamientos.png" width="920" height="700"></div>
-    <div class="mapa-banos"><img src="src/img/accesos-biotren.png" width="920" height="700"></div>
+    <div class="mapa-taxi"><img src="src/img/taxi.png" width="920" height="700"></div>
+    <div class="mapa-transantiago"><img src="src/img/transantiago.png" width="920" height="700"></div>
 </div>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 
 <div style="margin:0 auto; text-align:left; clear:both; width:100%">

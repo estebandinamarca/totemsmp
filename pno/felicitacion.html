@@ -126,7 +126,7 @@
         <p style="text-align:center;">
         <input type="text" name="tipo" value="Felicitacion" style="display:none;"/>
         <!-- <textarea name="mensaje" class="ayuda-mensaje" id="mensaje" onfocus="jsKeyboard.focus(this);clean(this);" value="" placeholder="Mensaje"></textarea> -->
-        <textarea name="mensaje" class="keyboard ayuda-mensaje" id="mensaje" value="" placeholder="Mensaje"></textarea>        
+        <textarea name="mensaje" class="keyboard ayuda-mensaje" id="mensaje" value="" placeholder="Mensaje"></textarea> 
         </p>
         </form>
     </div>
@@ -148,6 +148,18 @@
     </div>
 
     </div><!-- /contenedor-busqueda -->
+
+<script type="text/javascript">
+      function enviaCorreo()
+      {
+    
+    $.ajaxSetup({async: false});
+    //$.('.envio-loading').click(function(){});
+     
+    $.get("enviaCorreo.php",$('#formulario').serialize(),function(data){});
+    
+      }
+</script> 
 
 </div><!-- /content -->
 </body>

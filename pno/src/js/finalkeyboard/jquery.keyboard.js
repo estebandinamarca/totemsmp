@@ -1309,12 +1309,12 @@ $.keyboard = function(el, options){
 		// *** change keyboard language & look ***
 		display : {
 			'a'      : '\u2714:Accept (Shift-Enter)', // check mark - same action as accept
-			'accept' : 'Accept:Accept (Shift-Enter)',
+			'accept' : 'Aceptar:Aceptar (Shift-Enter)',
 			'alt'    : 'Alt:\u2325 AltGr',        // other alternatives \u2311 
 			'b'      : '\u232b:Backspace',    // Left arrow (same as &larr;)
-			'bksp'   : 'Bksp:Backspace',
+			'bksp'   : 'Borrar:Borrar',
 			'c'      : '\u2716:Cancel (Esc)', // big X, close - same action as cancel
-			'cancel' : 'Cancel:Cancel (Esc)',
+			'cancel' : 'Cancelar:Cancelar (Esc)',
 			'clear'  : 'C:Clear',             // clear num pad
 			'combo'  : '\u00f6:Toggle Combo Keys',
 			'dec'    : '.:Decimal',           // decimal point for num pad (optional), change '.' to ',' for European format

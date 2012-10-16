@@ -1,5 +1,4 @@
 <?php 
-
 ?>
 <!DOCTYPE html> 
 <html> 
@@ -54,17 +53,17 @@
 <div class="contenedor-busqueda">
 <div class="contenedor-busquedas-btn">
 <ul class="busquedas">
-<li></li>
 <li><a href="busquedaTiendas.php" data-transition="fade" rel="external">Por Tienda</a></li>
 <li class="current"><a href="#" >Por Rubro</a></li>
-<li></li>
+<li><a href="busquedaMarcas.php" data-transition="fade" rel="external">Por Marcas</a></li>
+<li><a href="busquedaProductos.php" data-transition="fade" rel="external">Por Productos</a></li>
 </ul> 
 </div>
 
 <div class="contenedor-flechas">
 <div class="flecha"></div>
-<div class="flecha"></div>
 <div class="flecha flecha-current"></div>
+<div class="flecha"></div>
 <div class="flecha"></div>
 </div>
 
@@ -80,7 +79,6 @@
 </div><!-- /content -->
 </div><!-- /page -->
 
-<!------------------------------------------------ Javascript: ----------------------------------------->
 <script>
 //#######################################--- INICIO SCRIPT DE BUSQUEDA---##############################3
 $(document).ready(function () {

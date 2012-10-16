@@ -48,13 +48,10 @@ else
     		<img src='src/img/logos/tiendas/<?php echo $result->getlogo();?>' width='120' height='100'>
     		</a>
     		<div class='nombre-tienda'>
-    			
-                
                 <p class="texto-lista"><a class='mapa fancybox.iframe'
     				name="<?php echo $result->getidtienda();?>"
     				onclick= 'cargaPagina(<?php echo $result->getubiTienda();?>,<?php echo $result->getidtienda()?>)'><?php echo $result->getnombre();?></a></p>
-                
-                
+
                 <p class="subtexto-lista">Nivel <?php echo  $result->getpiso(); ?></p></div>
     			<a class='button-mapa mapa fancybox.iframe'
     				name="<?php echo $result->getidtienda();?>"

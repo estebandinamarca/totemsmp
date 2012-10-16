@@ -21,7 +21,7 @@
 	var timeout;
 	document.onmousemove = function(){
   	clearTimeout(timeout);
-  	timeout = setTimeout(function(){top.location.href='protector.html'}, 360000);
+  	timeout = setTimeout(function(){top.location.href='protector.html'}, 180000);
 	}
 	</script> 
     </head> 
@@ -44,20 +44,28 @@
     </div>
     
 <div id="efecto-pagina" class="contenedor-busqueda">
-<div class="bg-busquedas bg-busquedas-large">
 
+<div class="bg-busquedas">
 <div style="text-align:center;">
 <div id="resultadosHorarios">
-<a href="#"class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('79','79');" data-ajax="false"><img src="src/img/h-tottus.jpg"></a>
-<a href="#" class="" onclick= "cambiaRubro(1);" data-ajax="false"><img src="src/img/h-autoplaza.jpg"></a>
-<a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('107','107');" data-ajax="false"><img src="src/img/h-cinemark.jpg"></a>
-<a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('80','80');" data-ajax="false"><img src="src/img/h-homecenter.jpg"></a>
+
+<div style="float:left; margin-left:45px;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('62','82');" ><img src="src/img/h-falabella.jpg"></a></div>
+<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('116','183');" data-ajax="false"><img src="src/img/h-ripley.jpg"></a></div>
+<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('84','126');" data-ajax="false"><img src="src/img/h-lapolar.jpg"></a></div>
+<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('106','163');" data-ajax="false"><img src="src/img/h-paris.jpg"></a></div>
+<div style="float:left;"><img src="src/img/h-horarios.jpg"></div>
 <a href="#"  onclick= "cambiaRubro(27);" rel="external"><img src="src/img/h-menores.jpg"></a>
+<a href="#"class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('88','130');" data-ajax="false"><img src="src/img/h-lider.jpg"></a>
+<a href="#" class="" onclick= "cambiaRubro(1);" data-ajax="false"><img src="src/img/h-autoplaza.jpg"></a>
+<a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('76','107');" data-ajax="false"><img src="src/img/h-homecenter.jpg"></a>
 <a href="#" rel="external" onclick= "cambiaRubro(26);"><img src="src/img/h-comidas.jpg"></a>
+<a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('8','178');" data-ajax="false"><img src="src/img/h-civil.jpg"></a>
+
 </div>
 </div>  
 </div>
 </div>
+
 <script> 
 function cargaPagina(ubicacion,idTienda)
 {
@@ -73,6 +81,7 @@ function cargaPagina(ubicacion,idTienda)
 		closeEffect	: 'elastic',
 		openSpeed	: 'normal',
 		helpers 	: { overlay : {opacity: 0.5, css : {'background-color' : '#440007'} } },
+		
 		href:"getCaminoMasCorto.php?inicio=263&meta="+ubicacion+"&idTienda="+idTienda+""
 		//href: "getCaminoNewProgram.php?id="+idTienda+"&inicio=39&meta="+ubicacion+""
 	});
@@ -83,6 +92,7 @@ function cambiaRubro(rubro)
 			return true;
 }
 </script>
+
 <div class="volver-bottom">
 <div class="volver-btn-bottom"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
 </div>    

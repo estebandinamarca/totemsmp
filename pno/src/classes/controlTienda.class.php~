@@ -22,7 +22,6 @@ class controlTienda
 			FROM tienda, nodos, propiedadesTienda
 			WHERE nodos.idnodo = propiedadesTienda.idnodo
 			AND tienda.idtienda = propiedadesTienda.idtienda
-			AND tienda.nombre NOT LIKE '%Vacante%'
 			AND tienda.idtienda= ?";
 		
 		$result= $sql->devDatos($consulta,array($id));
@@ -49,7 +48,6 @@ class controlTienda
 					FROM tienda, nodos, propiedadesTienda
 					WHERE nodos.idnodo = propiedadesTienda.idnodo
 					AND tienda.idtienda = propiedadesTienda.idtienda
-					AND tienda.nombre NOT LIKE '%Vacante%'
 					AND tienda.nombre LIKE ?
 					ORDER BY tienda.nombre ASC ";
 		
@@ -62,7 +60,6 @@ class controlTienda
 			FROM tienda, nodos, propiedadesTienda
 			WHERE nodos.idnodo = propiedadesTienda.idnodo
 			AND tienda.idtienda = propiedadesTienda.idtienda
-			AND tienda.nombre NOT LIKE '%Vacante%'
 			AND tienda.nombre RLIKE ?
 			ORDER BY tienda.nombre ASC ";
 			
@@ -89,7 +86,6 @@ class controlTienda
 			FROM tienda, nodos, propiedadesTienda
 			WHERE nodos.idnodo = propiedadesTienda.idnodo
 			AND tienda.idtienda = propiedadesTienda.idtienda
-			AND tienda.nombre NOT LIKE '%Vacante%'
 			AND tienda.nombre LIKE ?
 			ORDER BY tienda.nombre ASC ";
 				
@@ -100,7 +96,6 @@ class controlTienda
 			FROM tienda, nodos, propiedadesTienda
 			WHERE nodos.idnodo = propiedadesTienda.idnodo
 			AND tienda.idtienda = propiedadesTienda.idtienda
-			AND tienda.nombre NOT LIKE '%Vacante%'
 			AND tienda.nombre RLIKE ?
 			ORDER BY tienda.nombre ASC ";
 				
@@ -159,7 +154,6 @@ class controlTienda
 		AND detalleRubro.idrubro = rubro.idrubro
 		AND nodos.idnodo = propiedadesTienda.idnodo
 		AND tienda.idtienda = propiedadesTienda.idtienda 
-		AND tienda.nombre NOT LIKE '%Vacante%'
 		AND rubro.idrubro = ?
 		ORDER BY tienda.nombre ASC ";
 		$result= $sql->devDatos($consulta,array($idrubro));
@@ -174,6 +168,55 @@ class controlTienda
 		
 	}
 	
+	public function productoEnTiendas($idproducto)
+	{
+		$arr = array();
+		$sql=conexionMySQLi::getInstance();
+		$consulta="SELECT tienda.idtienda,tienda.nombre,tienda.logo,nodos.piso,propiedadesTienda.idnodo
+		FROM tienda, nodos,propiedadesTienda, detalleTienda,producto
+		WHERE producto.idproducto = detalleTienda.idproducto
+		AND tienda.idtienda = detalleTienda.idtienda
+		AND nodos.idnodo = propiedadesTienda.idnodo
+		AND tienda.idtienda = propiedadesTienda.idtienda 
+		AND producto.idproducto = ?
+		ORDER BY tienda.nombre ASC ";
+		$result= $sql->devDatos($consulta,array($idproducto));
+		$result->bind_result($idtienda,$nombre,$logo,$piso,$ubiTienda);
+		while ($result->fetch())
+		{
+			$arr[] = new tienda($idtienda,$nombre,$logo,$piso,$ubiTienda);
+		
+		}
+		
+		return $arr;
+		
+		
+	}
+	
+	public function marcaEnTiendas($idmarca)
+	{
+		$arr = array();
+		$sql=conexionMySQLi::getInstance();
+		$consulta="SELECT tienda.idtienda,tienda.nombre,tienda.logo,nodos.piso,propiedadesTienda.idnodo
+		FROM tienda, nodos,propiedadesTienda,detalleMarca,marca
+		WHERE marca.idmarca = detalleMarca.idmarca
+		AND tienda.idtienda = detalleMarca.idtienda
+		AND nodos.idnodo = propiedadesTienda.idnodo
+		AND tienda.idtienda = propiedadesTienda.idtienda 
+		AND marca.idmarca = ?
+		ORDER BY tienda.nombre ASC ";
+		$result= $sql->devDatos($consulta,array($idmarca));
+		$result->bind_result($idtienda,$nombre,$logo,$piso,$ubiTienda);
+		while ($result->fetch())
+		{
+			$arr[] = new tienda($idtienda,$nombre,$logo,$piso,$ubiTienda);
+		
+		}
+		
+		return $arr;
+		
+		
+	}
 	
 	
 

@@ -1,34 +1,29 @@
 <?php
-
 ?>
+<!DOCTYPE html> 
 <html> 
 	<head> 
-    	<meta charset="UTF-8" />
-		<title>Mall Plaza</title> 
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-
-		<!-- Jquery Library 1.7.1 -->
-		<script src="src/js/jquery-1.7.1.min.js"></script>
-	
-    	<!-- Jquery Mobile 1.1.0 -->
-		<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
-    	<link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
-    	<link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />
-    
-	   	<!-- Fancybox 2.0.6 -->
-    	<link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>
-        
-		<!-- iScroll 4.0 -->
-		<script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>        
-    
-    	<!-- Estilo Base -->
-    	<link rel="stylesheet" href="src/css/base/estilo.base.css" />
-    	<script type="text/JavaScript">
+    <meta charset="UTF-8" />
+	<title>Mall Plaza</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<!-- Jquery Library 1.7.1 -->
+	<script src="src/js/jquery-1.7.1.min.js"></script>
+    <!-- Jquery Mobile 1.1.0 -->
+	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
+    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
+    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />
+	<!-- iScroll 4.0 -->
+	<script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>        
+    <!-- Estilo Base -->
+    <link rel="stylesheet" href="src/css/base/estilo.base.css" />
+    <!-- Fancybox 2.0.6 -->
+    <link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>    
+    <script type="text/JavaScript">
 	var timeout;
 	document.onmousemove = function(){
   	clearTimeout(timeout);
-  	timeout = setTimeout(function(){top.location.href='protector.html';}, 360000);
+  	timeout = setTimeout(function(){top.location.href='protector.html'}, 360000);
 	}
 	</script>  
 	</head>
@@ -59,15 +54,15 @@
     	<div class="contenedor-busqueda">
 			<div  class="contenedor-busquedas-btn">
 				<ul class="busquedas">
-					<li></li>
 					<li class="current"><a href="#" >Por Tienda</a></li>
-					<li><a href="busquedaRubros.php" data-transition="fade" rel="external" >Por Rubro</a></li>
-					<li></li>
+                    <li><a href="busquedaRubros.php" data-transition="fade" rel="external" >Por Rubro</a></li>
+                    <li><a href="busquedaMarcas.php" data-transition="fade" rel="external">Por Marcas</a></li>
+					<li><a href="busquedaProductos.php" data-transition="fade" rel="external">Por Producto</a></li>
 				</ul> 
 			</div> 
 			<div class="contenedor-flechas">
+                <div class="flecha flecha-current"></div>
 				<div class="flecha"></div>
-				<div class="flecha flecha-current"></div>
 				<div class="flecha "></div>
 				<div class="flecha"></div>
 			</div>
@@ -179,9 +174,7 @@
     
 	</div><!-- /content -->
 </div><!-- /page -->
-<div id="virtualKeyboard" style="z-index:1000;"></div>
- 
-<!------------------------------------------------ Javascript: ----------------------------------------->
+
 <script>
 document.onload=buscaTiendas('todo');
 var i=1;

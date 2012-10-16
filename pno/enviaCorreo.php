@@ -14,8 +14,8 @@ $headers = "From: $from_name <$from_email>";
 
 if($face==null)
 {
-  $subject = "Correo desde Mall Plaza Mirador BioBio ($tipo)";
-  $body = "El siguiente mensaje fue enviado desde el totem T1 en Mall Plaza Mirador Biobio con el siguiente mensaje:\n
+  $subject = "Correo desde Mall Plaza Norte ($tipo)";
+  $body = "El siguiente mensaje fue enviado desde el totem T3 en Mall Plaza Norte con el siguiente mensaje:\n
 	   Tipo de Mensaje: $tipo \n
 	   Nombre: $nombre \n
 	   RUT: $rut\n
@@ -24,8 +24,8 @@ if($face==null)
 	   Mensaje: $mensaje\n\n\n
 	   Gracias";
 
-  $to = "n2k316@gmail.com,n2k316@hotmail.com,ncastillo@dreamit.cl";
-  //$to = "callcenter@fidelis.cl,ropazo@fidelis.cl,juan.martinez@mallplaza.cl";
+  
+  $to = "callcenter@fidelis.cl,ropazo@fidelis.cl,juan.martinez@mallplaza.cl";
 }
 else
 {
@@ -51,5 +51,5 @@ if (($nombre!=null&&$rut!=null&&$telefono!=null&&$correo!=null&&$mensaje!=null)|
 	echo "fail…";
     }
 }
-//echo mail("n2k316@gmail.com","asuntillo","Este es el cuerpo del mensaje");
+
 ?>
