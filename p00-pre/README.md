@@ -1,2 +1,2 @@
-p00 - tótem base
+p00-pre - basado en pbb
 ==========
