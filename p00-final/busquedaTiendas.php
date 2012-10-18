@@ -68,13 +68,6 @@
 			</div>
 
 			<div class="bg-busquedas">
-				<!-- 
-				##########3 BUSCADOR ##############################
-				
-				<input name="res" type="text" class="search" id="txtContent" onkeyup="buscaTiendas(event);" onfocus="jsKeyboard.focus(this);clean(this);" value=""> 
-				
-				##########3 FIN BUSCADOR ##############################
-				-->
 			<div class="alfabeto">
 			<fieldset data-role="controlgroup" data-type="horizontal">
          		<input type="radio" name="radio-choice-2" id="radio-choice-21" value="choice-1" checked="checked" onClick="buscaTiendas('todo');" />
@@ -182,18 +175,6 @@ var a="";
 function buscaTiendas(letra){
 
 	$("#resultadosTiendas").load("resultadosTienda.php?bus=1&res="+letra+"");
-	/*##################### BUSCADOR ######################3
-		 if (document.getElementById("txtContent").value=="")
-			 { 
-			 $("#resultados").empty();
-			 $("#resultados").append("<img src='src/img/img-marcas.png' style='text-align:center';>");
-			 } 
-		 else 
-			 {
-				$("#resultados").load("resultadosTienda.php?bus=1&"+$("#txtContent").serialize());
-			 }
-			 ###################### FIN BUSCADOR #############################
-			 */			 
 			return true;
 }
 </script>

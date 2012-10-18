@@ -80,30 +80,17 @@
 </div><!-- /page -->
 
 <script>
-//#######################################--- INICIO SCRIPT DE BUSQUEDA---##############################3
+//######################## INICIO SCRIPT DE BUSQUEDA ##################
 $(document).ready(function () {
 	buscaRubros();
 });
 var i=1;
 var a="";
 function buscaRubros(){
-
 	$("#resultadosRubros").load("resultadosRubros.php");
-	/*##################### BUSCADOR ######################3
-		 if (document.getElementById("txtContent").value=="")
-			 { 
-			 $("#resultados").empty();
-			 $("#resultados").append("<img src='src/img/img-marcas.png' style='text-align:center';>");
-			 } 
-		 else 
-			 {
-				$("#resultados").load("resultadosTienda.php?bus=1&"+$("#txtContent").serialize());
-			 }
-			 ###################### FIN BUSCADOR #############################
-			 */			 
-			
-			return true;
+		return true;
 }
 </script>
+
 </body>
 </html>

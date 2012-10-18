@@ -1,6 +1,6 @@
 <?php
-
 ?>
+<!DOCTYPE html>
 <html> 
 	<head> 
     <meta charset="UTF-8" />
@@ -8,11 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<!-- Jquery Library 1.7.1 -->
 	<script src="src/js/jquery-1.7.1.min.js"></script>
-    <!-- Jquery Mobile 1.1.0 
-	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
-    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
-    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />-->
-
 	<!-- iScroll 4.0 -->
 	<script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>        
 	<!-- Jquery UI -->
@@ -129,7 +124,6 @@
 var i=1;
 var a="";
 function buscaTiendas(){
-	//$("#resultadosTiendas").load("resultadosTienda.php?bus=1&res="+letra+"");
 	//##################### BUSCADOR ######################3
 		 if (document.getElementById("txtContent").value=="")
 			 { 
@@ -141,7 +135,6 @@ function buscaTiendas(){
 			 {
 				if (i>=3)$("#resultadosMarca").load("resultadosMarca.php?"+$("#txtContent").serialize());
 				i++;
-				//alert($("#txtContent").serialize());
 			 }
 		//	 ###################### FIN BUSCADOR #############################
 			 //*/			 

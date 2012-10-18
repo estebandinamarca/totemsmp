@@ -1,2 +1,2 @@
-ptr
+storesmall
 ==========

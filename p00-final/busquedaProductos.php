@@ -1,6 +1,6 @@
 <?php
-
 ?>
+<!DOCTYPE html>
 <html> 
 	<head> 
     <meta charset="UTF-8" />
@@ -8,12 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<!-- Jquery Library 1.7.1 -->
 	<script src="src/js/jquery-1.7.1.min.js"></script>
-    <!-- Jquery Mobile 1.1.0 
-	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
-    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
-    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />-->
-
-	<!-- iScroll 4.0 -->
+    <!-- iScroll 4.0 -->
 	<script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>        
 	<!-- Jquery UI -->
     <link rel="stylesheet" href="src/css/jquery.ui/jquery-ui.css" />
@@ -37,10 +32,8 @@
 
 <body>
 <div data-role="page" id="busqueda-productos" class="mall-inicio-bg">
-
 	<script>
 	$(document).ready(function() {
-
     var k = $('.keyboard'),
     s = $('#switcher').find('input'),
     set = $('#switcher').find('.ui-controlgroup-controls'),
@@ -106,11 +99,11 @@
 			</div>
 
 			<div class="bg-busquedas bg-busquedas-padding">
-				<!--##########3 BUSCADOR ##############################-->
+				<!--########## BUSCADOR ##############################-->
 				<div class="emailContainer">			
 				<input type="text" name="res"  class="keyboard search" id="txtContent" onchange="buscaTiendas();"  value=""/> 
 				</div>
-				<!--##########3 FIN BUSCADOR ##############################-->
+				<!--########## FIN BUSCADOR ##############################-->
 				<div id="resultadosProducto" class="efecto-pagina" style="text-align: center; margin: 0; padding: 0;">
 					<img src="src/img/escribe.jpg">
 				</div>
@@ -130,22 +123,18 @@
 var i=1;
 var a="";
 function buscaTiendas(){
-	//$("#resultadosTiendas").load("resultadosTienda.php?bus=1&res="+letra+"");
-	//##################### BUSCADOR ######################3
+	//##################### BUSCADOR ###################### 
 		 if (document.getElementById("txtContent").value=="")
 			 { 
 			 $("#resultadosProducto").empty();
 			 i=1;
-			// $("#resultadosProducto").append("<img src='src/img/img-marcas.png' style='text-align:center';>");
 			 } 
 		 else 
 			 {
 				if (i>=3)$("#resultadosProducto").load("resultadosProducto.php?"+$("#txtContent").serialize());
 				i++;
-				//alert($("#txtContent").serialize());
 			 }
-		//	 ###################### FIN BUSCADOR #############################
-			 //*/			 
+		// ###################### FIN BUSCADOR #############################			 
 			return true;
 }
 </script>
