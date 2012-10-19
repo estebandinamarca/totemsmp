@@ -1037,6 +1037,7 @@ $.keyboard = function(el, options){
 
 								case 's':
 								case 'shift':
+								case 'abc':
 									base.addKey('shift', action);
 									break;
 
@@ -1167,6 +1168,10 @@ $.keyboard = function(el, options){
 			base.lastKeyset[0] = base.shiftActive = !base.shiftActive;
 			base.showKeySet(el);
 		},
+		abc : function(base,el){
+			base.lastKeyset[0] = base.shiftActive = !base.shiftActive;
+			base.showKeySet(el);
+		},		
 		sign : function(base){
 			if(/^\-?\d*\.?\d*$/.test( base.$preview.val() )) {
 				base.$preview.val( (base.$preview.val() * -1) );
@@ -1213,16 +1218,16 @@ $.keyboard = function(el, options){
 		'qwerty' : {
 			'default': [
 				'1 2 3 4 5 6 7 8 9 0 - {bksp}',
-				'q w e r t y u i o p @ \\',
-				'a s d f g h j k l ; \'',
-				'{shift} z x c v b n m , . /',
+				'q w e r t y u i o p , \\',
+				'a s d f g h j k l _ \'',
+				'{shift} z x c v b n m @ . /',
 				'{accept} {space} {cancel}'
 			],
 			'shift': [
-				'~ ! @ # $ % ^ & * ( ) _ + {bksp}',
-				'{tab} Q W E R T Y U I O P { } |',
-				'A S D F G H J K L : " {enter}',
-				'{shift} Z X C V B N M < > ? {shift}',
+				'~ ! # $ % ^ & * ( ) + {bksp}',
+				'Q W E R T Y U I O P { } |',
+				'A S D F G H J K L : "',
+				'{abc} Z X C V B N M < > ?',
 				'{accept} {space} {cancel}'
 			]
 		},
@@ -1324,11 +1329,12 @@ $.keyboard = function(el, options){
 			'next'   : 'Next \u21e8',
 			'prev'   : '\u21e6 Prev',
 			's'      : '\u21e7:Shift',        // thick hollow up arrow
-			'shift'  : 'Shift:Shift',
+			'shift'  : '%#!:%#!',
 			'sign'   : '\u00b1:Change Sign',  // +/- sign for num pad
 			'space'  : '\ufe42\ufe41:Space',
 			't'      : '\u21e5:Tab',          // right arrow to bar (used since this virtual keyboard works with one directional tabs)
-			'tab'    : '\u21e5 Tab:Tab'       // \u21b9 is the true tab symbol (left & right arrows)
+			'tab'    : '\u21e5 Tab:Tab',       // \u21b9 is the true tab symbol (left & right arrows)
+			'abc'	 : 'abc:abc',
 		},
 
 		// Message added to the key title while hovering, if the mousewheel plugin exists

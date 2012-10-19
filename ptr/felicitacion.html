@@ -6,14 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Jquery Library 1.7.1 -->
 	<script src="src/js/jquery-1.7.1.min.js"></script>
-    <!-- Jquery Mobile 1.1.0 
-	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
-	<link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />
-    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />-->
     <!-- Jquery UI -->
     <link rel="stylesheet" href="src/css/jquery.ui/jquery-ui.css" />
     <script src="src/js/jquery.ui/jquery-ui.min.js"></script>
-
     <!-- Final Keyboard -->
     <link rel="stylesheet" href="src/css/finalkeyboard/jquery.mobile-1.1.0-rc.1.min.css" />
     <script src="src/js/finalkeyboard/jquery.mobile-1.1.0-rc.1.min.js"></script>
@@ -22,28 +17,18 @@
     <script src="src/js/finalkeyboard/jquery.keyboard.extension-mobile.js"></script>    
     <!-- Estilo Base -->
     <link rel="stylesheet" href="src/css/base/estilo.base.css" />
-    
    	<script>
 	$(document).ready(function() {
-		//$(".efecto-pagina").css("display", "none");
-		//$('.efecto-pagina').fadeIn(800);
-
     var k = $('.keyboard'),
     s = $('#switcher').find('input'),
     set = $('#switcher').find('.ui-controlgroup-controls'),
     kbOptions = {
         keyBinding : 'mousedown touchstart',
-        //alwaysOpen : false,
         usePreview  : false,
         autoAccept  : true,
         position: {
-            of: ".emailContainer", // null = attach to input/textarea; use $(sel) to attach elsewhere
-            //my: 'center center',
-            //at: 'center center',
-            //at2: 'center center',
+            of: ".emailContainer",  
         },
-        // make sure jQuery UI styles aren't applied even if the stylesheet has loaded
-        // the Mobile UI theme will still over-ride the jQuery UI theme
         css : {
             input          : '',
             container      : '',
@@ -57,22 +42,10 @@
     k
         .keyboard(kbOptions)
         .addMobile({
-            // keyboard wrapper theme
             container    : { theme:'c' },
-            // theme added to all regular buttons
             buttonMarkup : { theme:'c', shadow:'true', inline:'true', corners:'false' },
-            // theme added to action buttons (e.g. tab, shift, accept, cancel);
-            // parameters here will override the settings in the buttonMarkup
             buttonAction : { theme:'b' },
-            // theme added to button when it is active (e.g. shift is down)
-            // All extra parameters will be ignored
             buttonActive : { theme:'e' },
-            //position: {
-            // of: "#emailContainer", // null = attach to input/textarea;
-            // my: 'center center',
-            //  at: 'center center',
-            //   at2: 'center center', // used when "usePreview" is false
-            //}
         });
 	});
     </script>
@@ -150,15 +123,11 @@
     </div><!-- /contenedor-busqueda -->
 
 <script type="text/javascript">
-      function enviaCorreo()
-      {
-    
+    function enviaCorreo()
+    {
     $.ajaxSetup({async: false});
-    //$.('.envio-loading').click(function(){});
-     
     $.get("enviaCorreo.php",$('#formulario').serialize(),function(data){});
-    
-      }
+    }
 </script> 
 
 </div><!-- /content -->

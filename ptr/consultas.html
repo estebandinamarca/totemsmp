@@ -9,7 +9,6 @@
     <!-- Jquery UI -->
     <link rel="stylesheet" href="src/css/jquery.ui/jquery-ui.css" />
     <script src="src/js/jquery.ui/jquery-ui.min.js"></script>
-
     <!-- Final Keyboard -->
     <link rel="stylesheet" href="src/css/finalkeyboard/jquery.mobile-1.1.0-rc.1.min.css" />
     <script src="src/js/finalkeyboard/jquery.mobile-1.1.0-rc.1.min.js"></script>
@@ -21,7 +20,6 @@
     
     <script>
     $(document).ready(function() {
-
     var k = $('.keyboard'),
     s = $('#switcher').find('input'),
     set = $('#switcher').find('.ui-controlgroup-controls'),
@@ -130,15 +128,11 @@
     </div>
     
 <script type="text/javascript">
-      function enviaCorreo()
-      {
-	
+    function enviaCorreo()
+    {
 	$.ajaxSetup({async: false});
-	//$.('.envio-loading').click(function(){});
-	 
 	$.get("enviaCorreo.php",$('#formulario').serialize(),function(data){});
-	
-      }
+    }
 </script> 
     
 </div><!-- /content -->

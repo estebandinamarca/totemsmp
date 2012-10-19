@@ -19,6 +19,7 @@
     <!-- Fancybox 2.0.6 -->
     <link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>
+	
 	<script type="text/JavaScript">
 	var timeout;
 	document.onmousemove = function(){

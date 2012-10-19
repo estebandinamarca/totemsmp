@@ -19,11 +19,12 @@ if ($rub!=null)
 	?>
 	<div class="titulo-rubro">
     		<div class="volver-rubros-btn">
-				<span><a href="#" data-transition="slide" data-direction="reverse"  onclick="cargaResultados(null,0)"></a></span></div>
+				<span><a href="#" onclick="cargaResultados(null,0)"></a></span>
+            </div>
 				<?php echo $rubros->getnombre();?>
-			</div>
+	</div>
 	<div id="wrapper" class="wrapper-extendido-rubros">
- <?php 
+<?php 
 } 
 else 
 {
@@ -50,15 +51,15 @@ else
     			?>
     			<li>
     			<a href="#" onclick= 'cargaPagina(<?php echo $tiendas->getubiTienda();?>,<?php echo $tiendas->getidtienda()?>);'>
-    			  
     			<img src='src/img/logos/tiendas/<?php echo $tiendas->getlogo();?>' width='120' height='100'>
     			</a>
+
     			<div class='nombre-tienda'>
-    			<a href="#" onclick= 'cargaPagina(<?php echo $tiendas->getubiTienda();?>,<?php echo $tiendas->getidtienda()?>);'>
-    			<p class="texto-lista"><?php echo $tiendas->getnombre();?></p>
+    			<p class="texto-lista"><a href="#" onclick= 'cargaPagina(<?php echo $tiendas->getubiTienda();?>,<?php echo $tiendas->getidtienda()?>);'><?php echo $tiendas->getnombre();?></a></p>
+
                 <p class="subtexto-lista">Nivel <?php echo  $tiendas->getpiso();?></p>
-                </a>
                 </div>
+
     			<a class='button-mapa' 
     				name="<?php echo $tiendas->getidtienda();?>"
     				onclick= 'cargaPagina(<?php echo $tiendas->getubiTienda();?>,<?php echo $tiendas->getidtienda()?>);'>
@@ -75,19 +76,17 @@ else
     		{
     		?>
     		<li>
-    		<a href="#" onclick="cargaResultados(<?php echo $result->getidrubro();?>,1);" data-transition="slide">
-    			  
+    		<a href="#" onclick="cargaResultados(<?php echo $result->getidrubro();?>,1);">
     		<img src='src/img/logos/rubros/<?php echo $result->getlogo();?>' width='120' height='100'>
     		</a>
-    		<a href="#" onclick="cargaResultados(<?php echo $result->getidrubro();?>,1);" data-transition="slide">
+
     		<div class='nombre-tienda'>
-    		<p class="texto-lista"><?php echo $result->getnombre();?></p></div>
-    		</a>
+    		<p class="texto-lista"><a href="#" onclick="cargaResultados(<?php echo $result->getidrubro();?>,1);"><?php echo $result->getnombre();?></a></p></div>
     		
-    		<a href="#" onclick="cargaResultados(<?php echo $result->getidrubro();?>,1);"class="button-mapa button-rubros" data-transition="slide"></a>
+    		
+    		<a href="#" onclick="cargaResultados(<?php echo $result->getidrubro();?>,1);"class="button-mapa button-rubros"></a>
     		</li>	
     		<?php 
-    		    		
     		} 
     	}
     	
@@ -97,8 +96,6 @@ else
     		</ul>
 		</div><!-- / Fin container slidejs -->
 	</div>
-
-
 
 <script>var myScroll = new iScroll('wrapper');</script>
 
@@ -118,9 +115,9 @@ function cargaPagina(ubicacion,idTienda)
 		openSpeed	: 'normal',
 		helpers 	: { overlay : {opacity: 0.5, css : {'background-color' : '#440007'} } },
 		href		: "getCaminoMasCorto.php?inicio=263&meta="+ubicacion+"&idTienda="+idTienda+""
-		
 	});
 }
+
 function cargaResultados(idRubro,op)
 {
 	if (op=="1")
@@ -132,7 +129,6 @@ function cargaResultados(idRubro,op)
 				
 				
  			 });
-			
 		}
 	else
 		{ 
@@ -141,9 +137,7 @@ function cargaResultados(idRubro,op)
 			$("#resultadosRubros").load("resultadosRubros.php");
 			$("#resultadosRubros").show();
 			 })
-			
 		}
-		
 }
 </script>
 

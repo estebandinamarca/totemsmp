@@ -10,7 +10,13 @@
     <!-- Responsive Slides -->
     <link rel="stylesheet" href="src/css/slides/responsiveslides.css" /> 
     <script type="text/javascript" src="src/js/slides/responsiveslides.min.js"></script>  
-      
+    <script type="text/JavaScript">
+    	var timeout;
+    	document.onmousemove = function(){
+      clearTimeout(timeout);
+     	timeout = setTimeout(function(){location.reload(true);}, 180000);
+    	}
+	  </script>   
     <!-- Estilo Base --> 
     <link rel="stylesheet" href="src/css/base/estilo.base.index.css" /> 
     </head>

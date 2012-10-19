@@ -19,6 +19,7 @@
     <!-- Fancybox 2.0.6 -->
     <link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
     <script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>    
+    <!-- Timeout -->
     <script type="text/JavaScript">
 	var timeout;
 	document.onmousemove = function(){
@@ -35,14 +36,14 @@
 	$(window).bind("load", function() {
     $('#dvLoading').fadeOut(1700);
     });
-	
+
 	$(document).ready(function() {
 		$(".efecto-pagina").css("display", "none");
 		$('.efecto-pagina').fadeIn(2500);	
 	  });
 	</script>
 	<div id="dvLoading"></div>
-    
+
 	<div data-role="content">
 		<div class="titulos">
     		<div class="volver-btn"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
@@ -173,7 +174,6 @@ document.onload=buscaTiendas('todo');
 var i=1;
 var a="";
 function buscaTiendas(letra){
-
 	$("#resultadosTiendas").load("resultadosTienda.php?bus=1&res="+letra+"");
 			return true;
 }

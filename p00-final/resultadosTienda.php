@@ -78,7 +78,7 @@ function cargaPagina(ubicacion,idTienda)
 		autoSize	: false,
 		closeClick	: false,
 		openEffect	: 'fade',
-		closeEffect	: 'elastic',
+		closeEffect	: 'fade',
 		openSpeed	: 'normal',
 		helpers 	: { overlay : {opacity: 0.7, css : {'background-color' : '#440007'} } },
 		href:"getCaminoMasCorto.php?inicio=263&meta="+ubicacion+"&idTienda="+idTienda+""

@@ -65,14 +65,14 @@
         });
 
 		$(".efecto-pagina").css("display", "none");
-		$('.efecto-pagina').fadeIn(2500);	
+		$('.efecto-pagina').fadeIn(2100);	
 	 });
 
-	$(window).bind("load", function() {
-	    $('#dvLoading').fadeOut(1700);
-	});
+	//$(window).bind("load", function() {
+	//    $('#dvLoading').fadeOut(1700);
+	//});
 	</script>
-	<div id="dvLoading"></div>
+	<!-- <div id="dvLoading"></div> -->
     
 	<div data-role="content">
 		<div class="titulos">

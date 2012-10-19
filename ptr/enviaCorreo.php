@@ -15,7 +15,7 @@ $headers = "From: $from_name <$from_email>";
 if($face==null)
 {
   $subject = "Correo desde Mall Plaza Norte ($tipo)";
-  $body = "El siguiente mensaje fue enviado desde el totem T3 en Mall Plaza Norte con el siguiente mensaje:\n
+  $body = "El siguiente mensaje fue enviado desde el totem T1 en Mall Plaza Trebol con el siguiente mensaje:\n
 	   Tipo de Mensaje: $tipo \n
 	   Nombre: $nombre \n
 	   RUT: $rut\n
@@ -39,7 +39,6 @@ else
 
   $to = $face;
 }
-
 if (($nombre!=null&&$rut!=null&&$telefono!=null&&$correo!=null&&$mensaje!=null)||($face!=null&&strstr($face,'@')!=false))
 {
     if (mail($to, $subject, $body, $headers)) 

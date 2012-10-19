@@ -7,11 +7,10 @@
 </head> 
 
 <body> 
-<!-- Fancybox 2.0.6 -->
+<!-- Fancybox 2.0.6 
 <link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>-->
 
-<!----------------------------------------------------- Busqueda: Por Tiendas ---------------------------------------------->
 <div data-role="page" id="cine" class="mall-inicio-bg">
 
     <script type="text/javascript">
@@ -22,9 +21,11 @@
 
 	<div data-role="content">
     <div class="titulos">
-    <div class="volver-btn"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
+    <div class="volver-btn">
+    	<span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span>
+    </div>
     <div class="titulo-txt">
-    <h1>Cartelera</h1>
+    	<h1>Cartelera</h1>
     </div>
     </div>
     
@@ -79,11 +80,7 @@
 <script> 
 function cargaPagina(ubicacion,idTienda)
 {
-	
 	$.fancybox({
-		//maxWidth	: 800,
-		//maxHeight	: 600,
-		
 		type		: "iframe",
 		fitToView	: true,
 		width		: 900,
@@ -97,16 +94,10 @@ function cargaPagina(ubicacion,idTienda)
 		helpers 	: { overlay : {opacity: 0.5, css : {'background-color' : '#440007'} } },
 		
 		href:"getCaminoMasCorto.php?inicio=263&meta="+ubicacion+"&idTienda="+idTienda+""
-		//href: "getCaminoNewProgram.php?id="+idTienda+"&inicio=39&meta="+ubicacion+""
 	});
-	//$.fancybox({type:'iframe',href:"getCaminoMasCorto.php?inicio=39&meta="+ubicacion+"&idTienda="+idTienda+""});
-	//$.colorbox({iframe:true, width:"900px", height:"1100px",href:"mapa_02.php"});
-//	$.colorbox.resize();
-		
 }
 </script>
 </div>
-
 
 <div class="volver-bottom">
 <div class="volver-btn-bottom"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>

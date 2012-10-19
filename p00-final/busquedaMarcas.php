@@ -67,14 +67,14 @@
         });
 
 		$(".efecto-pagina").css("display", "none");
-		$('.efecto-pagina').fadeIn(2500);	
+		$('.efecto-pagina').fadeIn(2100);	
 	 });
 
-	$(window).bind("load", function() {
-	    $('#dvLoading').fadeOut(1700);
-	});
+	//$(window).bind("load", function() {
+	//   $('#dvLoading').fadeOut(1700);
+	//});
 	</script>
-	<div id="dvLoading"></div>
+	<!-- <div id="dvLoading"></div> -->
 
 	<div data-role="content">
 		<div class="titulos">
@@ -124,20 +124,18 @@
 var i=1;
 var a="";
 function buscaTiendas(){
-	//##################### BUSCADOR ######################3
+	//##################### BUSCADOR ######################
 		 if (document.getElementById("txtContent").value=="")
 			 { 
 			 $("#resultadosMarca").empty();
 			 i=1;
-			// $("#resultadosProducto").append("<img src='src/img/img-marcas.png' style='text-align:center';>");
 			 } 
 		 else 
 			 {
-				if (i>=3)$("#resultadosMarca").load("resultadosMarca.php?"+$("#txtContent").serialize());
-				i++;
+			if (i>=3)$("#resultadosMarca").load("resultadosMarca.php?"+$("#txtContent").serialize());
+			i++;
 			 }
-		//	 ###################### FIN BUSCADOR #############################
-			 //*/			 
+	//###################### FIN BUSCADOR ###########################			 
 			return true;
 }
 </script>

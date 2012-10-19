@@ -18,22 +18,15 @@ $totem = controlTotem::getTotem($inicio);
 <script src="src/js/caminoMasCorto/gMatrix1.js"></script>
 <script src="src/js/caminoMasCorto/gMatrix2.js"></script>
 <script src="src/js/caminoMasCorto/gMatrixsub1.js"></script>
-
 <script src="src/js/jquery-1.7.1.min.js"></script>
-
 <script src="src/js/mapa/Three.js"></script>
-
 <script src="src/js/mapa/Detector.js"></script>
 <script src="src/js/mapa/Stats.js"></script>
-
 <script src="src/js/mapa/Tween.js"></script>
-
 <script type='text/javascript' src='src/js/mapa/dat.gui.js'></script>
-
 <script src="src/js/mapa/Curve.js"></script>
 <script src="src/js/mapa/TubeGeometry.js"></script>
 <script src="src/js/mapa/ExtrudeGeometry.js"></script>
-
 <script src="src/js/mapa/pp/ShaderExtras.js"></script>
 		<script src="src/js/mapa/pp/EffectComposer.js"></script>
 		<script src="src/js/mapa/pp/RenderPass.js"></script>
@@ -41,8 +34,6 @@ $totem = controlTotem::getTotem($inicio);
 		<script src="src/js/mapa/pp/ShaderPass.js"></script>
 		<script src="src/js/mapa/pp/MaskPass.js"></script>
 		<script src="src/js/mapa/pp/SavePass.js"></script>
-
-
 <head>
 
 		<title>Multiplataforma | Módulo WebGL</title>
@@ -75,11 +66,9 @@ function calculaCamino()
 	 * 	-> caminoMasCorto = caminoMasCorto."<separador>".caminoParcial
 	 * 	-> vuelvo a 2
 	 */
-	 <?php 
+	<?php 
 				$inicioOriginal = controlCamino::getNodo($inicio);
 				$metaFinal = controlCamino::getNodo($meta);
-				
-				
 	?>
 	function caminoObj(id,camino,largo,idnodo)
 	{
@@ -87,7 +76,6 @@ function calculaCamino()
 		this.camino=camino;
 		this.largo=largo;
 		this.idnodo=idnodo;
-
 	}
 	var cpisos = new Array();
 	var pisoInicioOriginal= "<?php echo $inicioOriginal->getpiso();?>";
@@ -116,7 +104,6 @@ function calculaCamino()
 			var cami="";
 			for (var i = 0; i < camino.length; i++)
 			{
-		
 				for(var k=0;k<camino[i].length;k++)
 				{
 					if(i==0&&k==0)cami=camino[i][k];
@@ -160,7 +147,6 @@ function calculaCamino()
 					//alert(l);
 				//	alert(coorInicioActual+"-"+cambiadores[l]+"->piso->"+pisoInicioActual);
 					camino = generaCamino(coorInicioActual+"-"+cambiadores[l],pisoInicioActual);
-					
 					//alert("camino->"+camino);
 					for (var i = 0; i < camino.length; i++)
 					{
@@ -185,8 +171,6 @@ function calculaCamino()
 				//alert(caminoParcial+"->camino "+cpisos[0].idnodo);
 				//alert("caminoParcial "+caminoParcial);
 			//	alert(cpisos[0].idnodo + "idnodo cpisos " + cpisos[0].camino+ "--"+cpisos[0].id);
-				
-				
 				$.get("getPisoPorCoorReal.php", { coor: ""+cpisos[0].idnodo ,direccion:"sube",piso:pisoInicioActual},
 						   function(data){
 					   		//	alert(data+" ->data de coorpisoreal");
@@ -203,7 +187,6 @@ function calculaCamino()
 						   function(data){
 					   		//	alert("en baja-> "+ data);
 					   			cambiadores=data;
-					   			
 					   });
 				cambiadores=cambiadores.split(";");
 				for (var l = 0; l < cambiadores.length; l++) 
@@ -220,14 +203,11 @@ function calculaCamino()
 								if(k%2==0)cami=cami+"-"+camino[i][k];
 								else cami=cami+"_"+camino[i][k];
 							}
-									
 						}
 					}
 					camin=cami.split("-"); 
 				//	alert(cami);
 					cpisos[i]=new caminoObj(i,cami,cami.length,camin.slice(-1));
-									
-
 				}
 				cpisos.sort(function(a,b){return a.largo - b.largo;});
 				caminoParcial=caminoParcial+"*"+pisoInicioActual+"*"+""+cpisos[0].camino;
@@ -249,12 +229,9 @@ function calculaCamino()
 	
 }
 
-
-
 function generaCamino(data,piso)
 {
-	
-		//alert(data + "<-data piso-> "+piso );
+	//alert(data + "<-data piso-> "+piso );
 	var data=data.split("-");
 	//console.log(data);
 	for (var i = 0; i < data.length; i++) 
@@ -298,7 +275,6 @@ function generaCamino(data,piso)
 		}
 	if(piso=="2")
 		{
-		
 		var matrix = gMatrix2();
 		//alert(matrix);
 		var grid = new PF.Grid(171, 110, matrix);
@@ -336,10 +312,6 @@ function generaCamino(data,piso)
 	var finder = new PF.JumpPointFinder({allowDiagonal: true});
 	//alert(finder);
 	//console.log(finder);
-
-			
-	
-
 	dataA = 
 	{
 		x 	: data[0][0],
@@ -350,27 +322,20 @@ function generaCamino(data,piso)
 		x 	: data[1][0],
 		y	: data[1][1]
 	}
-
-			
-
 	//convHaMatrix(dataA);
 	//convHaMatrix(dataB);
 	//alert(dataA+" dataA "+dataB+" dataB");
 	//alert(dataA.x+" "+ dataA.y+" "+dataB.x+" "+dataB.y);
-			//console.log(dataB);
-
-
+	//console.log(dataB);
 	//	alert(dataA.x +"dataAx "+ dataA.y +" dataAy "+  dataB.x +"dataBx "+ dataB.y +" dataBy ");
-		//alert(grid);
+	//alert(grid);
 	var caminoRaw = finder.findPath(dataA.x, dataA.y, dataB.x, dataB.y, grid);
-		//alert(caminoRaw);
-			
+	//alert(caminoRaw);
 	for (var i = 0; i < caminoRaw.length; i++) 
 	{
 		entrada = caminoRaw[i];
 		camino.push(entrada);
 	};
-
 	return camino;
 }
 
@@ -382,12 +347,9 @@ function generaMapa(camino)
 	var orientacionTotem = '<?php echo $totem->getorientacion(); ?>';
 	//alert(orientacionTotem);
 	//console.log(typeof(idTienda));
-
 	// camino
-	
 	//var camino=camino.split("-");
 	var camino=camino.split("*");
-
 	/*for (var i = 0; i < camino.length; i++) {
 		o = camino[i].split("_");
         o[0] = parseInt(o[0]);
@@ -395,7 +357,6 @@ function generaMapa(camino)
         camino[i] = o;
 	};*/
 	//console.log(camino);
-
 	for (var j = 0; j < camino.length; j=j+2) {
 		camino[j]=camino[j].split("-");
 
@@ -661,10 +622,6 @@ function generaMapa(camino)
 		scene.add(piso_1s);
 		scene.add(piso_T);
 
-
-
-
-
 		// MATERIALES
 		activo 		= new THREE.MeshLambertMaterial( { color: 0x2186ba, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 1 } );
 		//pasivo = new THREE.MeshLambertMaterial( { color: 0xff0000, ambient: 0xff0000} );
@@ -686,7 +643,6 @@ function generaMapa(camino)
 		sTerrazas 	= new THREE.MeshLambertMaterial( { color: 0xffae23, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 1 } ); //ffae23
 
 		matPisoA = [activo, pasivo, pisoColor, pisoColor1, sFalabella, sHomecenter, sLider, sParis, sRipley, sPolar, sBoulevard, sTerrazas];
-
 
 		activo2		= new THREE.MeshLambertMaterial( { color: 0x2186ba, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
 		//pasivo = new THREE.MeshLambertMaterial( { color: 0xff0000, ambient: 0xff0000} );
@@ -711,10 +667,6 @@ function generaMapa(camino)
 
 		matPisoB = [activo2, pasivo2, pisoColor2, sFalabella2, sParis2, sRipley2, sE_Azul, sE_Cyan, sE_Gris, sE_Rojo, sE_Verde, sAutoplaza, sComidas, sBoulevard0];
 
-
-		
-
-
 		// Totem
 
 		/*for (var i = 0; i < scene.__objects.length; i++) {
@@ -733,8 +685,6 @@ function generaMapa(camino)
 		//console.log(mTotem.position.x);
 		//console.log(mTotem.position);
 		piso_T.add( mTotem );
-
-
 
 		if (totem.piso == 1) {
 			//console.log(piso_1.children);
@@ -831,7 +781,6 @@ function generaMapa(camino)
 
 			}
 
-
 			for (var l = 0; l < mAutoplaza.length; l++) {
 				for (var i = 0; i < scene.__objects.length; i++) {
 					if ( scene.__objects[i].name == mAutoplaza[l].toString() ) {
@@ -875,11 +824,8 @@ function generaMapa(camino)
 			};
 
 
-
-
-
 		}else{
-			//
+		//
 		};
 		// RECORRIDO
 		//var planeMaterial =  new THREE.MeshLambertMaterial( { color: 0xF5A331 } ); //, ambient: 0xDEDEDE} );
@@ -934,13 +880,10 @@ function generaMapa(camino)
           			tramoV.position.y = -18; // -20
           		};
           		
-
           		tramos.push(tramoV);
           		piso_T.add( tramoV );
           		tramoV.visible = false;
 	        };
-
-
 	        // PUNTERO
       		var xA = [];
       		var yA = [];
@@ -957,11 +900,7 @@ function generaMapa(camino)
       		temp.push(yA);
 
       		tramosVec.push(temp);
-
-
         };
-
-
   		// PUNTERO
   		puntero = new THREE.Mesh(new THREE.SphereGeometry(1.4), new THREE.MeshBasicMaterial({ color: 0x0E374D }) ); 
   		scene.add( puntero );
@@ -973,15 +912,7 @@ function generaMapa(camino)
 
   		slotPuntero.x = camino[2][0][0];
   		slotPuntero.y = -camino[2][0][1];
-
-
-
-
   		// HUDs
-  		
-
-
-  		
 
   		/*// distancia total
   		var dtotal = 0;
@@ -1077,7 +1008,6 @@ function generaMapa(camino)
 		
 		dB2[5]	= [309 , 1, -201];
 
-
 		// asignando camara inicial
 		n = 3;
 
@@ -1096,17 +1026,10 @@ function generaMapa(camino)
         camera.position.z = slotCam.z;
         camera.lookAt( slotTar );
 
-
-
         /*gCilFlecha1 = new THREE.CylinderGeometry( 1, 1, 12, 32, 32 );
 		mCilFlechaA = new THREE.Mesh( gCilFlecha1, new THREE.MeshBasicMaterial({ color: 0xff0000 }) );
 		mCilFlechaA.position = coordMedio;
 		scene.add( mCilFlechaA );*/
-
-
-
-
-
 
         // LINEAS + HUD
         
@@ -1119,9 +1042,6 @@ function generaMapa(camino)
 
         var lineaInicio = new THREE.Line( mLineaInicio, sLineas );
 		scene.add( lineaInicio );	*/
-
-
-
 
 		// LOGOS INICIO Y FINAL
 
@@ -1153,13 +1073,10 @@ function generaMapa(camino)
 		spHudDestino.visible = false;
 		huds.push(spHudDestino);
 
-
 		/*mTotem.position.x = camino[2][0][0];
 		mTotem.position.y = 0;
 		mTotem.position.z = -camino[2][0][1];*/
 		//camino[4][camino[4].length-1];
-
-		
 
 		/*var mLineaDestino = new THREE.Geometry()
 		mLineaDestino.vertices.push( mTiendaSel.position );
@@ -1168,14 +1085,12 @@ function generaMapa(camino)
         var lineaDestino = new THREE.Line( mLineaDestino, sLineas );
 		scene.add( lineaDestino );*/
 
-
 		// LOGOS CAMINOS Y ESCALERAS
 
 		var iHudInsCa = THREE.ImageUtils.loadTexture( 'src/images/mapa/inCa.png' );
         var iHudInsCb = THREE.ImageUtils.loadTexture( 'src/images/mapa/inCb.png' );
         var iHudInsS = THREE.ImageUtils.loadTexture( 'src/images/mapa/inS.png' );
         var iHudInsBa = THREE.ImageUtils.loadTexture( 'src/images/mapa/inBa.png' );
-
 
 		var spHudInsCa = new THREE.Sprite( { map: iHudInsCa, useScreenCoordinates: true, color: 0xffffff } );
 		spHudInsCa.scale.x = 0.57;
@@ -1210,9 +1125,7 @@ function generaMapa(camino)
 		spHudInsBa.visible = false;
 		huds.push(spHudInsBa);
 
-
 		// BOTONES
-
 		var iHudBt1 = THREE.ImageUtils.loadTexture( 'src/images/mapa/btn_01.png' );
 		var iHudBt2 = THREE.ImageUtils.loadTexture( 'src/images/mapa/btn_02.png' );
 		var iHudBt3 = THREE.ImageUtils.loadTexture( 'src/images/mapa/btn_03.png' );
@@ -1241,11 +1154,7 @@ function generaMapa(camino)
 		scene.add( spHudBt3 );
 		huds.push(spHudBt3);
 
-
-
 		// ICONOS ESCALERAS Y ASCENSORES
-
-
 		var iHudEsc01 = THREE.ImageUtils.loadTexture( 'src/images/mapa/_esc01.png' );
 		var iHudAs = THREE.ImageUtils.loadTexture( 'src/images/mapa/elevador.png' );
 
@@ -1256,7 +1165,6 @@ function generaMapa(camino)
 		scene.add( spHudEsc01 );*/
 
 		// piso 1
-
 		esc101 = [141,88,1];
 		esc102 = [140,93,1];
 		esc103 = [121,90,2];
@@ -1296,7 +1204,6 @@ function generaMapa(camino)
 		};
 
 		// piso 2
-
 		esc201 = [141,88,1];
 		esc202 = [140,93,1];
 		esc203 = [121,90,2];
@@ -1334,7 +1241,6 @@ function generaMapa(camino)
 		};
 
 		// piso -1
-
 		esc001 = [140,93,1];
 		esc002 = [121,90,1];
 		esc003 = [105,83,2];
@@ -1368,12 +1274,7 @@ function generaMapa(camino)
 			};
 		};
 
-
-
-
-
 		// LOGOS UNIDADES DE SERVICIO
-
 		var iHudUni1 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_bulevard.png' );
 
 		var spHudUni1 = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
@@ -1436,16 +1337,12 @@ function generaMapa(camino)
 		piso_1s.add( spHudUni4 );
 		matPisoB.push(spHudUni4);
 
-
 		// apagando textos - v04i3
 
 		/*scene.__objects[262].visible = false;
 		scene.__objects[27].visible = false;
 		scene.__objects[166].visible = false;
 		scene.__objects[26].visible = false;*/
-
-
-
 
 		//spHudInsCb.visible = false;
 		//huds.push(spHudUni1);
@@ -1460,11 +1357,6 @@ function generaMapa(camino)
 
   		//huds.push(sHudA);
 
-
-
-
-
-
 		/*var spHudEsc01 = new THREE.Sprite( { map: iHudEsc01, useScreenCoordinates: false, color: 0xffffff } );
 		spHudEsc01.scale.x = 0.084;
 		spHudEsc01.scale.y = 0.07;
@@ -1473,7 +1365,6 @@ function generaMapa(camino)
 		spHudEsc01.affectedByDistance  = true;
 		spHudEsc01.mergeWith3D = true;
 		huds.push(spHudEsc01);*/
-
 
 		// flechas
 		/*sFlechas = new THREE.MeshLambertMaterial( { color: 0xff0000 , ambient: 0xff0000 } );
@@ -1499,10 +1390,6 @@ function generaMapa(camino)
         mCilFlechaA2.position = ubicacion;
         mCilFlechaA2.rotation = tan;
         scene.add( mCilFlechaA2 );*/
-
-
-
-
 
 
 		// DEBUGGING
@@ -1551,13 +1438,10 @@ function generaMapa(camino)
 		});*/
 
 		//gui.close();
-
 		
 		//console.log(mTiendaSel.position);
 		//console.log(camera.position);
 		//console.log(rutap.length);
-
-
 
 		// COMPOSER
 		//renderer.autoClear = false;
@@ -1586,8 +1470,6 @@ function generaMapa(camino)
 		colorCorrection.uniforms[ 'powRGB' ].value = new THREE.Vector3( 1, 0.85, 0.85 ) ;
 		//colorCorrection.uniforms[ 'mulRGB' ].value = new THREE.Vector3( 1, 1.1, 1.1 ) ; 
 
-
-
 		composer = new THREE.EffectComposer( renderer, renderTarget );
 		var renderModel = new THREE.RenderPass( scene, camera );
 		//effectFXAA.renderToScreen = true;
@@ -1597,7 +1479,6 @@ function generaMapa(camino)
 		//colorify.renderToScreen = true;
 		//screenfx.renderToScreen = true;
 
-
 		composer = new THREE.EffectComposer( renderer, renderTarget );
 		composer.addPass( renderModel );
 		//composer.addPass( effectFXAA );
@@ -1606,7 +1487,6 @@ function generaMapa(camino)
 		//composer.addPass( vblur );
 		composer.addPass( colorCorrection );
 		//composer.addPass( effectVignette );
-
 
 		//
 		pasos = 1;
@@ -1618,13 +1498,7 @@ function generaMapa(camino)
 
 		//console.log(camino);
 
-
-
-
-
-
 	}
-
 
 	// ANIMAR CAMARA
 
@@ -1688,11 +1562,8 @@ function generaMapa(camino)
 
 	}
 
-
 	// ANIMAR TARGET
-
 	function animarTar( px, py, pz, d, t ) {
-
 		tween = new TWEEN.Tween(slotTar)
 			.to({x: px, y: py, z: pz}, t)
 			.delay(d)
@@ -1713,13 +1584,9 @@ function generaMapa(camino)
 
 	}
 
-	
-
 
 	// ANIMAR PISOS
-
 	function animarPiso1( ny, no, t ) {
-
 		if (no == 1) {
 			for (var i = 0; i < piso_1.children.length; i++) {
 				piso_1.children[i].visible = true;
@@ -1758,11 +1625,9 @@ function generaMapa(camino)
 				};
 			})
 		tween.start();
-
 	}
 
 	function animarPiso2( ny, no, t ) {
-
 		if (no == 1) {
 			for (var i = 0; i < piso_2.children.length; i++) {
 				piso_2.children[i].visible = true;
@@ -1787,11 +1652,9 @@ function generaMapa(camino)
 				};
 			})
 		tween.start();
-
 	}
 
 	function animarPiso1s( ny, no, t ) {
-
 		if (no == 1) {
 			for (var i = 0; i < piso_1s.children.length; i++) {
 				piso_1s.children[i].visible = true;
@@ -1818,16 +1681,12 @@ function generaMapa(camino)
 				};
 			})
 		tween.start();
-
 	}
 
 
 	// ANIMAR PUNTERO
-
 	function animarPuntero( xA, yA, t ) {
-
 		// nVueltas
-
 		tween = new TWEEN.Tween(slotPuntero)
 			.interpolation( TWEEN.Interpolation.CatmullRom )
 			.to({x: xA, y: yA}, t)
@@ -1872,14 +1731,10 @@ function generaMapa(camino)
 				};
 			})
 		tween.start();
-
 	}
 
-
 	// ANIMAR TARGET
-
 	function animarHudA( o, t ) {
-
 		tween = new TWEEN.Tween(slotHud)
 			.to({o: o}, t)
 			.easing(TWEEN.Easing.Cubic.InOut)
@@ -1890,16 +1745,10 @@ function generaMapa(camino)
 				//
 			})
 		tween.start();
-
 	}
 
-
-
-
 	//
-
 	function onDocumentMouseDown( event ) {
-
 		event.preventDefault();
 
 		document.addEventListener( 'mousemove', onDocumentMouseMove, false );

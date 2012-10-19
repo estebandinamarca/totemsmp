@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Jquery Library 1.7.1 -->
     <script src="src/js/jquery-1.7.1.min.js"></script>
-    <!-- Jquery Mobile 1.1.0 
-    <script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
-    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />
-    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />-->
     <!-- Jquery UI -->
     <link rel="stylesheet" href="src/css/jquery.ui/jquery-ui.css" />
     <script src="src/js/jquery.ui/jquery-ui.min.js"></script>
-
     <!-- Final Keyboard -->
     <link rel="stylesheet" href="src/css/finalkeyboard/jquery.mobile-1.1.0-rc.1.min.css" />
     <script src="src/js/finalkeyboard/jquery.mobile-1.1.0-rc.1.min.js"></script>
@@ -25,7 +20,6 @@
     
     <script>
     $(document).ready(function() {
-
     var k = $('.keyboard'),
     s = $('#switcher').find('input'),
     set = $('#switcher').find('.ui-controlgroup-controls'),
@@ -57,9 +51,6 @@
         });
         
     });
-
-    //$(".efecto-pagina").css("display", "none");
-    //$('.efecto-pagina').fadeIn(800);
     </script>
     
     <script type="text/JavaScript">
@@ -103,8 +94,6 @@
 function enviaCorreo()
     {
 	$.ajaxSetup({async: false});
-	//$.('.envio-loading').click(function(){});
-	//alert($('#formulario').serialize());
 	$.get("enviaCorreo.php",$('#formulario').serialize(),function(data){});
     }
 </script>

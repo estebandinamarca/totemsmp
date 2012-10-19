@@ -37,9 +37,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c9ba6', end
 
 /* (in)valid inputs */
 button.ui-keyboard-accept.ui-keyboard-valid-input { border-color: #0c0; background: #080; color: #fff; }
-button.ui-keyboard-accept.ui-keyboard-valid-input:hover { background: #0a0; }
+button.ui-keyboard-accept.ui-keyboard-valid-input:hover { background: #000!important; }
 button.ui-keyboard-accept.ui-keyboard-invalid-input { border-color: #c00; background: #800; color: #fff; }
-button.ui-keyboard-accept.ui-keyboard-invalid-input:hover { background: #a00; }
+button.ui-keyboard-accept.ui-keyboard-invalid-input:hover { background: #000!important; }
 
 /*** jQuery Mobile definitions ***/
 /* jQuery Mobile styles - need wider buttons because of font size and text-overflow:ellipsis */

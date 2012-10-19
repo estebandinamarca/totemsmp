@@ -21,9 +21,7 @@ $idTienda=$_GET['idTienda'];
 	    <script src="src/js/mapa/ExtrudeGeometry.js"></script>
 	    <link rel="stylesheet" href="src/css/base/iframes.css" />
 	    <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />
-        
 		<?php $tienda= controlTienda::getTienda($idTienda); ?>
-
 
     <div class="titulo-iframe">
             <img src="src/img/logos/tiendas/<?php echo $tienda->getlogo()?>" width="120" height="100">
@@ -33,7 +31,7 @@ $idTienda=$_GET['idTienda'];
             </div>
     </div>
 	<h1 class="titulo-mapa">Ruta a tu tienda en Nivel <?php echo $tienda->getpiso()?></h1>
-    
+
     <script>
 	$(window).bind("load", function() {
     $('#dvLoading').fadeOut(2100);
@@ -42,7 +40,6 @@ $idTienda=$_GET['idTienda'];
 	<div id="dvLoading">
 		<!-- <img src="src/img/espera.jpg" width="403" height="403"> -->
 	</div>
-
     
 	<div id="mapa"></div>
 	<script>
