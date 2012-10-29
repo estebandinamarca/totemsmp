@@ -57,9 +57,9 @@ else
     			foreach ($marcaEnTiendas as $resultado)
 	    		{
     				?>
-    				<li><img src='src/img/logos/tiendas/<?php echo $resultado->getlogo();?>' width='120' height='100'>
+    				<li><a onclick= 'cargaPagina(<?php echo $resultado->getubiTienda();?>,<?php echo $resultado->getidtienda()?>);'><img src='src/img/logos/tiendas/<?php echo $resultado->getlogo();?>' width='120' height='100'></a>
     				<div class='nombre-tienda'>
-    				<p class="texto-lista"><?php echo $resultado->getnombre();?></p>
+    				<p class="texto-lista"><a onclick= 'cargaPagina(<?php echo $resultado->getubiTienda();?>,<?php echo $resultado->getidtienda()?>);'><?php echo $resultado->getnombre();?></a></p>
     				<p class="subtexto-lista">Nivel <?php echo $resultado->getpiso(); ?></p></div>
 	    			<a class='button-mapa' name="<?php echo $resultado->getidtienda();?>" onclick= 'cargaPagina(<?php echo $resultado->getubiTienda();?>,<?php echo $resultado->getidtienda()?>);'>
     				</a>   	    			
