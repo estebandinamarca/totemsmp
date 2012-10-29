@@ -26,8 +26,14 @@ div.titulo-rubro { padding:7px 25px 7px 15px; height:102px; margin:0 auto 10px a
 	font-size:30px;	text-align:left;line-height:102px;color:#d10f26;-webkit-border-radius: 30px 130px 130px 30px; border-radius: 20px 20px 0px 0px;
 	font-family:'GothamRounded-Medium', Arial, Helvetica, sans-serif;text-shadow: 1px 1px 2px #DDDDDD;filter: dropshadow(color=#4a4a4a, offx=1, offy=1);
 	-webkit-box-shadow:  0px 3px 5px 0px rgba(0, 0, 0, .1);box-shadow:  0px 3px 5px 0px rgba(0, 0, 0, .1);}div.volver-rubros-btn, div.volver-horarios-btn {height:102px; width:142px; margin:0 20px 0 0; float:left}div.volver-horarios-btn span a {height:100px; width:142px; background:url(../../img/horarios-btn.png) center no-repeat; display:block}div.volver-rubros-btn span a {height:100px; width:142px; background:url(../../img/rubros-btn.png) center no-repeat; display:block}
-div.volver-rubros-btn span a:active {background: url(../../img/rubros-btn-active.png) center no-repeat;}div.volver-horarios-btn span a:active {background: url(../../img/horarios-btn-active.png) center no-repeat;}div.titulo-rubro img { float:right; width:120px; height:100px; border:#eeeeee 1px solid; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px;}div.alfabeto {width:1000px; height:120px; padding:20px 0 0 0;}#wrapper {position:relative; z-index:1; display:block; float:left; width:1000px; height:800px; background:#FFF; overflow:auto;}.wrapper-margin {margin:20px 0 0 0;}
-.wrapper-extendido {height:980px!important}.wrapper-extendido-rubros {height:870px!important}#scroller {position:absolute; z-index:1; /*	-webkit-touch-callout:none;*/-webkit-tap-highlight-color:rgba(0,0,0,0); width:100%;	padding:0;}#scroller ul {list-style:none; padding:0; margin:0; width:100%; text-align:left;}#scroller li { padding:0 0 0 10px; min-height:120px; width:910px; margin: 0 40px 5px 40px; border:1px solid #E7E7E7;background-image: linear-gradient(bottom, rgb(255,255,255) 47%, rgb(245,245,245) 100%);background-image: -o-linear-gradient(bottom, rgb(255,255,255) 47%, rgb(245,245,245) 100%);
+div.volver-rubros-btn span a:active {background: url(../../img/rubros-btn-active.png) center no-repeat;}div.volver-horarios-btn span a:active {background: url(../../img/horarios-btn-active.png) center no-repeat;}div.titulo-rubro img { float:right; width:120px; height:100px; border:#eeeeee 1px solid; -webkit-border-radius: 5px 5px 5px 5px; border-radius: 5px 5px 5px 5px;}div.alfabeto {width:1000px; height:120px; padding:20px 0 0 0;}
+#wrapper {position:relative; z-index:1; display:block; float:left; width:1000px; height:800px; background:#FFF; overflow:auto;}
+.wrapper-margin {margin:20px 0 0 0;}
+.wrapper-extendido {height:980px!important}
+.wrapper-corto {height:700px!important}
+.wrapper-extendido-rubros {height:870px!important}
+
+#scroller {position:absolute; z-index:1; /*	-webkit-touch-callout:none;*/-webkit-tap-highlight-color:rgba(0,0,0,0); width:100%;	padding:0;}#scroller ul {list-style:none; padding:0; margin:0; width:100%; text-align:left;}#scroller li { padding:0 0 0 10px; min-height:120px; width:910px; margin: 0 40px 5px 40px; border:1px solid #E7E7E7;background-image: linear-gradient(bottom, rgb(255,255,255) 47%, rgb(245,245,245) 100%);background-image: -o-linear-gradient(bottom, rgb(255,255,255) 47%, rgb(245,245,245) 100%);
 	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 47%, rgb(245,245,245) 100%);background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 47%, rgb(245,245,245) 100%);background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 47%, rgb(245,245,245) 100%);background-image: -webkit-gradient(
 	linear,	left bottom,left top,color-stop(0.47, rgb(255,255,255)),color-stop(1, rgb(245,245,245)));-webkit-border-radius: 6px;   border-radius: 6px 22px 22px 6px;
 	display:block;clear:both;overflow:auto;}#scroller li.divisor { padding:7px 15px 7px 15px; min-width: 60px; height:20px; min-height:20px;background-image: linear-gradient(bottom, rgb(196,196,196) 8%, rgb(217,217,217) 54%);background-image: -o-linear-gradient(bottom, rgb(196,196,196) 8%, rgb(217,217,217) 54%);
@@ -63,12 +69,13 @@ input.ayuda-campo, textarea.ayuda-mensaje {width:820px; height:60px; margin:5px 
 input.ayuda-campo-mitad-left { width: 380px!important; margin: 5px 0; float: left;}
 input.ayuda-campo-mitad-right { width: 380px!important; margin: 5px 0; float: right;}
 textarea.ayuda-mensaje {height:170px;} h1.titulos-ayuda {font-weight:normal; text-shadow:none; font-size:50px; text-align:center; color:#D10F26; font-family:'GothamRounded-Medium', Arial, Helvetica, sans-serif; clear:both; display:block; line-height:50px;} #dvLoading { background:url(../../img/fancybox/fancybox_loading.gif) no-repeat center center; height: 140px; width: 140px; position: fixed; left: 50%; top: 50%;
-margin: -25px 0 0 -25px; z-index: 1000; }​
-html, body, img, a {cursor: none!important; -moz-user-select: none;-webkit-user-select: none;-webkit-user-drag:none; -khtml-user-select: none; -ms-user-select: none; user-select: none;}
-input, label {cursor: none!important;}
+margin: -25px 0 0 -25px; z-index: 1000;}​
 
 textarea.sugerencias-text { font-size: 28px }
 div.bg-inicial { background: url(../../img/escribe.jpg) no-repeat center}
 
 input.facebook {margin:0 auto 10px auto; background:#FFF; border:#CCC 1px solid; font-size:47px; text-align:center;-webkit-border-radius: 20px 20px 20px 20px; border-radius: 20px 20px 20px 20px; font-family: 'GothamRounded-Medium', Arial, Helvetica, sans-serif; color:#666; -webkit-box-shadow: inset 0px 0px 18px 13px rgba(0, 0, 0, 0.1);box-shadow: inset 0px 0px 18px 13px rgba(0, 0, 0, 0.1);}
 input.facebook:focus {border:#999 1px solid; -webkit-box-shadow: inset 0px 0px 18px 13px rgba(98, 98, 98, 0.2);box-shadow: inset 0px 0px 18px 13px rgba(98, 98, 98, 0.2);}
+
+html, body, img, a {cursor: none!important; -moz-user-select: none;-webkit-user-select: none;-webkit-user-drag:none; -khtml-user-select: none; -ms-user-select: none; user-select: none;}
+input, label {cursor: none!important;}

@@ -65,8 +65,14 @@ class controlTienda
 			
 			
 		}
-		if ($nombre!="todo")$result= $sql->devDatos($consulta,array($nombre.'%'));
-		else $result= $sql->devDatos($consulta,array('%%'));
+		if ($nombre!="todo")
+		{
+			if ($nombre!="[0-9]") $result= $sql->devDatos($consulta,array($nombre.'%'));
+			else $result= $sql->devDatos($consulta,array("[0-9]"));
+		}
+		else  $result= $sql->devDatos($consulta,array('%%'));
+		  
+		
 		$result->bind_result($idtienda,$nombre,$logo,$piso,$ubiTienda);
 		
 		while ($result->fetch())
@@ -102,7 +108,11 @@ class controlTienda
 				
 		}
 		
-		if ($nombre!="todo") $result= $sql->devDatos($consulta,array($nombre.'%'));
+		if ($nombre!="todo")
+		{
+			if ($nombre!="[0-9]") $result= $sql->devDatos($consulta,array($nombre.'%'));
+			else $result= $sql->devDatos($consulta,array("[0-9]"));
+		}
 		else $result= $sql->devDatos($consulta,array('%%'));
 		$result->bind_result($numero);
 		if ($result->fetch())return $numero;
@@ -201,8 +211,8 @@ class controlTienda
 		FROM tienda, nodos,propiedadesTienda,detalleMarca,marca
 		WHERE marca.idmarca = detalleMarca.idmarca
 		AND tienda.idtienda = detalleMarca.idtienda
-		AND nodos.idnodo = propiedadesTienda.idnodo
 		AND tienda.idtienda = propiedadesTienda.idtienda 
+		AND nodos.idnodo = propiedadesTienda.idnodo
 		AND marca.idmarca = ?
 		ORDER BY tienda.nombre ASC ";
 		$result= $sql->devDatos($consulta,array($idmarca));

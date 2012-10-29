@@ -17,7 +17,6 @@ $totem = controlTotem::getTotem($inicio);
 <script type="text/javascript" src="src/js/caminoMasCorto/pathfinding-browser.js"></script>
 <script src="src/js/caminoMasCorto/gMatrix1.js"></script>
 <script src="src/js/caminoMasCorto/gMatrix2.js"></script>
-<script src="src/js/caminoMasCorto/gMatrixsub1.js"></script>
 <script src="src/js/jquery-1.7.1.min.js"></script>
 <script src="src/js/mapa/Three.js"></script>
 <script src="src/js/mapa/Detector.js"></script>
@@ -98,9 +97,9 @@ function calculaCamino()
 			coorMetaActual=coorMetaFinal;
 			/*********************************************************************/
 			//alert(pisoInicioActual + " pisoActual;" + coorMetaActual + " metaActual");
-		//	alert(coorInicioActual+"-"+coorMetaActual+" "+pisoInicioActual);
+			//alert(coorInicioActual+"-"+coorMetaActual+" "+pisoInicioActual);
 			camino=generaCamino(coorInicioActual+"-"+coorMetaActual,pisoInicioActual);
-		//	alert(pisoInicioActual + " pisoActual;" +coorInicioActual+ " inicioActual;" + coorMetaActual + " metaActual;" + camino + " camino;"); 
+			//alert(pisoInicioActual + " pisoActual;" +coorInicioActual+ " inicioActual;" + coorMetaActual + " metaActual;" + camino + " camino;"); 
 			var cami="";
 			for (var i = 0; i < camino.length; i++)
 			{
@@ -145,7 +144,7 @@ function calculaCamino()
 				{
 					//alert(cambiadores[l]);
 					//alert(l);
-				//	alert(coorInicioActual+"-"+cambiadores[l]+"->piso->"+pisoInicioActual);
+					//alert(coorInicioActual+"-"+cambiadores[l]+"->piso->"+pisoInicioActual);
 					camino = generaCamino(coorInicioActual+"-"+cambiadores[l],pisoInicioActual);
 					//alert("camino->"+camino);
 					for (var i = 0; i < camino.length; i++)
@@ -173,13 +172,13 @@ function calculaCamino()
 			//	alert(cpisos[0].idnodo + "idnodo cpisos " + cpisos[0].camino+ "--"+cpisos[0].id);
 				$.get("getPisoPorCoorReal.php", { coor: ""+cpisos[0].idnodo ,direccion:"sube",piso:pisoInicioActual},
 						   function(data){
-					   		//	alert(data+" ->data de coorpisoreal");
+					   			//alert(data+" ->data de coorpisoreal");
 					   			data=data.split(";");
 					   			coorInicioActual=data[0];
 					   			pisoInicioActual=data[1];
 					   });
 				
-				//alert(pisoInicioActual + " pisoActual;" + coorMetaActual + " metaActual");
+				//alert(pisoInicioActual + " pisoActual" + coorMetaActual + " metaActual" + coorInicioActual + " coorInicioActual");
 			}
 			else
 			{
@@ -265,7 +264,7 @@ function generaCamino(data,piso)
 		var matrix = gMatrix1();
 		//alert(matrix);
 		//var grid = new PF.Grid(63, 47, matrix);
-		var grid = new PF.Grid(171, 170, matrix);
+		var grid = new PF.Grid(248, 208, matrix);
 		//alert(grid);	
 		/*var grosor="5";
 		var alt="47";*/
@@ -277,21 +276,12 @@ function generaCamino(data,piso)
 		{
 		var matrix = gMatrix2();
 		//alert(matrix);
-		var grid = new PF.Grid(171, 110, matrix);
+		var grid = new PF.Grid(250, 151, matrix);
 	//	var grosor="2";
 	//	var alt="116";
 		
 		}
-	if(piso=="-1")
-	{
 	
-	      var matrix = gMatrixsub1();
-	      //alert(matrix);
-	      var grid = new PF.Grid(171, 106, matrix);
-	 //     var grosor="2";
-	 ///     var alt="116";
-	
-	}
 	/*
 	function convHaMatrix (p) 
 	{
@@ -362,8 +352,8 @@ function generaMapa(camino)
 
 		for (var i = 0; i < camino[j].length; i++) {
 			o = camino[j][i].split("_");				// fragmenta cada fragmento de camino
-	        o[0] = 156 + parseInt(o[0])*2;					// convierte a num y asigna al primer slot del fragmento	//160
-	        o[1] = 340 - parseInt(o[1])*2;					// convierte a num y asigna al segundo slot del fragmento	//339
+	        o[0] = 156 + parseInt(o[0])*1;					// convierte a num y asigna al primer slot del fragmento	//160
+	        o[1] = 340 - parseInt(o[1])*1;					// convierte a num y asigna al segundo slot del fragmento	//339
 	        camino[j][i] = o;							// reemplaza fragmento continuo por uno fragmentado
 		};
 	};
@@ -509,16 +499,16 @@ function generaMapa(camino)
 
 		// ASIGNANDO PISOS
 		//var localesPiso1 = [2,3,4,5,6,7,10,13,15,16,17,18,19,20,21,22,25,26,28,32,35,45,46,47,48,49,52,54,55,56,57,61,64,65,66,69,73,76,77,81,82,83,85,86,87,88,90,94,95,98,99,101,102,104,105,107,108,110,111,114,116,117,120,122,126,127,128,129,130,133,136,137,138,140,143,144,145,150,151,152,153,154,156,158,159,160,162,163,165,166,168,169,170,173,175,176,177,181,183,184,185,187,188,191,195,198,201,203,205,206,208,209,210,211,212,215,217,222,223,224,225,227,228,229,230,231,232,233,234,235,236,237,238,239,241,242,243,244];
-		var localesPiso1 = [2,5,6,7,10,13,16,17,18,19,20,21,22,25,26,28,32,35,45,47,48,49,55,56,61,64,66,69,73,77,81,82,83,86,88,90,94,99,102,104,105,107,108,110,111,114,116,117,120,122,126,129,130,133,136,138,140,144,145,150,151,152,153,154,156,158,159,160,162,163,166,168,169,170,173,175,176,177,181,183,184,187,188,191,195,203,205,208,209,210,212,215,217,222,223,224,225,228,229,230,231,232,233,234,235,236,237,238,239,241,242,243,244, 3,4,15,46,52,54,57,65,76,85,87,95,98,101,127,128,143,165,185,201,206,211,227, 270,271,272,273];
-		var localesPiso2 = [9,11,12,14,23,27,29,30,31,33,34,36,37,38,39,40,41,42,43,44,53,62,67,68,70,71,72,74,75,78,79,82.2,89,91,92,93,97,100,103,106,113,115,118,119,121,124,126.2,131,132,134,139,141,142,146,147,155,157,161,163.2,164,167,171,172,174,179,182,183.2,186,192,193,194,197,199,200,202,204,207,214,218,219,220,221,226,246,247,248,249,250,251,252,253];
-		var localesPiso1s = [24,51,58,59,60,80,96,109,112,123,125,135,137,149,178,180,189,190,196,198,216,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269];
-		var cambiadores = ["a01","a02","a03","a04","a05","e01","e02","e03","e04","e05","m02","m03","m04","m05","m06","m07","m08","m09","m10","m11","m12","m13","m14","m15","m16"];
+		var localesPiso1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217];
+		var localesPiso2 = [218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341];
+		//var localesPiso1s = [24,51,58,59,60,80,96,109,112,123,125,135,137,149,178,180,189,190,196,198,216,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269];
+		//var cambiadores = ["a01","a02","a03","a04","a05","e01","e02","e03","e04","e05","m02","m03","m04","m05","m06","m07","m08","m09","m10","m11","m12","m13","m14","m15","m16"];
 
-		var mAutoplaza = [24,51,58,60,80,96,112,123,125,135,180,196,216,254,255,260,261,262,263,264,265,266,268,269];
-		var mBoulevard = [13,18,64,69,133,154,210,233,235,236,3,4,15,46,52,54,57,65,76,85,87,95,98,101,127,128,143,165,185,201,211,206,227];
-		var mBoulevard0= [59,109,137,149,178,189,190,198,256,257,258,259,267];
-		var mTerrazas  = [10,19,28,55,73,138,188,195,205,224,234,237,238,239, 270,271,272,273];
-		var mComidas   = [97,72,197,167,124,53,142,171,172,39,121,199,38,75,67,226,62,194,37];
+		var mBoulevard = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,32,33,34,35,36,37,38,39,40];
+		var mTerrazas  = [47,48,49,50,51,52,53,54,55,70,71,72];
+		var mAutoplaza = [56,57,58,59,60,61,62,63,64,65,66,67,68,69];
+		var mAires 	   = [129,130,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,207,208,209,210,211,212,213,214,215,216];
+		var mComidas   = [218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239];
 
 		for (var l = 0; l < localesPiso1.length; l++) {
 
@@ -527,11 +517,11 @@ function generaMapa(camino)
 				if ( scene.__objects[i].name == localesPiso1[l].toString() ) {
 					//console.log("objeto "+i+" tiene la iD = "+localesPiso1[l]);
 					piso_1.add(scene.__objects[i]);
-				}else if ( scene.__objects[i].name == "Piso" ){
+				}else if ( scene.__objects[i].name == "Piso1" ){
 					piso_1.add(scene.__objects[i]);
-				}else if ( scene.__objects[i].name == "bathroom" ){
+				}else if ( scene.__objects[i].name == "Piso_gral" ){
 					piso_1.add(scene.__objects[i]);
-				}else if ( scene.__objects[i].name == "Totem_nvo" ){
+				/*}else if ( scene.__objects[i].name == "Totem_nvo" ){
 					piso_1.add(scene.__objects[i]);
 				}else if ( scene.__objects[i].name == "iAutoplaza.001" ){
 					piso_1.add(scene.__objects[i]);
@@ -539,7 +529,70 @@ function generaMapa(camino)
 					piso_1.add(scene.__objects[i]);
 				}else if ( scene.__objects[i].name == "calles" ){
 					piso_1.add(scene.__objects[i]);
+
 				}else if ( scene.__objects[i].name == "estacionamientos1" ){
+					piso_1.add(scene.__objects[i]);*/
+				}else if ( scene.__objects[i].name == "v_01" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_02" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_03" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_04" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_05" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_06" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_07" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_08" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_09" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_10" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_11" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_12" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_13" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_14" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_15" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_16" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_17" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_18" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_19" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_20" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_21" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_22" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_23" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_24" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_25" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_26" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_27" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_28" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_29" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_30" ){
+					piso_1.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "estacionamientos" ){
 					piso_1.add(scene.__objects[i]);
 				};
 			};
@@ -554,13 +607,35 @@ function generaMapa(camino)
 				if ( scene.__objects[i].name == localesPiso2[l].toString() ) {
 					//console.log("objeto "+i+" tiene la iD = "+localesPiso2[l]);
 					piso_2.add(scene.__objects[i]);
-				}else if ( scene.__objects[i].name == "piso2" ){
+				}else if ( scene.__objects[i].name == "Piso2" ){
 					piso_2.add(scene.__objects[i]);
-				}else if ( scene.__objects[i].name == "banos" ){
+				/*}else if ( scene.__objects[i].name == "banos" ){
 					piso_2.add(scene.__objects[i]);
 				}else if ( scene.__objects[i].name == "terraza" ){
 					piso_2.add(scene.__objects[i]);
 				}else if ( scene.__objects[i].name == "iAutoplaza.002" ){
+					piso_2.add(scene.__objects[i]);*/
+				}else if ( scene.__objects[i].name == "v_31" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_32" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_33" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_34" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_35" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_36" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_37" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_38" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_39" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_40" ){
+					piso_2.add(scene.__objects[i]);
+				}else if ( scene.__objects[i].name == "v_41" ){
 					piso_2.add(scene.__objects[i]);
 				};
 			};
@@ -569,7 +644,7 @@ function generaMapa(camino)
 		};
 
 
-		for (var l = 0; l < localesPiso1s.length; l++) {
+		/*for (var l = 0; l < localesPiso1s.length; l++) {
 
 			for (var i = 0; i < scene.__objects.length; i++) {
 
@@ -600,10 +675,10 @@ function generaMapa(camino)
 			};
 
 			
-		};
+		};*/
 
 
-		for (var l = 0; l < cambiadores.length; l++) {
+		/*for (var l = 0; l < cambiadores.length; l++) {
 
 			for (var i = 0; i < scene.__objects.length; i++) {
 
@@ -611,7 +686,7 @@ function generaMapa(camino)
 					scene.__objects[i].visible = false;
 				};
 			};			
-		};
+		};*/
 
 
 		
@@ -619,64 +694,67 @@ function generaMapa(camino)
 		
 		scene.add(piso_1);
 		scene.add(piso_2);
-		scene.add(piso_1s);
+		//scene.add(piso_1s);
 		scene.add(piso_T);
 
 		// MATERIALES
-		activo 		= new THREE.MeshLambertMaterial( { color: 0x2186ba, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 1 } );
+		activo 		= new THREE.MeshLambertMaterial( { color: 0x2186ba, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 1 } );
 		//pasivo = new THREE.MeshLambertMaterial( { color: 0xff0000, ambient: 0xff0000} );
-		//pasivo = new THREE.MeshPhongMaterial( { color: 0xA3A3A3, shading: THREE.FlatShading , ambient: 0xffffff } ); //, opacity: 0.2, transparent: true } ); //, wireframe: true } );
-		pasivo 		= new THREE.MeshLambertMaterial( { color: 0x989795, ambient: 0xffffff, shading: THREE.FlatShading, transparent: true, opacity: 1 } );
-		pisoColor 	= new THREE.MeshLambertMaterial( { color: 0xe1dcd5, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 1 } );
+		//pasivo = new THREE.MeshPhongMaterial( { color: 0xA3A3A3, shading: THREE.FlatShading , ambient: 0xffffff } ); //, opacity: 0.2, transparent: false } ); //, wireframe: true } );
+		pasivo 		= new THREE.MeshLambertMaterial( { color: 0x989795, ambient: 0xffffff, shading: THREE.FlatShading, transparent: false, opacity: 1 } );
+		pisoColor 	= new THREE.MeshLambertMaterial( { color: 0xe1dcd5, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 1 } );
 
-		pisoColor1 	= new THREE.MeshLambertMaterial( { color: 0xCCC9C4, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 1 } );
+		pisoColor1 	= new THREE.MeshLambertMaterial( { color: 0xCCC9C4, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 1 } );
 
 		//tiendas
-		sFalabella 	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tFalabella.jpg' ), transparent: true, opacity: 1 } ); //, ambient: 0x000000 } );
-		sHomecenter	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tHomecenter.jpg' ), transparent: true, opacity: 1 } );
-		sLider 		= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tLider.jpg' ), transparent: true, opacity: 1 } );
-		sParis 		= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tParis.jpg' ), transparent: true, opacity: 1 } );
-		sRipley 	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tRipley.jpg' ), transparent: true, opacity: 1 } );
-		sPolar	 	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tPolar.jpg' ), transparent: true, opacity: 1 } );
+		sFalabella 	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tFalabella.jpg' ), transparent: false, opacity: 1 } ); //, ambient: 0x000000 } );
+		sParis 		= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tParis.jpg' ), transparent: false, opacity: 1 } );
+		sRipley 	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tRipley.jpg' ), transparent: false, opacity: 1 } );
+		sHomecenter	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tHomecenter.jpg' ), transparent: false, opacity: 1 } );
+		sStaIsabel	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tStaIsabel.jpg' ), transparent: false, opacity: 1 } );
 
-		sBoulevard 	= new THREE.MeshLambertMaterial( { color: 0x67e1ad, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 1 } );
-		sTerrazas 	= new THREE.MeshLambertMaterial( { color: 0xffae23, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 1 } ); //ffae23
+		sEstac	 	= new THREE.MeshLambertMaterial( { color: 0x97E8EB, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 1 } );
+		sBoulevard 	= new THREE.MeshLambertMaterial( { color: 0x67e1ad, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 1 } );
+		sTerrazas 	= new THREE.MeshLambertMaterial( { color: 0xffae23, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 1 } ); //ffae23
+		sAutoplaza 	= new THREE.MeshLambertMaterial( { color: 0x03579F, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 1 } );
+		sAires 		= new THREE.MeshLambertMaterial( { color: 0x919191, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 1 } );
+		
 
-		matPisoA = [activo, pasivo, pisoColor, pisoColor1, sFalabella, sHomecenter, sLider, sParis, sRipley, sPolar, sBoulevard, sTerrazas];
+		matPisoA = [activo, pasivo, pisoColor, pisoColor1, sFalabella, sParis, sRipley, sHomecenter, sStaIsabel, sEstac, sBoulevard, sTerrazas, sAutoplaza, sAires];
 
-		activo2		= new THREE.MeshLambertMaterial( { color: 0x2186ba, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
+		activo2		= new THREE.MeshLambertMaterial( { color: 0x2186ba, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
 		//pasivo = new THREE.MeshLambertMaterial( { color: 0xff0000, ambient: 0xff0000} );
-		//pasivo = new THREE.MeshPhongMaterial( { color: 0xA3A3A3, shading: THREE.FlatShading , ambient: 0xffffff } ); //, opacity: 0.2, transparent: true } ); //, wireframe: true } );
-		pasivo2		= new THREE.MeshLambertMaterial( { color: 0x989795, ambient: 0xffffff, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
-		pisoColor2 	= new THREE.MeshLambertMaterial( { color: 0xe1dcd5, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
+		//pasivo = new THREE.MeshPhongMaterial( { color: 0xA3A3A3, shading: THREE.FlatShading , ambient: 0xffffff } ); //, opacity: 0.2, transparent: false } ); //, wireframe: true } );
+		pasivo2		= new THREE.MeshLambertMaterial( { color: 0x989795, ambient: 0xffffff, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
+		pisoColor2 	= new THREE.MeshLambertMaterial( { color: 0xe1dcd5, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
 
 		//tiendas
-		sFalabella2	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tFalabella.jpg' ), transparent: true, opacity: 0 } ); //, ambient: 0x000000 } );
-		sParis2		= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tParis.jpg' ), transparent: true, opacity: 0 } );
-		sRipley2 	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tRipley.jpg' ), transparent: true, opacity: 0 } );
+		sFalabella2	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tFalabella.jpg' ), transparent: false, opacity: 0 } ); //, ambient: 0x000000 } );
+		sParis2		= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tParis.jpg' ), transparent: false, opacity: 0 } );
+		sRipley2 	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tRipley.jpg' ), transparent: false, opacity: 0 } );
+		sJohnson 	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tJohnson.jpg' ), transparent: false, opacity: 0 } );
 
-		sE_Azul 	= new THREE.MeshLambertMaterial( { color: 0x888BBE, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
-		sE_Cyan 	= new THREE.MeshLambertMaterial( { color: 0x97E8EB, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
-		sE_Gris 	= new THREE.MeshLambertMaterial( { color: 0x919191, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
-		sE_Rojo 	= new THREE.MeshLambertMaterial( { color: 0xF25252, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
-		sE_Verde 	= new THREE.MeshLambertMaterial( { color: 0x9BFC9D, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
+		sE_Azul 	= new THREE.MeshLambertMaterial( { color: 0x888BBE, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
+		sE_Cyan 	= new THREE.MeshLambertMaterial( { color: 0x97E8EB, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
+		sE_Gris 	= new THREE.MeshLambertMaterial( { color: 0x919191, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
+		sE_Rojo 	= new THREE.MeshLambertMaterial( { color: 0xF25252, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
+		sE_Verde 	= new THREE.MeshLambertMaterial( { color: 0x9BFC9D, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
 
-		sAutoplaza 	= new THREE.MeshLambertMaterial( { color: 0x03579F, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
-		sComidas 	= new THREE.MeshLambertMaterial( { color: 0xFFD307, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 0 } );
-		sBoulevard0	= new THREE.MeshLambertMaterial( { color: 0x67e1ad, ambient: 0x000000, shading: THREE.FlatShading, transparent: true, opacity: 1 } );
+		sComidas 	= new THREE.MeshLambertMaterial( { color: 0xFFD307, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
+		sBoulevard0	= new THREE.MeshLambertMaterial( { color: 0x67e1ad, ambient: 0x000000, shading: THREE.FlatShading, transparent: false, opacity: 0 } );
 
-		matPisoB = [activo2, pasivo2, pisoColor2, sFalabella2, sParis2, sRipley2, sE_Azul, sE_Cyan, sE_Gris, sE_Rojo, sE_Verde, sAutoplaza, sComidas, sBoulevard0];
+		matPisoB = [activo2, pasivo2, pisoColor2, sFalabella2, sParis2, sRipley2, sJohnson, sE_Azul, sE_Cyan, sE_Gris, sE_Rojo, sE_Verde, sComidas, sBoulevard0];
 
 		// Totem
 
-		/*for (var i = 0; i < scene.__objects.length; i++) {
+		for (var i = 0; i < scene.__objects.length; i++) {
 			if ( scene.__objects[i].name == "Totem_nvo" ) {
-				console.log("objeto "+i+" se llama Totem");
+				//console.log("objeto "+i+" se llama Totem");
 				//console.log(scene.__objects[i]);
 			};
-		};*/
+		};
 
-		mTotem = scene.__objects[27];
+		mTotem = scene.__objects[0];
 		sTotem	= new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/tTotem.jpg' ) } ); //, transparent: true, opacity: 1 } );
 		mTotem.material = sTotem;
 		mTotem.position.x = camino[2][0][0];
@@ -695,24 +773,24 @@ function generaMapa(camino)
 				if( piso_1.children[i].name === idTienda ) {
 					piso_1.children[i].material = activo;
 					mTiendaSel = piso_1.children[i];
-				}else if( piso_1.children[i].name === "Piso" ){
+				}else if( piso_1.children[i].name === "Piso1" ){
 			 		piso_1.children[i].material = pisoColor;
-			 	}else if( piso_1.children[i].name === "82" ){
+			 	}else if( piso_1.children[i].name === "131" ){
 			 		piso_1.children[i].material = sFalabella;
-			 	}else if( piso_1.children[i].name === "107" ){
-			 		piso_1.children[i].material = sHomecenter;
-			 	}else if( piso_1.children[i].name === "130" ){
-			 		piso_1.children[i].material = sLider;
-			 	}else if( piso_1.children[i].name === "163" ){
+			 	}else if( piso_1.children[i].name === "92" ){
 			 		piso_1.children[i].material = sParis;
-			 	}else if( piso_1.children[i].name === "183" ){
+			 	}else if( piso_1.children[i].name === "91" ){
 			 		piso_1.children[i].material = sRipley;
-			 	}else if( piso_1.children[i].name === "126" ){
-			 		piso_1.children[i].material = sPolar;
-			 	}else if( piso_1.children[i].name === "calles" ){
+
+			 	}else if( piso_1.children[i].name === "217" ){
+			 		piso_1.children[i].material = sHomecenter;
+			 	}else if( piso_1.children[i].name === "31" ){
+			 		piso_1.children[i].material = sStaIsabel;
+
+			 	}else if( piso_1.children[i].name === "Piso_gral" ){
 			 		piso_1.children[i].material = pisoColor1;
-			 	}else if( piso_1.children[i].name === "estacionamientos1" ){
-			 		piso_1.children[i].material = pisoColor1;
+			 	}else if( piso_1.children[i].name === "estacionamientos" ){
+			 		piso_1.children[i].material = sEstac;
 			 	}else{
 			 		piso_1.children[i].material = pasivo;
 				}
@@ -726,16 +804,16 @@ function generaMapa(camino)
 				if( piso_2.children[i].name === idTienda ) {
 					piso_2.children[i].material = activo2;
 					mTiendaSel = piso_2.children[i];
-				}else if( piso_2.children[i].name === "piso2" ){
+				}else if( piso_2.children[i].name === "Piso2" ){
 			 		piso_2.children[i].material = pisoColor2;
-			 	}else if( piso_2.children[i].name === "82.2" ){
+			 	}else if( piso_2.children[i].name === "285" ){
 			 		piso_2.children[i].material = sFalabella2;
-			 	}else if( piso_2.children[i].name === "163.2" ){
+			 	}else if( piso_2.children[i].name === "256" ){
 			 		piso_2.children[i].material = sParis2;
-			 	}else if( piso_2.children[i].name === "183.2" ){
+			 	}else if( piso_2.children[i].name === "255" ){
 			 		piso_2.children[i].material = sRipley2;
-			 	}else if( piso_2.children[i].name === "126.2" ){
-			 		piso_2.children[i].material = sRipley2;
+			 	}else if( piso_2.children[i].name === "272" ){
+			 		piso_2.children[i].material = sJohnson;
 			 	}else{
 			 		piso_2.children[i].material = pasivo2;
 				}
@@ -744,7 +822,7 @@ function generaMapa(camino)
 
 			}
 
-			var o=piso_1s.children.length;
+			/*var o=piso_1s.children.length;
 			for (i=0; i<o; i++){
 				
 				//if( scene.__objects[i].name === "160" ) {
@@ -753,8 +831,6 @@ function generaMapa(camino)
 					mTiendaSel = piso_1s.children[i];
 				}else if( piso_1s.children[i].name === "piso_subt" ){
 			 		piso_1s.children[i].material = pisoColor2;
-			 	/*}else if( piso_1s.children[i].name === "estacionamientos" ){
-			 		piso_1s.children[i].material = sFalabella2;*/
 			 	}else if( piso_1s.children[i].name === "163.2" ){
 			 		piso_1s.children[i].material = sParis2;
 			 	}else if( piso_1s.children[i].name === "183.2" ){
@@ -779,30 +855,12 @@ function generaMapa(camino)
 
 				piso_1s.children[i].visible = false;
 
-			}
-
-			for (var l = 0; l < mAutoplaza.length; l++) {
-				for (var i = 0; i < scene.__objects.length; i++) {
-					if ( scene.__objects[i].name == mAutoplaza[l].toString() ) {
-						scene.__objects[i].material = sAutoplaza;
-					/*}else if( scene.__objects[i].name === "iAutoplaza" ){
-			 			scene.__objects[i].material = sAutoplaza;*/
-					};
-				};
-			};
+			}*/
 
 			for (var l = 0; l < mBoulevard.length; l++) {
 				for (var i = 0; i < scene.__objects.length; i++) {
 					if ( scene.__objects[i].name == mBoulevard[l].toString() ) {
 						scene.__objects[i].material = sBoulevard;
-					};
-				};
-			};
-
-			for (var l = 0; l < mBoulevard0.length; l++) {
-				for (var i = 0; i < scene.__objects.length; i++) {
-					if ( scene.__objects[i].name == mBoulevard0[l].toString() ) {
-						scene.__objects[i].material = sBoulevard0;
 					};
 				};
 			};
@@ -815,6 +873,22 @@ function generaMapa(camino)
 				};
 			};
 
+			for (var l = 0; l < mAutoplaza.length; l++) {
+				for (var i = 0; i < scene.__objects.length; i++) {
+					if ( scene.__objects[i].name == mAutoplaza[l].toString() ) {
+						scene.__objects[i].material = sAutoplaza;
+					};
+				};
+			};
+
+			for (var l = 0; l < mAires.length; l++) {
+				for (var i = 0; i < scene.__objects.length; i++) {
+					if ( scene.__objects[i].name == mAires[l].toString() ) {
+						scene.__objects[i].material = sAires;
+					};
+				};
+			};
+
 			for (var l = 0; l < mComidas.length; l++) {
 				for (var i = 0; i < scene.__objects.length; i++) {
 					if ( scene.__objects[i].name == mComidas[l].toString() ) {
@@ -822,6 +896,13 @@ function generaMapa(camino)
 					};
 				};
 			};
+
+
+			/*for (var i = 0; i < scene.__objects.length; i++) {
+				if ( scene.__objects[i].name == "estacionamientos" ) {
+					scene.__objects[i].material = sE_Verde;
+				};
+			};*/
 
 
 		}else{
@@ -1031,6 +1112,8 @@ function generaMapa(camino)
 		mCilFlechaA.position = coordMedio;
 		scene.add( mCilFlechaA );*/
 
+
+
         // LINEAS + HUD
         
 
@@ -1050,17 +1133,17 @@ function generaMapa(camino)
         var iHudDestino = THREE.ImageUtils.loadTexture( 'src/img/logos/tiendas/<?php echo $foto;?>' );
 
         var spHudInicio = new THREE.Sprite( { map: iHudInicio, useScreenCoordinates: false, color: 0xffffff } );
-		spHudInicio.scale.x = 0.12;
-		spHudInicio.scale.y = 0.12;
-		spHudInicio.position.set( 285, 10, -277 ); //( camino[2][0], 10, -camino[2][2] )
+		spHudInicio.scale.x = 0.06; // era 0.12
+		spHudInicio.scale.y = 0.06;
+		spHudInicio.position.set( camino[2][0][0]-4, 6, -camino[2][0][1]-2 ); //( camino[2][0], 10, -camino[2][2] )
 		scene.add( spHudInicio );
 		huds.push(spHudInicio);
 
 		//console.log(camino[2][0][0]+", "+-camino[2][0][1])
 
 		var spHudDestino = new THREE.Sprite( { map: iHudDestino, useScreenCoordinates: false, color: 0xffffff } );
-		spHudDestino.scale.x = 0.084;
-		spHudDestino.scale.y = 0.07;
+		spHudDestino.scale.x = 0.042; // era 0.084
+		spHudDestino.scale.y = 0.035;  // 0.07
 		//spHudDestino.position.set( mTiendaSel.position.x, 10, mTiendaSel.position.z );
 
 		if (camino[3] == -1) {
@@ -1165,21 +1248,22 @@ function generaMapa(camino)
 		scene.add( spHudEsc01 );*/
 
 		// piso 1
-		esc101 = [141,88,1];
-		esc102 = [140,93,1];
-		esc103 = [121,90,2];
-		esc104 = [109,73,1];
-		esc105 = [105,83,2];
-		esc106 = [98,88,1];
-		esc107 = [87,89,1];
-		esc108 = [93,69,1];
-		esc109 = [52,72,1];
-		esc110 = [43,73,2];
-		esc111 = [49,61,1];
-		esc112 = [60,40,1];
-		esc113 = [52,20,1];
-		esc114 = [98,59,1];
-		escalas01 = [esc101, esc102, esc103, esc104, esc105, esc106, esc107, esc108, esc109, esc110, esc111, esc112, esc113, esc114];
+		esc101 = [120,84,1];
+		esc102 = [126,102,1];
+		esc103 = [126,106,1];
+		esc104 = [126,118,1];
+		esc105 = [169,140,1];
+		esc106 = [174,141,1];
+		esc107 = [169,109,1];
+		esc108 = [179,104,2]; //172,104,2
+		esc109 = [169,98,1];
+		esc110 = [169,68,1];
+		esc111 = [182,58,1];
+		esc112 = [203,53,1];
+		esc113 = [227,74,1];
+		esc114 = [229,88,1];
+		esc115 = [222,98,1];
+		escalas01 = [esc101, esc102, esc103, esc104, esc105, esc106, esc107, esc108, esc109, esc110, esc111, esc112, esc113, esc114, esc115];
 
 		for (var j = 0; j < escalas01.length-1; j++) {
 			//escalas01[j]
@@ -1194,9 +1278,9 @@ function generaMapa(camino)
 				};
 
 				var spHudEsc01 = new THREE.Sprite( { map: imagen, useScreenCoordinates: false, color: 0xffffff } );
-				spHudEsc01.scale.x = 0.05;
-				spHudEsc01.scale.y = 0.05;
-				spHudEsc01.position.set( 156 + parseInt(escalas01[j][0])*2, 5, -(340 - parseInt(escalas01[j][1])*2) );
+				spHudEsc01.scale.x = 0.025; // 0.05
+				spHudEsc01.scale.y = 0.025;
+				spHudEsc01.position.set( 156 + parseInt(escalas01[j][0])*1, 5, -(340 - parseInt(escalas01[j][1])*1) );
 				scene.add( spHudEsc01 );
 				piso_1.add( spHudEsc01 );
 				matPisoA.push(spHudEsc01);
@@ -1204,18 +1288,23 @@ function generaMapa(camino)
 		};
 
 		// piso 2
-		esc201 = [141,88,1];
-		esc202 = [140,93,1];
-		esc203 = [121,90,2];
-		esc204 = [109,73,1];
-		esc205 = [105,83,2];
-		esc206 = [87,89,1];
-		esc207 = [93,69,1];
-		esc208 = [52,72,1];
-		esc209 = [43,73,2];
-		esc210 = [49,61,1];
-		esc211 = [52,20,1];
-		escalas02 = [esc201, esc202, esc203, esc204, esc205, esc206, esc207, esc208, esc209, esc210, esc211];
+		esc201 = [120,83,1];
+		esc202 = [127,101,1];
+		esc203 = [127,105,1];
+		esc204 = [126,118,1];
+		esc205 = [169,139,1];
+		esc206 = [173,140,1];
+		esc207 = [168,108,1];
+		esc208 = [179,103,2];
+		esc209 = [169,98,1];
+		esc210 = [168,67,1];
+		esc211 = [182,53,1];
+		esc212 = [203,51,1];
+		esc213 = [226,73,1];
+		esc214 = [229,86,1];
+		esc215 = [221,97,1];
+
+		escalas02 = [esc201, esc202, esc203, esc204, esc205, esc206, esc207, esc208, esc209, esc210, esc211, esc212, esc213, esc214, esc215];
 
 		for (var j = 0; j < escalas02.length-1; j++) {
 			//escalas02[j]
@@ -1230,9 +1319,9 @@ function generaMapa(camino)
 				};
 
 				var spHudEsc02 = new THREE.Sprite( { map: imagen, useScreenCoordinates: false, color: 0xffffff } );
-				spHudEsc02.scale.x = 0.05;
-				spHudEsc02.scale.y = 0.05;
-				spHudEsc02.position.set( 156 + parseInt(escalas02[j][0])*2, 45, -(340 - parseInt(escalas02[j][1])*2) );
+				spHudEsc02.scale.x = 0.025;
+				spHudEsc02.scale.y = 0.025;
+				spHudEsc02.position.set( 156 + parseInt(escalas02[j][0])*1, 45, -(340 - parseInt(escalas02[j][1])*1) );
 				scene.add( spHudEsc02 );
 				piso_2.add( spHudEsc02 );
 				spHudEsc02.visible = false;
@@ -1241,7 +1330,7 @@ function generaMapa(camino)
 		};
 
 		// piso -1
-		esc001 = [140,93,1];
+		/*esc001 = [140,93,1];
 		esc002 = [121,90,1];
 		esc003 = [105,83,2];
 		esc004 = [98,88,1];
@@ -1266,49 +1355,50 @@ function generaMapa(camino)
 				var spHudEsc00 = new THREE.Sprite( { map: imagen, useScreenCoordinates: false, color: 0xffffff } );
 				spHudEsc00.scale.x = 0.05;
 				spHudEsc00.scale.y = 0.05;
-				spHudEsc00.position.set( 156 + parseInt(escalas01s[j][0])*2, -40, -(340 - parseInt(escalas01s[j][1])*2) );
+				spHudEsc00.position.set( 156 + parseInt(escalas01s[j][0])*1, -40, -(340 - parseInt(escalas01s[j][1])*1) );
 				scene.add( spHudEsc00 );
 				piso_1s.add( spHudEsc00 );
 				spHudEsc00.visible = false;
 				matPisoB.push(spHudEsc00);
 			};
-		};
+		};*/
 
 		// LOGOS UNIDADES DE SERVICIO
 		var iHudUni1 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_bulevard.png' );
 
 		var spHudUni1 = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
-		spHudUni1.scale.x = 0.12;
-		spHudUni1.scale.y = 0.12;
-		spHudUni1.position.set( 322, 15, -40 );
+		spHudUni1.scale.x = 0.06; // era 0.12
+		spHudUni1.scale.y = 0.06;
+		spHudUni1.position.set( 185, 15, -260 );
 		scene.add( spHudUni1 );
 		piso_1.add( spHudUni1 );
 		matPisoA.push(spHudUni1);
+		
 
-		var spHudUni1b = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
-		spHudUni1b.scale.x = 0.12;
-		spHudUni1b.scale.y = 0.12;
+		/*var spHudUni1b = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
+		spHudUni1b.scale.x = 0.06; // 0.12
+		spHudUni1b.scale.y = 0.06;
 		spHudUni1b.position.set( 196, 15, -224 );
 		scene.add( spHudUni1b );
 		piso_1.add( spHudUni1b );
-		matPisoA.push(spHudUni1b);
+		matPisoA.push(spHudUni1b);*/
 
-		var spHudUni1c = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
+		/*var spHudUni1c = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
 		spHudUni1c.scale.x = 0.12;
 		spHudUni1c.scale.y = 0.12;
 		spHudUni1c.position.set( 196, -30, -224 );
 		scene.add( spHudUni1c );
 		spHudUni1c.visible = false;
 		piso_1s.add( spHudUni1c );
-		matPisoB.push(spHudUni1c);
+		matPisoB.push(spHudUni1c);*/
 
 
 		var iHudUni2 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_terrazas.png' );
 
 		var spHudUni2 = new THREE.Sprite( { map: iHudUni2, useScreenCoordinates: false, color: 0xffffff } );
-		spHudUni2.scale.x = 0.12;
-		spHudUni2.scale.y = 0.12;
-		spHudUni2.position.set( 314, 15, -272 );
+		spHudUni2.scale.x = 0.06;
+		spHudUni2.scale.y = 0.06;
+		spHudUni2.position.set( 255, 15, -245 );
 		scene.add( spHudUni2 );
 		piso_1.add( spHudUni2 );
 		matPisoA.push(spHudUni2);
@@ -1317,9 +1407,9 @@ function generaMapa(camino)
 		var iHudUni3 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_comidas.png' );
 
 		var spHudUni3 = new THREE.Sprite( { map: iHudUni3, useScreenCoordinates: false, color: 0xffffff } );
-		spHudUni3.scale.x = 0.12;
-		spHudUni3.scale.y = 0.12;
-		spHudUni3.position.set( 256, 70, -264 );
+		spHudUni3.scale.x = 0.06;
+		spHudUni3.scale.y = 0.06;
+		spHudUni3.position.set( 280, 60, -240 );
 		scene.add( spHudUni3 );
 		spHudUni3.visible = false;
 		piso_2.add( spHudUni3 );
@@ -1329,13 +1419,13 @@ function generaMapa(camino)
 		var iHudUni4 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_autoplaza.png' );
 
 		var spHudUni4 = new THREE.Sprite( { map: iHudUni4, useScreenCoordinates: false, color: 0xffffff } );
-		spHudUni4.scale.x = 0.12;
-		spHudUni4.scale.y = 0.12;
-		spHudUni4.position.set( 290, -30, -260 );
+		spHudUni4.scale.x = 0.06;
+		spHudUni4.scale.y = 0.06;
+		spHudUni4.position.set( 240, 15, -210 );
 		scene.add( spHudUni4 );
-		spHudUni4.visible = false;
-		piso_1s.add( spHudUni4 );
-		matPisoB.push(spHudUni4);
+		piso_1.add( spHudUni4 );
+		matPisoA.push(spHudUni4);
+		
 
 		// apagando textos - v04i3
 
@@ -1538,7 +1628,7 @@ function generaMapa(camino)
 					} else if (camino[3]==-1){
 						huds[5].visible = true;												// hud Baja visible
 						animarPiso1( 40, 0, 3000 );											// anim cambio de piso -1
-						animarPiso1s( 45, 1, 3000 );
+						//animarPiso1s( 45, 1, 3000 );
 					};
 					
 					pasos = 4;
@@ -1654,7 +1744,7 @@ function generaMapa(camino)
 		tween.start();
 	}
 
-	function animarPiso1s( ny, no, t ) {
+	/*function animarPiso1s( ny, no, t ) {
 		if (no == 1) {
 			for (var i = 0; i < piso_1s.children.length; i++) {
 				piso_1s.children[i].visible = true;
@@ -1681,7 +1771,7 @@ function generaMapa(camino)
 				};
 			})
 		tween.start();
-	}
+	}*/
 
 
 	// ANIMAR PUNTERO
@@ -1759,6 +1849,7 @@ function generaMapa(camino)
 		mouseYOnMouseDown = event.clientY - windowHalfY;
 		targetRotationOnMouseDown = targetRotation;
 		targetElevationOnMouseDown = targetElevation;
+
 	}
 
 	function onDocumentMouseMove( event ) {
@@ -1768,6 +1859,7 @@ function generaMapa(camino)
 
 		targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.02;
 		targetElevation = targetElevationOnMouseDown + ( mouseY - mouseYOnMouseDown ) * 0.02;
+		//console.log("MouseDown ok");
 	}
 
 	function onDocumentMouseUp( event ) {
@@ -1776,7 +1868,42 @@ function generaMapa(camino)
 		document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
 		document.removeEventListener( 'mouseout', onDocumentMouseOut, false );
 
-		if (mouseYOnMouseDown < -160) {
+		
+
+	}
+
+	function onDocumentMouseOut( event ) {
+
+		document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
+		document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
+		document.removeEventListener( 'mouseout', onDocumentMouseOut, false );
+	}
+
+	function onDocumentTouchStart( event ) {
+
+		if ( event.touches.length == 1 ) {
+
+			event.preventDefault();
+
+			mouseXOnMouseDown = event.touches[ 0 ].pageX - windowHalfX;
+			mouseYOnMouseDown = event.touches[ 0 ].pageY - windowHalfY;
+			targetRotationOnMouseDown = targetRotation;
+			targetElevationOnMouseDown = targetElevation;
+		}
+	}
+
+	function onDocumentTouchMove( event ) {
+
+		if ( event.touches.length == 1 ) {
+
+			event.preventDefault();
+
+			mouseX = event.touches[ 0 ].pageX - windowHalfX;
+			mouseY = event.touches[ 0 ].pageY - windowHalfY;
+			targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.05;
+			targetElevation = targetElevationOnMouseDown + ( mouseY - mouseYOnMouseDown ) * 0.05;
+
+			if (mouseYOnMouseDown < -160) {
 			if (mouseXOnMouseDown > -140 && mouseXOnMouseDown < -70) {
 				//console.log(mouseXOnMouseDown);
 				btns = 1;
@@ -1870,39 +1997,6 @@ function generaMapa(camino)
 				animarCam(  dB1[2][0], dB1[2][1], dB1[2][2], 0, 2000 );
 			};
 		};
-
-	}
-
-	function onDocumentMouseOut( event ) {
-
-		document.removeEventListener( 'mousemove', onDocumentMouseMove, false );
-		document.removeEventListener( 'mouseup', onDocumentMouseUp, false );
-		document.removeEventListener( 'mouseout', onDocumentMouseOut, false );
-	}
-
-	function onDocumentTouchStart( event ) {
-
-		if ( event.touches.length == 1 ) {
-
-			event.preventDefault();
-
-			mouseXOnMouseDown = event.touches[ 0 ].pageX - windowHalfX;
-			mouseYOnMouseDown = event.touches[ 0 ].pageY - windowHalfY;
-			targetRotationOnMouseDown = targetRotation;
-			targetElevationOnMouseDown = targetElevation;
-		}
-	}
-
-	function onDocumentTouchMove( event ) {
-
-		if ( event.touches.length == 1 ) {
-
-			event.preventDefault();
-
-			mouseX = event.touches[ 0 ].pageX - windowHalfX;
-			mouseY = event.touches[ 0 ].pageY - windowHalfY;
-			targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.05;
-			targetElevation = targetElevationOnMouseDown + ( mouseY - mouseYOnMouseDown ) * 0.05;
 
 		}
 	}
@@ -2208,7 +2302,7 @@ function generaMapa(camino)
 		var loader = new THREE.SceneLoader();
 		loader.callbackProgress = callbackProgress;
 
-		loader.load( "src/js/mapa/v05b.js", callbackFinished );
+		loader.load( "src/js/mapa/v06h.js", callbackFinished );
 		
 	}
 }

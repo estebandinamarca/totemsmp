@@ -4,7 +4,7 @@ require_once 'src/classes/controlCamino.class.php';
 require_once 'src/classes/controlTienda.class.php';
 //$camino= calculaCamino::getCalculoCamino("2","53");
 
-$inicio="263";
+$inicio="372";
 $meta=$_GET['meta'];
 $idTienda=$_GET['idTienda'];
 
