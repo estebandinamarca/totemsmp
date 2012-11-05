@@ -3,17 +3,15 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-10-2012 a las 14:44:57
+-- Tiempo de generación: 05-11-2012 a las 15:03:28
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-CREATE DATABASE IF NOT EXISTS `totemMallPlaza`;
-USE `totemMallPlaza`;
-
+CREATE DATABASE IF NOT EXISTS `totemmallplaza`;
+USE `totemmallplaza`;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
