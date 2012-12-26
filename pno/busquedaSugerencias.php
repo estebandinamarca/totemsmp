@@ -24,9 +24,7 @@
 
 <body> 
 <div data-role="page" id="busqueda-sugerencias" class="mall-inicio-bg">
-
-
-	<div data-role="content">
+<div data-role="content">
     <div class="titulos">
     <div class="volver-btn"><span><a href="inicio.html" rel="external"></a></span></div>
     <div class="titulo-txt">
@@ -58,22 +56,8 @@ var i=1;
 var a="";
 function buscaRubros(){
 	$("#resultadosRubros").load("sugerencia.php");
-	/*##################### BUSCADOR ######################3
-		 if (document.getElementById("txtContent").value=="")
-			 { 
-			 $("#resultados").empty();
-			 $("#resultados").append("<img src='src/img/img-marcas.png' style='text-align:center';>");
-			 } 
-		 else 
-			 {
-				$("#resultados").load("resultadosTienda.php?bus=1&"+$("#txtContent").serialize());
-			 }
-			 ###################### FIN BUSCADOR #############################
-			 */			 
-			
-			return true;
+		return true;
 }
 </script>
-<div style="margin:0 auto; width:100%"><div id="virtualKeyboard" style="z-index:1000;"></div></div>
 </body>
 </html>

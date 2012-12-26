@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <html> 
 	<head> 
@@ -12,7 +11,6 @@
 	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
     <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
     <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />-->
-
 	<!-- iScroll 4.0 -->
 	<script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>        
 	<!-- Jquery UI -->
@@ -26,6 +24,7 @@
     <script src="src/js/finalkeyboard/jquery.keyboard.extension-mobile.js"></script>    
     <!-- Estilo Base -->
     <link rel="stylesheet" href="src/css/base/estilo.base.css" />
+    <!-- Time Out -->
     <script type="text/JavaScript">
 	var timeout;
 	document.onmousemove = function(){
@@ -37,10 +36,10 @@
 
 <body>
 <div data-role="page" id="busqueda-productos" class="mall-inicio-bg">
-
+    
+    <!-- Teclado -->
 	<script>
 	$(document).ready(function() {
-
     var k = $('.keyboard'),
     s = $('#switcher').find('input'),
     set = $('#switcher').find('.ui-controlgroup-controls'),
@@ -74,14 +73,10 @@
 		$(".efecto-pagina").css("display", "none");
 		$('.efecto-pagina').fadeIn(2500);	
 	 });
-
-	$(window).bind("load", function() {
-	    $('#dvLoading').fadeOut(1700);
-	});
 	</script>
-	<div id="dvLoading"></div>
-    
-	<div data-role="content">
+	
+	<!-- <div id="dvLoading"></div> -->
+    <div data-role="content">
 		<div class="titulos">
     		<div class="volver-btn"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
     		<div class="titulo-txt">
@@ -106,46 +101,39 @@
 			</div>
 
 			<div class="bg-busquedas bg-busquedas-padding">
-				<!--##########3 BUSCADOR ##############################-->
+				<!-- BUSCADOR -->
 				<div class="emailContainer">			
 				<input type="text" name="res"  class="keyboard search" id="txtContent" onchange="buscaTiendas();"  value=""/> 
-				</div>
-				<!--##########3 FIN BUSCADOR ##############################-->
+				</div><!-- FIN BUSCADOR -->
+
 				<div id="resultadosProducto" class="efecto-pagina" style="text-align: center; margin: 0; padding: 0;">
 					<img src="src/img/escribe.jpg">
 				</div>
 			</div>
 			
-			
-		</div><!-- /contenedor-busqueda -->
+		</div>
         
     <div class="volver-bottom">
     <div class="volver-btn-bottom"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
     </div>
     
-	</div><!-- /content -->
-</div><!-- /page -->
+	</div>
+</div>
 
 <script>
 var i=1;
 var a="";
 function buscaTiendas(){
-	//$("#resultadosTiendas").load("resultadosTienda.php?bus=1&res="+letra+"");
-	//##################### BUSCADOR ######################3
 		 if (document.getElementById("txtContent").value=="")
-			 { 
-			 $("#resultadosProducto").empty();
-			 i=1;
-			// $("#resultadosProducto").append("<img src='src/img/img-marcas.png' style='text-align:center';>");
-			 } 
+			{ 
+				 $("#resultadosProducto").empty();
+				 i=1;
+			} 
 		 else 
 			 {
 				if (i>=3)$("#resultadosProducto").load("resultadosProducto.php?"+$("#txtContent").serialize());
 				i++;
-				//alert($("#txtContent").serialize());
 			 }
-		//	 ###################### FIN BUSCADOR #############################
-			 //*/			 
 			return true;
 }
 </script>

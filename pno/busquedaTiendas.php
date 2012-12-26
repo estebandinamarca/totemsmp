@@ -30,7 +30,6 @@
 
 <body>
 <div data-role="page" id="busqueda-tiendas" class="mall-inicio-bg">
-
 	<script>
 	$(window).bind("load", function() {
     $('#dvLoading').fadeOut(1700);
@@ -68,13 +67,6 @@
 			</div>
 
 			<div class="bg-busquedas">
-				<!-- 
-				##########3 BUSCADOR ##############################
-				
-				<input name="res" type="text" class="search" id="txtContent" onkeyup="buscaTiendas(event);" onfocus="jsKeyboard.focus(this);clean(this);" value=""> 
-				
-				##########3 FIN BUSCADOR ##############################
-				-->
 			<div class="alfabeto">
 			<fieldset data-role="controlgroup" data-type="horizontal">
          		<input type="radio" name="radio-choice-2" id="radio-choice-21" value="choice-1" checked="checked" onClick="buscaTiendas('todo');" />
@@ -166,14 +158,14 @@
 			</div>
 				<div id="resultadosTiendas" class="efecto-pagina" style="text-align: center; margin: 0; padding: 0;"></div>
 			</div>
-		</div><!-- /contenedor-busqueda -->
+		</div>
         
     <div class="volver-bottom">
     <div class="volver-btn-bottom"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
     </div>
     
-	</div><!-- /content -->
-</div><!-- /page -->
+	</div>
+</div>
 
 <script>
 document.onload=buscaTiendas('todo');
@@ -182,18 +174,6 @@ var a="";
 function buscaTiendas(letra){
 
 	$("#resultadosTiendas").load("resultadosTienda.php?bus=1&res="+letra+"");
-	/*##################### BUSCADOR ######################3
-		 if (document.getElementById("txtContent").value=="")
-			 { 
-			 $("#resultados").empty();
-			 $("#resultados").append("<img src='src/img/img-marcas.png' style='text-align:center';>");
-			 } 
-		 else 
-			 {
-				$("#resultados").load("resultadosTienda.php?bus=1&"+$("#txtContent").serialize());
-			 }
-			 ###################### FIN BUSCADOR #############################
-			 */			 
 			return true;
 }
 </script>

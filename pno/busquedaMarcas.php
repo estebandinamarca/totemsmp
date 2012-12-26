@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <html> 
 	<head> 
@@ -12,7 +11,6 @@
 	<script src="src/js/jquery.mobile/jquery.mobile.custom.min.js"></script>
     <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.structure.css" />
     <link rel="stylesheet" href="src/css/jquery.mobile/jquery.mobile.custom.theme.min.css" />-->
-
 	<!-- iScroll 4.0 -->
 	<script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>        
 	<!-- Jquery UI -->
@@ -74,12 +72,7 @@
 		$(".efecto-pagina").css("display", "none");
 		$('.efecto-pagina').fadeIn(2500);	
 	 });
-
-	$(window).bind("load", function() {
-	    $('#dvLoading').fadeOut(1700);
-	});
 	</script>
-	<div id="dvLoading"></div>
 
 	<div data-role="content">
 		<div class="titulos">
@@ -106,45 +99,39 @@
 			</div>
 
 			<div class="bg-busquedas bg-busquedas-padding">
-				<!--########## BUSCADOR ##############################-->
+				<!-- BUSCADOR -->
 				<div class="emailContainer">	
 				<input type="text" name="res" class="keyboard search" id="txtContent" onchange="buscaTiendas();" value=""/> 
 				</div>
-				<!--########## FIN BUSCADOR ##############################-->
+				<!-- FIN BUSCADOR -->
 				<div id="resultadosMarca" class="efecto-pagina" style="text-align: center; margin: 0; padding: 0;">
 					<img src="src/img/escribe.jpg">
 				</div>
 			</div>
-		</div><!-- /contenedor-busqueda -->
+		</div>
         
     <div class="volver-bottom">
     <div class="volver-btn-bottom"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
     </div>
     
-	</div><!-- /content -->
-</div><!-- /page -->
+	</div>
+</div>
 
  
 <script>
 var i=1;
 var a="";
 function buscaTiendas(){
-	//$("#resultadosTiendas").load("resultadosTienda.php?bus=1&res="+letra+"");
-	//##################### BUSCADOR ######################3
 		 if (document.getElementById("txtContent").value=="")
-			 { 
-			 $("#resultadosMarca").empty();
-			 i=1;
-			// $("#resultadosProducto").append("<img src='src/img/img-marcas.png' style='text-align:center';>");
-			 } 
+			{ 
+				$("#resultadosMarca").empty();
+				i=1;
+			} 
 		 else 
-			 {
+			{
 				if (i>=3)$("#resultadosMarca").load("resultadosMarca.php?"+$("#txtContent").serialize());
 				i++;
-				//alert($("#txtContent").serialize());
-			 }
-		//	 ###################### FIN BUSCADOR #############################
-			 //*/			 
+			}
 			return true;
 }
 </script>
