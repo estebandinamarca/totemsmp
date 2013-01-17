@@ -93,23 +93,18 @@
 </p>
 <p style="text-align:center; margin: 0 auto; color:#000; display:none;" class="mensaje">Enviando correo...</p>
 
- 
-
 <script>
 function enviaCorreo()
     {
-	
 	//$.ajaxSetup({async: false});
 	//$("p.mensaje").toggle();
 	//$.get("enviaCorreo.php",$('#formulario').serialize(),function(data){});
 	$.ajax({
-	
 	  type: "GET",
 	  url: "enviaCorreo.php",
 	  data: $('#formulario').serialize(),
 	  beforeSend: function(data) { $("p.mensaje").toggle()},
 	  success: function(data) {}
-	 
 	});
     }
 </script>
