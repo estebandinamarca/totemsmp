@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+    <meta charset="UTF-8" />
+	<title>Mall Plaza</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head> 
+
+<body> 
+<!-- Fancybox 2.0.6 
+<link rel="stylesheet" href="src/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="src/js/fancybox/jquery.fancybox.pack.js"></script>-->
+
+<div data-role="page" id="cine" class="mall-inicio-bg">
+
+    <script type="text/javascript">
+	$('#cine').bind('pageshow',function(event, ui){
+	var myScroll = new iScroll('wrapper-h-cine');
+	});
+	</script>
+
+	<div data-role="content">
+    <div class="titulos">
+    <div class="volver-btn">
+    	<span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span>
+    </div>
+    <div class="titulo-txt">
+    	<h1>Cartelera</h1>
+    </div>
+    </div>
+    
+    
+<div class="bg-paginas-carrusel carrusel-cine">
+
+<div id="wrapper-h-cine">
+	<div id="scroller-h-cine">
+		<ul id="thelist-h-cine">
+            <li><img src="src/img/cine/dictador.jpg" width="450" height="691">
+            <a href="src/iframes/cine-dictador.html" class="boton info-cine fancybox.iframe" data-ajax="false"><span><p>Información</p></span></a>
+            </li>
+			<li><img src="src/img/cine/paranorman.jpg" width="450" height="691">
+            <a href="src/iframes/cine-paranorman.html" class="boton info-cine fancybox.iframe" data-ajax="false"><span><p>Información</p></span></a>
+            </li>
+			<li><img src="src/img/cine/kramer.jpg" width="450" height="691">
+            <a href="src/iframes/cine-kramer.html" class="boton info-cine fancybox.iframe" data-ajax="false"><span><p>Información</p></span></a>
+            </li>
+			<li><img src="src/img/cine/ted.jpg" width="450" height="691">
+            <a href="src/iframes/cine-ted.html" class="boton info-cine fancybox.iframe" data-ajax="false"><span><p>Información</p></span></a>
+            </li>
+			<li><img src="src/img/cine/tengo-ganas.jpg" width="450" height="691">
+            <a href="src/iframes/cine-tengo-ganas.html" class="boton info-cine fancybox.iframe" data-ajax="false"><span><p>Información</p></span></a>
+            </li>
+			<li><img src="src/img/cine/tinkerbell.jpg" width="450" height="691">
+            <a href="src/iframes/cine-tinkerbell.html" class="boton info-cine fancybox.iframe" data-ajax="false"><span><p>Información</p></span></a>
+            </li>            
+		</ul>
+	</div>
+    
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$(".info-cine").fancybox({
+			fitToView	: true,
+			width		: 900,
+			height		: 1100,
+			padding 	: 40,
+			autoSize	: false,
+			closeClick	: false,
+			openEffect	: 'fade',
+			closeEffect	: 'elastic',
+			openSpeed	: 'normal',
+			helpers 	: { overlay : {opacity: 0.5, css : {'background-color' : '#440007'} } }
+		});
+	});
+	</script>       
+</div>
+</div>
+
+<div class="bottom-cine">
+<span><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('50','55');" >¿Cómo llegar?</a></span>
+<script> 
+function cargaPagina(ubicacion,idTienda)
+{
+	$.fancybox({
+		type		: "iframe",
+		fitToView	: true,
+		width		: 900,
+		height		: 1100,
+		padding 	: 40,
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'fade',
+		closeEffect	: 'elastic',
+		openSpeed	: 'normal',
+		helpers 	: { overlay : {opacity: 0.5, css : {'background-color' : '#440007'} } },
+		
+		href:"getCaminoMasCorto.php?inicio=263&meta="+ubicacion+"&idTienda="+idTienda+""
+	});
+}
+</script>
+</div>
+
+<div class="volver-bottom">
+<div class="volver-btn-bottom"><span><a href="inicio.html" data-transition="slide" data-direction="reverse"></a></span></div>
+</div>
+
+</div>
+</div>
+</div><!-- /content -->
+</div><!-- /page -->
+</body>
+</html>

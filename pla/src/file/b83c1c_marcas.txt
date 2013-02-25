@@ -1,0 +1,123 @@
+4,Adidas
+8,Alo
+9,Amchi
+15,AOC
+18,Arizona
+19,Arnette
+26,Avent
+31,Banco Falabella
+36,Bariloche
+37,Bata
+44,Bellota
+48,Biblioteca Viva
+51,Biocure
+55,Bolle
+57,Borghi
+60,Bresler
+62,Britax
+66,Bubble Gummers
+68,Buffet Express
+73,Caffarena
+77,Cannon
+83,Casa & Ideas
+86,Cat
+95,Chicco
+100,Cinemark
+102,Cluny
+104,Colgate
+105,Colloky
+106,Columbia
+114,CYR
+117,Davison
+123,Disney
+127,Doggis
+130,Dunkin Donut'S
+132,DYG
+144,Eurostil
+152,Ferouch
+160,Finger Paint
+162,Flores
+170,Fritz
+171,Gacel
+177,GMO
+183,Guante
+188,Happyland
+190,Head
+191,Hering
+199,Hugo Boss
+200,Hush Puppies
+205,Imagen
+207,Infanti
+211,Isdin
+220,Juan Maestro
+222,Kayser
+223,Kentucky Friend Chicken
+224,Kerastase
+234,La Roche Posa
+236,Laboratorio Chile
+238,Lakine
+242,Levi´S
+245,Limonada
+248,Loreal
+258,Matthew
+259,Maui & Sons
+264,Medipharm
+265,Merrel
+270,Mitre
+273,Moletto
+274,Monarch
+276,Montini
+287,Neo Extension
+288,Nero
+294,Nike
+295,Ninbus
+301,North Star
+306,Opaline
+307,Opticas Schilling
+313,Panasonic
+315,París
+322,Pepe Jeans
+323,Perfúmame
+327,Pillin
+331,Place Vendome
+338,Potros
+339,Power
+344,Puma
+345,Ralph 
+346,Ray Ban
+348,Reebok
+352,Rip Curl
+354,Rockford
+362,Samsung
+366,Sara
+367,Savory
+369,Schop Dog
+370,Sebago
+375,Skechers
+377,Sony
+381,Stadler
+392,Tarjeta Salco
+395,Tegmaph
+396,Telepizza
+401,Todo Piel
+405,Torre
+406,Toscani
+407,Toshiba
+410,Trendy
+421,Vitamin Life
+423,Vogue
+426,Volpantie
+428,Wado's
+435,Yogen Fruz
+455,Kodak
+472,Chia
+482,Haby
+483,Fergie
+484,Body Line
+488,Daily One Gold
+496,Cinemundo
+500,Accesory Place
+595,Secure
+612,Termofat
+618,Triline
+620,Umbrale

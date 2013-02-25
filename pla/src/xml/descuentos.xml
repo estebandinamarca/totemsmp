@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<descuentos>
+  <descuento>
+    <nombre>Adidas</nombre>
+    <tienda>Adidas</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>20%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-20.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Umbrale</nombre>
+    <tienda>Umbrale</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Pillin</nombre>
+    <tienda>Pillin</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Desde 1 agosto del 2012 hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>60%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-60.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Fun Way</nombre>
+    <tienda>Fun Way</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Desde 1 julio del 2012 hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Ferracini</nombre>
+    <tienda>Ferracini</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Desde 1 agosto del 2012 hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Todo Piel</nombre>
+    <tienda>Todo Piel</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Desde 1 agosto del 2012 hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+</descuentos>

@@ -1,0 +1,195 @@
+1,16Hrs
+4,Adidas
+8,Alo
+9,Amchi
+13,Andrea Rosseti
+15,AOC
+18,Arizona
+19,Arnette
+26,Avent
+27,Azaleia
+29,Banco de Chile
+31,Banco Falabella
+32,Banco Nova
+33,Banco París
+36,Bariloche
+37,Bata
+48,Biblioteca Viva
+55,Bolle
+57,Borghi
+59,Bravíssimo
+62,Britax
+63,Brooks
+65,Bruno Rossi
+66,Bubble Gummers
+68,Buffet Express
+73,Caffarena
+74,Calandre
+75,Calvin Klein
+76,Cangaroos
+77,Cannon
+82,Carteras Italianas
+85,Casio
+86,Cat
+89,Chanel
+90,Chantelle
+93,Chevrolet
+94,Chic
+95,Chicco
+97,Chinawok
+100,Cinemark
+103,CMR
+104,Colgate
+105,Colloky
+106,Columbia
+108,Converse
+110,Correos Chile
+112,Credichile
+113,Cushe
+114,CYR
+117,Davison
+120,Denon
+122,Disean
+123,Disney
+127,Doggis
+129,Domino
+132,DYG
+134,Americanino
+136,Epk
+139,Essence
+141,Eucerin
+144,Eurostil
+147,Faced
+150,Fasa
+152,Ferouch
+160,Finger Paint
+165,Forum
+167,Foster
+170,Fritz
+171,Gacel
+177,GMO
+183,Guante
+184,Gucci
+188,Happyland
+190,Head
+191,Hering
+199,Hugo Boss
+200,Hush Puppies
+202,Hyundai
+203,IPhone
+204,Ibanez
+207,Infanti
+211,Isdin
+212,Itau
+215,Jansport
+216,JJO
+219,Joyas Barón
+222,Kayser
+223,Kentucky Friend Chicken
+224,Kerastase
+231,Korg
+234,La Roche Posa
+236,Laboratorio Chile
+237,Lady Ventury
+238,Lakine
+242,Levi´S
+243,Lg
+245,Limonada
+247,Logitech
+248,Loreal
+253,Mapex
+258,Matthew
+259,Maui & Sons
+263,Mc Donald'S
+265,Merrel
+266,Mia
+268,Microsoft
+269,Mininas
+270,Mitre
+273,Moletto
+276,Montini
+278,Morin
+287,Neo Extension
+288,Nero
+289,Neutrogena
+294,Nike
+295,Ninbus
+296,Nintendo
+297,Nintendo 3DS
+300,Nokia
+301,North Star
+304,Nuk
+307,Opticas Schilling
+308,Oro Blue
+311,Palumbo
+312,Panama Jack
+313,Panasonic
+315,París
+318,Passionata
+322,Pepe Jeans
+327,Pillin
+331,Place Vendome
+333,Playstation3
+336,Pollini
+339,Power
+340,Pre-Unic
+344,Puma
+345,Ralph
+346,Ray Ban
+347,Razer
+348,Reebook
+349,Redken
+352,Rip Curl
+354,Rockford
+356,Rotter & Krauss
+360,Salfa
+361,Samsonite
+362,Samsung
+364,Santander Banefe
+366,Sara
+368,Saxoline
+369,Schop Dog
+370,Sebago
+371,Sei
+372,Selmark
+375,Skechers
+377,Sony
+379,Sportlab
+381,Stadler
+393,Tarragona
+395,Tegmaph
+396,Telepizza
+398,The Balm
+403,Too
+405,Torre
+406,Toscani
+413,Triumph
+414,Tronwell
+418,Vans
+419,Via Marte
+423,Vogue
+426,Volpantie
+429,WII
+430,Xbox360
+432,Xtrem
+435,Yogen Fruz
+453,Entel
+454,Feria Mix
+459,Lineatre
+460,Lomitón
+470,Isadora
+475,Citroen
+477,Clínica De La Ropa
+488,Kudam
+513,French Beauty
+514,Frutos
+524,Headex
+526,Io - Ashanti
+527,Io
+551,Mc Café
+556,Mimo & Co
+557,Mor
+570,Oakley
+580,Pivadiva
+588,Registro Civil
+620,Umbrale

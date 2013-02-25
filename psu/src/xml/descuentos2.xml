@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<descuentos>
+  <descuento>
+    <nombre>Bamers</nombre>
+    <tienda>Bamers</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>10%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-10.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY FEROUCH</nombre>
+    <tienda>Ferouch</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>40%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-40.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY FAMILY SHOP</nombre>
+    <tienda>Family Shop</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>40%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-40.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY TODO PIEL</nombre>
+    <tienda>Todo Piel</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY GEMA</nombre>
+    <tienda>Gema</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY DAILY</nombre>
+    <tienda>Daily</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY BAVEL</nombre>
+    <tienda>Bavel</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>20%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-20.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY RIP CURL</nombre>
+    <tienda>Rip Curl</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>40%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-40.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY POLEMIC</nombre>
+    <tienda>Polemic</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY PATUELLI</nombre>
+    <tienda>Patuelli</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>35%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-35.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY MAUI y SONS</nombre>
+    <tienda>Maui and Sons</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>40%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-40.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY BILLABONG</nombre>
+    <tienda>Billabong</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY TODOMODA</nombre>
+    <tienda>Todo Moda</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY MONERIA</nombre>
+    <tienda>Moneria</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY INTERSALON</nombre>
+    <tienda>Intersalón</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>40%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-40.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY HEAD</nombre>
+    <tienda>Head</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>15%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-15.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY FLORES</nombre>
+    <tienda>Flores</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY DO IT</nombre>
+    <tienda>Do It</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY PILLIN</nombre>
+    <tienda>Pillin</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>35%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-35.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY LIMONADA</nombre>
+    <tienda>Limonada</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>20%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-20.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY LIBRERIA ANTARTICA</nombre>
+    <tienda>Librería Antartica</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY FICCUS</nombre>
+    <tienda>Ficcus</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY COLLOKY</nombre>
+    <tienda>Colloky</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY MANIA</nombre>
+    <tienda>Mania</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>60%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-60.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY KUDAMS</nombre>
+    <tienda>Kudam</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>45%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-45.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY JOYAS BARON</nombre>
+    <tienda>Joyas Baron</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY DISTRIHOGAR MULTIMARCA (CANNON)</nombre>
+    <tienda>Cannon</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY CANNON</nombre>
+    <tienda>Cannon</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY BOUMEX</nombre>
+    <tienda>Boumex</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>10%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-10.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY BARRUSUCO</nombre>
+    <tienda>Barrusco</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>FULL DAY CANNON</nombre>
+    <tienda>Cannon</tienda>
+    <tiene_vigencia>si</tiene_vigencia>
+    <texto_vigencia></texto_vigencia>
+    <fecha_inicio>17-11-2012</fecha_inicio>
+    <fecha_termino>17-11-2012</fecha_termino>
+    <descuento>30%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-30.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Ópticas Place Vendome</nombre>
+    <tienda>Ópticas Place Vendome</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Scarla Deportes</nombre>
+    <tienda>Scarla Deportes</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>20%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-20.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Belsport</nombre>
+    <tienda>Belsport</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>50%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-50.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Zoo Factory</nombre>
+    <tienda>Zoo Factory</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>80%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-80.jpg</imagen>
+  </descuento>
+  <descuento>
+    <nombre>Rip Curl</nombre>
+    <tienda>Rip Curl</tienda>
+    <tiene_vigencia>no</tiene_vigencia>
+    <texto_vigencia>Hasta agotar stock</texto_vigencia>
+    <fecha_inicio></fecha_inicio>
+    <fecha_termino></fecha_termino>
+    <descuento>40%</descuento>
+    <imagen>http://www.mallplaza.cl/images/stories/compartido/promociones/img-dcto-40.jpg</imagen>
+  </descuento>
+</descuentos>

@@ -1,0 +1,239 @@
+1,3D,NULL,NULL
+2,Accesorios,NULL,NULL
+3,Accesorios automotrices,NULL,NULL
+4,Accesorios Computación,NULL,NULL
+5,Accesorios deportivos,NULL,NULL
+10,Aceite,NULL,NULL
+16,Alisadoras,NULL,NULL
+18,Almuerzo,NULL,NULL
+19,Alzavidrios,NULL,NULL
+21,Ampolletas,NULL,NULL
+22,Anillos,NULL,NULL
+23,Anteojos,NULL,NULL
+25,Aros,NULL,NULL
+26,Aros, anillos, pulseras, collares,NULL,NULL
+30,Articulos Hogar,NULL,NULL
+31,Audífonos,NULL,NULL
+33,Automoviles,NULL,NULL
+37,Balones,NULL,NULL
+38,Barquillos,NULL,NULL
+39,Bastidores,NULL,NULL
+40,Baterías,NULL,NULL
+43,Bebidas,NULL,NULL
+44,Bermudas,NULL,NULL
+45,Billeteras,NULL,NULL
+46,Blazer,NULL,NULL
+47,Blusas,NULL,NULL
+49,Bolsos,NULL,NULL
+50,Bolsos De Cuero,NULL,NULL
+51,Botas,NULL,NULL
+52,Botines,NULL,NULL
+54,Boxer,NULL,NULL
+472,Buffet,NULL,NULL
+56,Burritos,NULL,NULL
+57,Buzos,NULL,NULL
+59,Cables,NULL,NULL
+60,Café,NULL,NULL
+63,Calcetines,NULL,NULL
+491,Calcetines De Cobre,NULL,NULL
+64,Calzado De Fiesta,NULL,NULL
+65,Calzado De Vestir,NULL,NULL
+67,Calzado Descanso,NULL,NULL
+69,Calzado Fiesta,NULL,NULL
+70,Calzado Formal,NULL,NULL
+71,Calzado Informal,NULL,NULL
+72,Calzado Mujer,NULL,NULL
+76,Calzado Tipo Zapatillas,NULL,NULL
+77,Calzados,NULL,NULL
+438,Calzados De Vestir,NULL,NULL
+434,Calzados Hombre,NULL,NULL
+435,Calzados Mujer,NULL,NULL
+78,Calzas,NULL,NULL
+79,Calzones,NULL,NULL
+80,Camaras,NULL,NULL
+83,Camisas,NULL,NULL
+86,Camisetas,NULL,NULL
+87,Camisetas Futbol,NULL,NULL
+89,Cargadores,NULL,NULL
+91,Carnes,NULL,NULL
+92,Carnet,NULL,NULL
+93,Carteras,NULL,NULL
+95,Cartones,NULL,NULL
+96,Casacas,NULL,NULL
+99,Cepillos,NULL,NULL
+100,Cerraduras,NULL,NULL
+101,Cervezas,NULL,NULL
+102,Chalas,NULL,NULL
+103,Chalecos,NULL,NULL
+106,Chaquetas,NULL,NULL
+107,Chaquetas De Cuero,NULL,NULL
+108,Churrascos,NULL,NULL
+111,Cintas adhesivas,NULL,NULL
+112,Cinturones,NULL,NULL
+113,Coches,NULL,NULL
+115,Collares,NULL,NULL
+117,Comedores,NULL,NULL
+118,Completos,NULL,NULL
+121,Computadores,NULL,NULL
+125,Consolas,NULL,NULL
+126,Construccion,NULL,NULL
+127,Copas Helado,NULL,NULL
+130,Cordones,NULL,NULL
+131,Correspondencia,NULL,NULL
+132,Cortinas,NULL,NULL
+136,Créditos,NULL,NULL
+137,Cremas,NULL,NULL
+139,Cuadernillos,NULL,NULL
+140,Cuadernos,NULL,NULL
+141,Cuentas Corrientes,NULL,NULL
+142,Cuentas De Ahorro,NULL,NULL
+143,Cuentas Vista,NULL,NULL
+146,Cuidado Personal,NULL,NULL
+148,Cursos De Aleman,NULL,NULL
+149,Cursos De Frances,NULL,NULL
+150,Cursos De Ingles,NULL,NULL
+151,Cursos De Italiano,NULL,NULL
+152,Cursos De Portugues,NULL,NULL
+153,Depilación,NULL,NULL
+154,Deporte,NULL,NULL
+156,Detergente,NULL,NULL
+444,Discos,NULL,NULL
+162,Electrodomesticos,NULL,NULL
+163,Electronica,NULL,NULL
+164,Empanadas,NULL,NULL
+167,Encomiendas,NULL,NULL
+168,Ensaladas,NULL,NULL
+171,Esculturas,NULL,NULL
+172,Esmalte,NULL,NULL
+174,Extensiones,NULL,NULL
+175,Fajitas,NULL,NULL
+176,Faldas,NULL,NULL
+177,Ferreteria,NULL,NULL
+178,Fichas Juego,NULL,NULL
+182,Formatos Digitales,NULL,NULL
+186,Gacel,NULL,NULL
+187,Gafas,NULL,NULL
+189,Gasas,NULL,NULL
+192,Giros,NULL,NULL
+195,Gorros,NULL,NULL
+199,Hamburguesas,NULL,NULL
+200,Hawaianas,NULL,NULL
+201,Heladeria,NULL,NULL
+202,Helados,NULL,NULL
+205,Impresiones Fotograficas,NULL,NULL
+206,Impresoras,NULL,NULL
+207,Instrumentos Músicales,NULL,NULL
+208,Insumos,NULL,NULL
+210,Internet movil,NULL,NULL
+215,Jeans,NULL,NULL
+217,Joyas,NULL,NULL
+218,Juegos,NULL,NULL
+220,Juegos infantiles,NULL,NULL
+221,Jugos,NULL,NULL
+224,Juguetes,NULL,NULL
+227,Lámparas,NULL,NULL
+233,Leche,NULL,NULL
+235,Lentes,NULL,NULL
+236,Lentes De Sol,NULL,NULL
+237,Lentes Opticos,NULL,NULL
+239,Libros entretenimiento,NULL,NULL
+245,Maletas,NULL,NULL
+246,Mamaderas,NULL,NULL
+247,Manicure,NULL,NULL
+477,Maquillaje,NULL,NULL
+248,Maquinas De Ejercicios,NULL,NULL
+249,Marcos,NULL,NULL
+252,Mecedoras,NULL,NULL
+254,Medias,NULL,NULL
+255,Medias Luna,NULL,NULL
+256,Medicamentos,NULL,NULL
+262,Menaje,NULL,NULL
+264,Mochilas,NULL,NULL
+267,Muebles,NULL,NULL
+270,Netbook,NULL,NULL
+272,Notebook,NULL,NULL
+275,Ositos,NULL,NULL
+276,Pago de Cuentas,NULL,NULL
+277,Pago Isp,NULL,NULL
+279,Pantaletas,NULL,NULL
+280,Pantalones,NULL,NULL
+281,Pantalones De Trekking,NULL,NULL
+282,Pantalones De Vestir,NULL,NULL
+283,Pantys,NULL,NULL
+284,Pañales,NULL,NULL
+285,Pañales De Tela,NULL,NULL
+286,Pañuelos,NULL,NULL
+287,Papas Fritas,NULL,NULL
+288,Papeles,NULL,NULL
+290,Parrilladas,NULL,NULL
+446,Parrillas Grill,NULL,NULL
+291,Pasajes,NULL,NULL
+292,Pasaportes,NULL,NULL
+293,Pastas Dentales,NULL,NULL
+295,Pastelería,NULL,NULL
+297,Peliculas 35 mm,NULL,NULL
+299,Peluquería,NULL,NULL
+307,Pijamas,NULL,NULL
+309,Piletas,NULL,NULL
+312,Pizzas,NULL,NULL
+314,Plantillas,NULL,NULL
+316,Platos Preparados,NULL,NULL
+318,Poleras,NULL,NULL
+319,Poleras Deportivas,NULL,NULL
+320,Poleras Piqué,NULL,NULL
+321,Polerones,NULL,NULL
+322,Pollo,NULL,NULL
+323,Pollo Frito,NULL,NULL
+324,Postres,NULL,NULL
+325,Premios,NULL,NULL
+329,Productos Ligth,NULL,NULL
+330,Productos Maternales,NULL,NULL
+336,Pulseras,NULL,NULL
+339,Recargas Celular,NULL,NULL
+340,Recibo Y Envio De Dinero,NULL,NULL
+341,Recien Nacidos,NULL,NULL
+343,Reductoras,NULL,NULL
+347,Relojes,NULL,NULL
+351,Retiro Y Cobro De Cheques,NULL,NULL
+352,Ropa De Nieve,NULL,NULL
+354,Ropa Infantil,NULL,NULL
+355,Ropa Interior,NULL,NULL
+358,Salchipapas,NULL,NULL
+360,Sandwich,NULL,NULL
+361,Sandwicheria,NULL,NULL
+360,Sandwichs,NULL,NULL
+363,Seguros,NULL,NULL
+365,Servicios De Recaudacion,NULL,NULL
+367,Shampoo,NULL,NULL
+368,Shorts,NULL,NULL
+369,Sillas De Comer,NULL,NULL
+377,Sombreros,NULL,NULL
+378,Sombrillas,NULL,NULL
+380,Sostenes,NULL,NULL
+379,Sostenes Calzones,NULL,NULL
+386,Sweaters,NULL,NULL
+388,Tablas De Surf,NULL,NULL
+392,Teclados,NULL,NULL
+455,Tejidos,NULL,NULL
+394,Telefonìa fija,NULL,NULL
+395,Telefonia movil,NULL,NULL
+396,Tintas Impresora,NULL,NULL
+402,Tragos,NULL,NULL
+404,Trajes De Baño,NULL,NULL
+405,Trajes De Surf,NULL,NULL
+406,Trajes Formales,NULL,NULL
+410,Valijas,NULL,NULL
+411,Vehículos Nuevos,NULL,NULL
+413,Vestidos,NULL,NULL
+416,Vestuario,NULL,NULL
+418,Vestuario femenino,NULL,NULL
+421,Vestuario masculino,NULL,NULL
+423,Vitaminas,NULL,NULL
+425,Voleros,NULL,NULL
+427,Zapatillas,NULL,NULL
+429,Zapatillas deportivas,NULL,NULL
+430,Zapatillas Niñas,NULL,NULL
+431,Zapatillas Niño,NULL,NULL
+432,Zapatillas Primeros Pasos,NULL,NULL
+433,Zapatillas Running,NULL,NULL
+441,Zapatos futbol,NULL,NULL
