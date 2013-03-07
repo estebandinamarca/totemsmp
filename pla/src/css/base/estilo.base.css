@@ -108,7 +108,7 @@ div#reviewEvento {font-size: 17px; margin: 20px auto 10px auto; float: left; wid
 div#fotoEvento { padding-right: 20px; float: left; width: 393px;}
 div#fotoEvento img, div#fotoDescuento img, div#imgTiendaDescuento img { -webkit-border-radius: 5px; border-radius: 5px; -webkit-box-shadow:  0px 0px 4px 1px rgba(0, 0, 0, .1); box-shadow:  0px 0px 4px 1px rgba(0, 0, 0, .1); }
 
-div#imgTiendaDescuento {float: left; width: 120px; height: 100px; /*background: #CCC;*/ margin-right: 30px!important;}
+div#imgTiendaDescuento {float: left; width: 120px; height: 100px;margin-right: 30px!important;}
 div#imgTiendaDescuento img {margin-top: 0px!important;}
 div#tituloDescuento {text-align: left; width: 590px; font-size: 37px; height: 100px; line-height: 100px; margin: 0px!important; float: left;}
 div#fotoDescuento {padding-right: 20px; float: left; width: 61px; margin: 20px 30px 0 0;}

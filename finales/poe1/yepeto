@@ -1,0 +1,128 @@
+/*
+		// LOGOS UNIDADES DE SERVICIO
+		var iHudUni1 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_bulevard.png' );
+
+		var spHudUni1 = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
+		spHudUni1.scale.x = 0.06; // era 0.12
+		spHudUni1.scale.y = 0.06;
+		spHudUni1.position.set( 315, 15, -325 );
+		scene.add( spHudUni1 );
+		piso_1.add( spHudUni1 );
+		matPisoA.push(spHudUni1);
+		
+		*/
+		/*var spHudUni1b = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
+		spHudUni1b.scale.x = 0.06; // 0.12
+		spHudUni1b.scale.y = 0.06;
+		spHudUni1b.position.set( 196, 15, -224 );
+		scene.add( spHudUni1b );
+		piso_1.add( spHudUni1b );
+		matPisoA.push(spHudUni1b);*/
+
+		/*var spHudUni1c = new THREE.Sprite( { map: iHudUni1, useScreenCoordinates: false, color: 0xffffff } );
+		spHudUni1c.scale.x = 0.12;
+		spHudUni1c.scale.y = 0.12;
+		spHudUni1c.position.set( 196, -30, -224 );
+		scene.add( spHudUni1c );
+		spHudUni1c.visible = false;
+		piso_1s.add( spHudUni1c );
+		matPisoB.push(spHudUni1c);*/
+
+		/*
+		var iHudUni2 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_terrazas.png' );
+
+		var spHudUni2 = new THREE.Sprite( { map: iHudUni2, useScreenCoordinates: false, color: 0xffffff } );
+		spHudUni2.scale.x = 0.06;
+		spHudUni2.scale.y = 0.06;
+		spHudUni2.position.set( 260, 15, -315 );
+		scene.add( spHudUni2 );
+		piso_1.add( spHudUni2 );
+		matPisoA.push(spHudUni2);
+
+
+		var iHudUni3 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_comidas.png' );
+
+		var spHudUni3 = new THREE.Sprite( { map: iHudUni3, useScreenCoordinates: false, color: 0xffffff } );
+		spHudUni3.scale.x = 0.06;
+		spHudUni3.scale.y = 0.06;
+		spHudUni3.position.set( 260, 60, -285 );
+		scene.add( spHudUni3 );
+		spHudUni3.visible = false;
+		piso_2.add( spHudUni3 );
+		matPisoB.push(spHudUni3);
+		//console.log(spHudUni3.position);
+
+
+		var iHudUni4 = THREE.ImageUtils.loadTexture( 'src/images/mapa/logo_autoplaza.png' );
+
+		var spHudUni4 = new THREE.Sprite( { map: iHudUni4, useScreenCoordinates: false, color: 0xffffff } );
+		spHudUni4.scale.x = 0.06;
+		spHudUni4.scale.y = 0.06;
+		spHudUni4.position.set( 355, 15, -280 );
+		scene.add( spHudUni4 );
+		piso_1.add( spHudUni4 );
+		matPisoA.push(spHudUni4);
+		*/
+
+		// apagando textos - v04i3
+
+		/*scene.__objects[262].visible = false;
+		scene.__objects[27].visible = false;
+		scene.__objects[166].visible = false;
+		scene.__objects[26].visible = false;*/
+
+		//spHudInsCb.visible = false;
+		//huds.push(spHudUni1);
+
+		/*sHudA = new THREE.MeshLambertMaterial( { shading: THREE.FlatShading, color: 0xe1dcd5, ambient: 0x000000, map: THREE.ImageUtils.loadTexture( 'src/images/mapa/esc01.png' ), transparent: true, opacity: 1, blending: THREE.NormalBlending } );
+  		mHudA = new THREE.Mesh(new THREE.PlaneGeometry(10,10), sHudA );
+  		mHudA.position.x = camino[2][0][0]-5;
+  		mHudA.position.z = -camino[2][0][1]-10;
+  		mHudA.position.y = 0;
+  		mHudA.rotation.y = Math.PI/2;
+  		scene.add( mHudA );*/
+
+  		//huds.push(sHudA);
+
+		/*var spHudEsc01 = new THREE.Sprite( { map: iHudEsc01, useScreenCoordinates: false, color: 0xffffff } );
+		spHudEsc01.scale.x = 0.084;
+		spHudEsc01.scale.y = 0.07;
+		spHudEsc01.position.set( mTiendaSel.position.x, 2, mTiendaSel.position.z );		
+		scene.add( spHudEsc01 );
+		spHudEsc01.affectedByDistance  = true;
+		spHudEsc01.mergeWith3D = true;
+		huds.push(spHudEsc01);*/
+
+		// flechas
+		/*sFlechas = new THREE.MeshLambertMaterial( { color: 0xff0000 , ambient: 0xff0000 } );
+
+		gCilFlecha1 = new THREE.CylinderGeometry( 2, 2, 6, 32, 32 );
+		mCilFlechaA = new THREE.Mesh( gCilFlecha1, sFlechas);
+		mCilFlechaA.position.set( 360, 5, -199 );
+		scene.add( mCilFlechaA );
+
+		gCilFlecha2 = new THREE.CylinderGeometry( 4, 0, 2, 32, 32 );
+		mCilFlechaA1 = new THREE.Mesh( gCilFlecha2, sFlechas);
+		mCilFlechaA1.position.set( 360, 1, -199 );
+		scene.add( mCilFlechaA1 );*/
+
+
+		/*indice = 0.8;
+		var tan = curvaA.getTangentAt(indice);
+
+        gCilFlecha3 = new THREE.CylinderGeometry( 1, 1, 6, 32, 32 );
+        mCilFlechaA2 = new THREE.Mesh( gCilFlecha3, sFlechas);
+
+        ubicacion = curvaA.getPointAt(indice);
+        mCilFlechaA2.position = ubicacion;
+        mCilFlechaA2.rotation = tan;
+        scene.add( mCilFlechaA2 );*/
+
+
+
+        CAmino al -1
+
+        *1*128_85-130_83-133_80-135_78-136_77-143_77-144_76-148_76-173_76*-1*173_76-172_77-154_77-153_76-152_76-151_75-144_75
+
+
+        CAmino al 2
