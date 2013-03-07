@@ -1,0 +1,439 @@
+1,16hrs
+2,4game
+3,Accessorize
+4,Adidas
+5,Afex
+6,Afrodita
+7,Alink
+8,Alo
+9,Amchi
+10,Americanino
+11,Amphora
+12,Amscam 
+13,Andrea Rosseti
+14,Angelina Faccenda
+15,Aoc
+16,Apple
+17,Argos
+18,Arizona
+19,Arnette
+20,Arrow
+21,Artel
+22,Aseguradora Magallanes
+23,Atrevida
+24,Audiovan
+25,Autopista Vespucio Sur
+26,Avent
+27,Azaleia
+28,Bamers
+29,Banco De Chile
+30,Banco Estado
+31,Banco Falabella
+32,Banco Nova
+33,Banco Paris
+34,Banco Ripley
+35,Banco Santiago Santander
+36,Bariloche
+37,Bata
+38,Bavel
+39,Bb&B
+40,Bb2
+41,Bbva
+42,Bci
+43,Belkiu
+44,Bellota
+45,Ben 10
+46,Betspro
+47,Bh
+48,Biblioteca Viva
+49,Bic
+50,Big Bang
+51,Biocure
+52,Black 
+53,Black And Blue
+54,Blackberry
+55,Bolle
+56,Bolsos
+57,Borghi
+58,Boutique Mex
+59,Bravíssimo
+60,Bresler
+61,Bridgestone
+62,Britax
+63,Brooks
+64,Broon Doss
+65,Bruno Rossi
+66,Bubble Gummers
+67,Bufalo Beef
+68,Buffet Express
+69,Bulova
+70,Burger King
+71,Cacharel
+72,Cad
+73,Caffarena
+74,Calandre
+75,Calvin Klein
+76,Cangaroos
+77,Cannon
+78,Capellini
+79,Car Meister
+80,Cardinale
+81,Carry
+82,Carteras Italianas
+83,Casa & Ideas
+84,Casa Pichara
+85,Casio
+86,Cat
+87,Cave Kids
+88,Cepech
+89,Chanel
+90,Chantelle
+91,Chantilly
+92,Chery
+93,Chevrolet
+94,Chic
+95,Chicco
+96,Chilexpress
+97,Chinawok
+98,Chuck E.Cheese's
+99,Cic
+100,Cinemark
+101,Clínica Del Calzado
+102,Cluny
+103,Cmr
+104,Colgate
+105,Colloky
+106,Columbia
+107,Continental
+108,Converse
+109,Coppelia
+110,Correos Chile
+111,Cory
+112,Credichile
+113,Cushe
+114,Cyr
+115,Daily
+116,Dakota
+117,Davison
+118,De Togni
+119,Delicias
+120,Denon
+121,Depileasy
+122,Disean
+123,Disney
+124,Dleite
+125,Do It
+126,Dockers
+127,Doggis
+128,Dolores
+129,Domino
+130,Dunkin Donut's
+131,Duoc
+132,Dyg
+133,Efesis
+134,Ellus
+135,Energy
+136,Epk
+137,Equalit
+138,Erase
+139,Essence
+140,Etinies
+141,Eucerin
+142,Eurocambio
+143,Europa
+144,Eurostil
+145,Everlast
+146,Exs
+147,Faced
+148,Fancy
+149,Farmacias Baum
+150,Fasa
+151,Fashion´S Park
+152,Ferouch
+153,Ferripaldi
+154,Feruch
+155,Festina
+156,Fiat
+157,Ficcus
+158,Fiesta Y Regalos
+159,Fila
+160,Finger Paint
+161,Fisher Price
+162,Flores
+163,Focal
+164,Ford 
+165,Forum
+166,Fossil
+167,Foster
+168,Fresness
+169,Fritec
+170,Fritz
+171,Gacel
+172,Gema
+173,Generador Rex
+174,Genios 
+175,Genius
+176,Gibson
+177,Gmo
+178,Good Year
+179,Gotta
+180,Great Wall
+181,Green Bull
+182,Grido, 
+183,Guante
+184,Gucci
+185,Hafei
+186,Haima
+187,Hankook
+188,Happyland
+189,Hasbro
+190,Head
+191,Hering
+192,Hkollection
+193,Homcenter Sodimac
+194,Home
+195,Home Factory
+196,Honner
+197,Hp
+198,Huawey Mobile
+199,Hugo Boss
+200,Hush Puppies
+201,Hush Puppies Kids
+202,Hyundai
+203,I Phone
+204,Ibanez
+205,Imagen
+206,Incase
+207,Infanti
+208,Integramedica
+209,Intime
+210,Irol
+211,Isdin
+212,Itau
+213,Izod
+214,Jac Motors
+215,Jansport
+216,Jjo
+217,Jockey
+218,Jordan
+219,Joyas Barón
+220,Juan Maestro
+221,Kapot
+222,Kayser
+223,Kentucky Friend Chicken
+224,Kerastase
+225,Kia Carens
+226,Kia Morning
+227,Kia Rio 3
+228,Kia Rio 4
+229,Kia Rio 5
+230,Konica
+231,Korg
+232,Kr3w
+233,La Piccola Italia
+234,La Roche Posa
+235,La Rosa De Saron
+236,Laboratorio Chile
+237,Lady Ventury
+238,Lakine
+239,Lan
+240,Lavaseco 5a Sec
+241,Lego
+242,Levi´S
+243,Lg
+244,Librería Antartica
+245,Limonada
+246,Llantas Del Pacifico
+247,Logitech
+248,Loreal
+249,Lucas Bland Ford
+250,Madeline Gardner
+251,Mahindra
+252,Mamut
+253,Mapex
+254,Mario Haddad
+255,Marquis
+256,Massaje Express Spa
+257,Mattel
+258,Matthew
+259,Maui&Sons
+260,Max Style
+261,Maxmo
+262,Mazda
+263,Mc Donald's
+264,Medipharm
+265,Merrel
+266,Mia
+267,Michelin
+268,Microsoft
+269,Mininas
+270,Mitre
+271,Mitsubishi
+272,Mobil
+273,Moletto
+274,Monarch
+275,Monix
+276,Montini
+277,Mori Lee
+278,Morin
+279,Mossimo
+280,Motorola, Samsung, Blackberry, Gsm, 
+281,Motorola
+282,Moulinex
+283,Movistar
+284,Multiservice
+285,Naturalizer
+286,Neman
+287,Neo Extension
+288,Nero
+289,Neutrogena
+290,New Era
+291,Newman
+292,Ngx
+293,Nicopoly
+294,Nike
+295,Ninbus
+296,Nintendo
+297,Nintendo 3ds
+298,Nintendo DS
+299,Nissan
+300,Nokia
+301,North Star
+302,Nrg
+303,Nt+3
+304,Nuk
+305,Olego
+306,Opaline
+307,Opticas Schilling
+308,Oro Blue
+309,Osito
+310,Pabellon De La Construccion
+311,Palumbo
+312,Panama Jack
+313,Panasonic
+314,Pandora
+315,Paris
+316,Party
+317,Passion
+318,Passionata
+319,Patuelli
+320,Pcfactory
+321,Pedro Juan & Diego
+322,Pepe Jeans
+323,Perfúmame
+324,Peugeot
+325,Phillips
+326,Pigeon
+327,Pillin
+328,Pioneer
+329,Pirelli
+330,Pizza Hut
+331,Place Vendome
+332,Play Skool
+333,Playstation3
+334,Poeme
+335,Polemic
+336,Pollini
+337,Poseidon
+338,Potros
+339,Power
+340,Pre-Unic
+341,Pro-Rewind
+342,Proarte
+343,Pub Licity
+344,Puma
+345,Ralph 
+346,Ray Ban
+347,Razer
+348,Rebook
+349,Redken
+350,Regatta
+351,Renault
+352,Rip Curl
+353,Rkf
+354,Rockford
+355,Ronald Joyce
+356,Rotter & Krauss
+357,Rowenta
+358,Rusty
+359,Rvca
+360,Salfa
+361,Samsonite
+362,Samsung
+363,San Camilo
+364,Santander Banefe
+365,Santo Demonio
+366,Sara
+367,Savory
+368,Saxoline
+369,Schop Dog
+370,Sebago
+371,Sei
+372,Selmark
+373,Sencillito
+374,Shell
+375,Skechers
+376,Sleep
+377,Sony
+378,Speck
+379,Sportlab
+380,Ssang Yong
+381,Stadler
+382,Status
+383,Sushi House
+384,Suzuki
+385,Suzuki Alto
+386,Suzuki Clerio
+387,Suzuki Gran Nomade
+388,Suzuki Gran Vitara
+389,Suzuki Sx4
+390,T-Fal
+391,Taco Bell
+392,Tarjeta Salco
+393,Tarragona
+394,Tatienne
+395,Tegmaph
+396,Telepizza
+397,Teletrak
+398,The Balm
+399,Timer
+400,Tobacco Store
+401,Todo Piel
+402,Todomoda
+403,Too
+404,Top
+405,Torre
+406,Toscani
+407,Toshiba
+408,Tottus
+409,Toyota
+410,Trendy
+411,Triace
+412,Trial
+413,Triumph
+414,Tronwell
+415,Tx7
+416,Umbro
+417,V2
+418,Vans
+419,Via Marte
+420,Vía Uno
+421,Vitamin Life
+422,Vitamina
+423,Vogue
+424,Volcom
+425,Volkswagen
+426,Volpantie
+427,Vox
+428,Wados
+429,Wii
+430,Xbox360
+431,Xception
+432,Xtrem
+433,Xtreme
+434,Xurros Café
+435,Yogen Fruz
+436,Zako
+437,Zara
+438,Zotie
+
