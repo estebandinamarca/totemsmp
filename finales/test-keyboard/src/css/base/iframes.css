@@ -5,7 +5,8 @@
 * { outline: 0; }
 *:focus {outline: none;} 
 html, body { min-height: 100%;  }
-body, ul, ol, dl { margin: 0; padding:0; -moz-user-select: none;-webkit-user-select: none;-webkit-user-drag:none; -khtml-user-select: none;-ms-user-select: none; user-select: none; background:'#FFF'}
+body, ul, ol, dl { margin: 0; padding:0; -moz-user-select: none;-webkit-user-select: none;-webkit-user-drag:none; -khtml-user-select: none; 
+-ms-user-select: none; user-select: none; background:'#FFF'}
 
 /* ------------------------------------------ Iframe -------------------------------------------- */
 div.iframe-container { width:900px; height:1100px; background:#FFF; overflow:hidden; -webkit-border-radius: 6px 4px 27px 27px; -moz-border-radius: 6px 4px 29px 29px; border-radius: 6px 4px 29px 29px; overflow:hidden}
@@ -22,14 +23,19 @@ div.titulo-iframe p.subtexto-lista {/* white-space: nowrap; */ font-size: 18px; 
 h1.titulo-mapa { clear:both; font-family: 'GothamRounded-Medium', Arial, Helvetica, sans-serif; font-size:39px; text-align:center; text-decoration:none; font-weight:normal; border-top:#f2f2f2 1px solid; padding:5px 0 0 0; margin:0; color:#D10F26; background: #FFF;}
 div.mapa-webgl { width:900px; height:900px; background:#fff;overflow:hidden; padding:0; margin:0;}
 
+
 div.cine-info-left {width:240px; height:860px; background:#FFF; overflow:hidden; padding:25px 15px 15px 15px; margin:0; float:left; text-align:left}
 div.cine-info-left img {text-align:center!important; -webkit-border-radius: 7px; border-radius: 7px;}
 div.cine-info-right {width:610px; height:860px; background:#FFF; overflow:hidden; padding:25px 15px 15px 5px; margin:0; float:right}
 div.cine-info-right h1 { font-family: 'GothamRounded-Medium', Arial, Helvetica, sans-serif; font-weight:normal; font-size:26px; color:#666}
+
 div.cine-info-right p, div.cine-info-left p { font-family: 'GothamRounded-Medium', Arial, Helvetica, sans-serif; font-weight:normal; font-size:14px; color:#666}
 
 #dvLoading {
+/*background:url(../../img/fancybox/fancybox_loading.gif) no-repeat center center;*/
 background:url(../../img/espera.jpg) no-repeat center center;
+/*height: 140px;
+width: 140px;*/
 height: 403px;
 width: 403px;
 position: fixed;

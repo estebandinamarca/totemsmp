@@ -76,7 +76,12 @@
 		$(".efecto-pagina").css("display", "none");
 		$('.efecto-pagina').fadeIn(2100);	
 	 });
+
+	//$(window).bind("load", function() {
+	//   $('#dvLoading').fadeOut(1700);
+	//});
 	</script>
+	<!-- <div id="dvLoading"></div> -->
 
 	<div data-role="content">
 		<div class="titulos">
@@ -103,11 +108,11 @@
 			</div>
 
 			<div class="bg-busquedas bg-busquedas-padding">
-				<!-- ########## BUSCADOR ############################## -->
+				<!--########## BUSCADOR ##############################-->
 				<div class="emailContainer">	
 				<input type="text" name="res" class="keyboard search" id="txtContent" onchange="buscaTiendas();" value=""/> 
 				</div>
-				<!-- ########## FIN BUSCADOR ############################## -->
+				<!--########## FIN BUSCADOR ##############################-->
 				<div id="resultadosMarca" class="efecto-pagina" style="text-align: center; margin: 0; padding: 0;">
 					<img src="src/img/escribe.jpg">
 				</div>

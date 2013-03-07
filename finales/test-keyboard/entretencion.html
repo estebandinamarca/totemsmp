@@ -13,13 +13,13 @@
 	$('#entretencion').bind('pageshow',function(event, ui){
 	var myScroll = new iScroll('wrapper-h');
 	/*---- ESTADISTICAS POR PAGINA------*/
-					var ur = window.location.href;
-					ur=ur.split("/");
-					ur=ur[4].split(".");
-					//alert(ur[0]);
-					ur=ur[0];
-					$.get("addEstadistica.php", { nomPag: ur } );
-					/*---- ESTADISTICAS POR PAGINA------*/	
+		var ur = window.location.href;
+		ur=ur.split("/");
+		ur=ur[4].split(".");
+		//alert(ur[0]);
+		ur=ur[0];
+	$.get("addEstadistica.php", { nomPag: ur } );
+	/*---- ESTADISTICAS POR PAGINA------*/	
 	});
 	</script>
 

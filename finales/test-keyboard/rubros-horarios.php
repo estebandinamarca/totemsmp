@@ -57,8 +57,20 @@ $numero=controlTienda::contarRubros();
     		foreach ($tiendasConRubro as $tiendas)
     		{
     			?>
-    			<li><img src='src/img/logos/tiendas/<?php echo $tiendas->getlogo();?>' width='120' height='100'><div class='nombre-tienda'>
-    			<p class="texto-lista"><?php echo $tiendas->getnombre();?></p><p class="subtexto-lista">Nivel <?php echo  $tiendas->getpiso(); ?></p></div>
+    			<li>
+    				<a onclick= 'cargaPagina(<?php echo $tiendas->getubiTienda();?>,<?php echo $tiendas->getidtienda()?>);'>
+    				 <?php  if (file_exists('src/img/logos/tiendas/'.$tiendas->getlogo())){ ?>   
+		    			<img src='src/img/logos/tiendas/<?php echo $tiendas->getlogo();?>' width='120' height='100'>
+		            <?php }
+		            else {?>
+		            <img src='src/img/logos/tiendas/null.jpg' width='120' height='100'>
+		            <?php }?>
+		        	</a>
+    				<div class='nombre-tienda'>
+    				<a onclick= 'cargaPagina(<?php echo $tiendas->getubiTienda();?>,<?php echo $tiendas->getidtienda()?>);'>
+    					<p class="texto-lista"><?php echo $tiendas->getnombre();?></p>
+    				</a>
+    			<p class="subtexto-lista">Nivel <?php echo  $tiendas->getpiso(); ?></p></div>
     			<a class='button-mapa'
     				name="<?php echo $tiendas->getidtienda();?>"
     				onclick= 'cargaPagina(<?php echo $tiendas->getubiTienda();?>,<?php echo $tiendas->getidtienda()?>);'>

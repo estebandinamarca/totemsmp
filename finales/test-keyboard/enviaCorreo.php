@@ -10,25 +10,25 @@ if (isset ($_GET['tipo']))$tipo=$_GET['tipo'];else $tipo=null;
 if (isset ($_GET['facebook']))$face=$_GET['facebook'];else $face=null;
 
 
-$from_name = "Mall Plaza Oeste";
+$from_name = "Mall Plaza Bio Bio";
 $from_email = "mensajes.mallplaza@gmail.com";
 $headers = "From: $from_name <$from_email>";
 
 if($face==null)
 {
-  $subject = "Correo desde Mall Plaza Oeste | ($tipo)";
-  $body = "El siguiente correo fue enviado desde el tótem T1, ubicado en Mall Plaza Oeste.\n
+  $subject = "Correo desde Mall Plaza Bio Bio ($tipo)";
+  $body = "El siguiente correo fue enviado desde el totem T1, ubicado en Mall Plaza Bio Bio:\n
 	   Tipo de Mensaje: $tipo \n
 	   Nombre: $nombre \n
 	   RUT: $rut\n
-	   Teléfono: $telefono\n
+	   Telefono: $telefono\n
 	   Correo: $correo\n
 	   Mensaje: $mensaje\n\n\n
 	   Gracias";
 
   
   $to = "callcenter@fidelis.cl,ropazo@fidelis.cl,juan.martinez@mallplaza.cl";
-
+	 
 }
 else
 {
@@ -37,26 +37,30 @@ else
 	   \n
 	   http://www.facebook.com/mallplaza
 	   \n\n
+	   
 	   Gracias";
 
   $to = $face;
 }
 if (($nombre!=null&&$rut!=null&&$telefono!=null&&$correo!=null&&$mensaje!=null)||($face!=null&&strstr($face,'@')!=false))
 {
-	$data=array($tipo,$nombre,$rut,$telefono,$correo,$mensaje); if (mail($to, $subject, $body, $headers)) 
+	$data=array($tipo,$nombre,$rut,$telefono,$correo,$mensaje);
+	//var_dump(mail($to, $subject, $body, $headers));
+    if (mail($to, $subject, $body, $headers)) 
     {
 
 	$estado=1;
 	
-	echo "success!";
+	echo "eexito!";
 
     } 
     else 
     {
     $estado=0;
-		echo "fail";    
-	} echo controlCorreos::insertCorreos($data,$estado);
-
+	
+	echo "fallo".
+    }
+    echo controlCorreos::insertCorreos($data,$estado);
 }
 
 ?>

@@ -10,13 +10,13 @@ if($_GET)
 		switch($ren)
 		{
 			case "desc": 
-				rename('src/xml/descuentosDesc.xml','src/xml/descuentos.xml');
+				rename('src/xml/descuentos3.xml','src/xml/descuentos.xml');
 				break;
 			case "cine": 
-				rename('src/xml/cineDesc.xml','src/xml/cine.xml');
+				rename('src/xml/cine3.xml','src/xml/cine.xml');
 				break;
 			case "evento": 
-				rename('src/xml/eventosDesc.xml','src/xml/eventos.xml');
+				rename('src/xml/eventos3.xml','src/xml/eventos.xml');
 				break;
 		}
 		echo "Carga realizada!";
@@ -36,7 +36,7 @@ else
 	switch($opc)
 	{
 		case "desc":
-			$url  = 'http://www.mallplaza.cl/xml/descuentos.php?siteid=mallplaza-oeste';
+			$url  = 'http://www.mallplaza.cl/xml/descuentos.php?siteid=mallplaza-biobio';
 			$path = 'src/xml/descuentosDesc.xml';
 			 
 			$fp = fopen($path, 'w');
@@ -50,7 +50,7 @@ else
 			fclose($fp);
 			break;
 		case "cine":
-			$url  = 'http://www.mallplaza.cl/xml/cine.php?siteid=mallplaza-oeste';
+			$url  = 'http://www.mallplaza.cl/xml/cine.php?siteid=mallplaza-biobio';
 			$path = 'src/xml/cineDesc.xml';
 			 
 			$fp = fopen($path, 'w');
@@ -64,7 +64,7 @@ else
 			fclose($fp);
 			break;
 		case "evento":
-			$url  = 'http://www.mallplaza.cl/xml/eventos.php?siteid=mallplaza-oeste';
+			$url  = 'http://www.mallplaza.cl/xml/eventos.php?siteid=mallplaza-biobio';
 			$path = 'src/xml/eventosDesc.xml';
 			 
 			$fp = fopen($path, 'w');
@@ -93,22 +93,24 @@ else
 <form action="updateContenidos.php" method="post" enctype="multipart/form-data">
 		<table id="upload" border="0">
 			<tr><th colspan="3">Actualizacion de contenidos</th></tr>
-			<tr><td colspan="3" style="background-color: #FFF; color: #000000; font-size: 14px; text-align: center;">Seleccione la actualización de contenido: </td></tr>
+			<tr><td colspan="3" style="background-color: #FFF; color: #000000; font-size: 14px; text-align: center;">Seleccione la actualizacion de contenido: </td></tr>
 			<tr><th style="background-color: #FFF; color: #000000; font-size: 12px;">Seleccione</th><td>&nbsp;</td><td>&nbsp;</td></tr>
 			<tr><td style="background-color: #FFF; color: #000000; font-size: 14px;">Descuento</td><td><input type="radio" name="radio1" id="tienda" value="desc"/></td><td>&nbsp;</td></tr>
 			<tr><td style="background-color: #FFF; color: #000000; font-size: 14px;">Cartelera de cine</td><td><input type="radio" name="radio1" id="productos" value="cine"/></td><td>&nbsp;</td></tr>
 			<tr><td style="background-color: #FFF; color: #000000; font-size: 14px;">Eventos</td><td><input type="radio" name="radio1" id="marcas" value="evento"/></td><td>&nbsp;</td></tr>
+			
+
+			
 			<tr><td>&nbsp;</td><td>&nbsp;</td><td align="right"><input type="submit" name="subir" value="Cargar Archivo"/></td></tr>
 		</table>	
 	</form>	
 <?php }
 }
 ?>
-<!-- jQuery base -->
 <script src="src/js/jquery-1.7.1.min.js"></script> 
 <!-- iScroll 4.0 -->
-<script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>
-<!-- Carga de css -->
+    <script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>
+
 <script>
 	function preview(file)
 	{
@@ -129,9 +131,15 @@ else
 				break;
 
 		}
+		
+
+
 	}
 </script>
 
 <div id="auth" style="display:none; cursor:auto!important;">
-	<div id="preview"></div>
+
+	<div id="preview" >
+	
+	</div>
 </div>

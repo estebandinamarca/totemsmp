@@ -17,7 +17,6 @@
 	<script type="text/javascript" src="src/js/iscroll/iscroll.js"></script>
  	<!-- Estilo Base -->
     <link rel="stylesheet" href="src/css/base/estilo.base.css" />
-    <!-- Timeout -->
     <script type="text/JavaScript">
 	var timeout;
 	document.onmousemove = function(){
@@ -34,11 +33,11 @@
 		$("#efecto-pagina").css("display", "none");
 		$('#efecto-pagina').fadeIn(480);	
 		/*---- ESTADISTICAS POR PAGINA------*/
-			var ur = window.location.href;
+		var ur = window.location.href;
 			ur=ur.split("/");
 			ur=ur[4].split(".");
 			ur=ur[0];
-			$.get("addEstadistica.php", { nomPag: ur } );
+		$.get("addEstadistica.php", { nomPag: ur } );
 		/*---- ESTADISTICAS POR PAGINA------*/
 	  });
 	</script>
@@ -64,41 +63,45 @@
 <!-- PISO 2
 	<div style="float:left; margin-left:45px;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('135','135');" ><img src="src/img/h-falabella.jpg"></a></div> -->
 
-<!-- ######################### RIPLEY ####################### -->
-<!-- PISO 1 
-<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('6','6');" data-ajax="false"><img src="src/img/h-ripley.jpg"></a></div> -->
+<!-- ######################### RIPLEY #######################33-->
+<!--   PISO 1 --
+<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('6','6');" data-ajax="false"><img src="src/img/h-ripley.jpg"></a></div>
+<!--   PISO 2 --
+<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('80','80');" data-ajax="false"><img src="src/img/h-ripley.jpg"></a></div-->
 
-<!-- PISO 2 
-<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('80','80');" data-ajax="false"><img src="src/img/h-ripley.jpg"></a></div> -->
+<!-- ######################### LA POLAR #######################33-->
+<!--   PISO 1 --	
+<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('5','5');" data-ajax="false"><img src="src/img/h-lapolar.jpg"></a></div>
+<!--   PISO 2 --	
+<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('79','79');" data-ajax="false"><img src="src/img/h-lapolar.jpg"></a></div-->
 
-<!-- ######################### LA POLAR ####################### -->
-<!-- PISO 1 	
-<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('5','5');" data-ajax="false"><img src="src/img/h-lapolar.jpg"></a></div> -->
-
-<!-- PISO 2 	
-<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('79','79');" data-ajax="false"><img src="src/img/h-lapolar.jpg"></a></div> -->
-
-<!-- ######################### PARIS ####################### -->
-<!-- PISO 1 -->
+<!-- ######################### PARIS #######################33-->
+<!--   PISO 1 -->
 <div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('55','55');" data-ajax="false"><img src="src/img/h-paris.jpg"></a></div>
-<!-- PISO 2
-<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('167','167');" data-ajax="false"><img src="src/img/h-paris.jpg"></a></div> -->
+<!--   PISO 2 --
+<div style="float:left;"><a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('167','167');" data-ajax="false"><img src="src/img/h-paris.jpg"></a></div-->
 
 <div style="float:left;"><img src="src/img/h-horarios.jpg"></div>
+
 <a href="#" onclick= "cambiaRubro(27);" rel="external"><img src="src/img/h-menores.jpg"></a>
 
-<!-- ######################### LIDER ####################### -->
-<!-- PISO 1 
-<a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('4','4');" data-ajax="false"><img src="src/img/h-lider.jpg"></a> -->
+
+<!-- ######################### LIDER #######################33-->
+<!--   PISO 1 --
+<a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('4','4');" data-ajax="false"><img src="src/img/h-lider.jpg"></a>
+-->
+
 <a href="#" onclick= "cambiaRubro(1);" data-ajax="false"><img src="src/img/h-autoplaza.jpg"></a>
 
-<!-- ######################### SODIMAC ####################### -->
-<!-- PISO 1 -->
+<!-- ######################### SODIMAC #######################33-->
+<!--   PISO 1 -->
 <a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('1','1');" data-ajax="false"><img src="src/img/h-homecenter.jpg"></a>
+-->
 <a href="#" rel="external" onclick= "cambiaRubro(26);"><img src="src/img/h-comidas.jpg"></a>
 
-<!-- ######################### REGISTRO CIVIL ####################### -->
-<!-- PISO 1 -->
+
+<!-- ######################### REGISTRO CIVIL #######################33-->
+<!--   PISO 1 -->
 <a href="#" class="como-llegar-cine fancybox.iframe button-mapa" onclick="cargaPagina('114','114');" data-ajax="false"><img src="src/img/h-civil.jpg"></a>
 
 </div>

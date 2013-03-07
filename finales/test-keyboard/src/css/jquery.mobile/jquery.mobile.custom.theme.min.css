@@ -7,9 +7,13 @@
 * http://jquery.org/license
 *
 */
+
 /* Swatches */
+
+
 /* C
 -----------------------------------------------------------------------------------------------------------*/
+
 .ui-bar-c {
 	border: 1px solid 		#B3B3B3 /*{c-bar-border}*/;
 	background: 			#eeeeee /*{c-bar-background-color}*/;
@@ -157,12 +161,19 @@
 	font-family: 'GothamRounded-Medium', Arial, Helvetica, sans-serif;
 	text-decoration: none;
 }
+
+
+
 /* Structure */
+
 /* links within "buttons" 
 -----------------------------------------------------------------------------------------------------------*/
+
 a.ui-link-inherit {
 	text-decoration: none !important;
 }
+
+
 /* Active class used as the "on" state across all themes
 -----------------------------------------------------------------------------------------------------------*/
 .ui-btn-active {
@@ -191,15 +202,20 @@ background-image: -webkit-gradient(
 .ui-btn-active a.ui-link-inherit {
 	color: 					#fff /*{global-active-color}*/;
 }
+
+
 /* button inner top highlight
 -----------------------------------------------------------------------------------------------------------*/
+
 .ui-btn-inner {
 	border-top: 1px solid 	#fff;
 	border-color: 			rgba(255,255,255,.3);
 }
 
+
 /* corner rounding classes
 -----------------------------------------------------------------------------------------------------------*/
+
 .ui-corner-tl {
 	-moz-border-radius-topleft: 		.6em /*{global-radii-blocks}*/;
 	-webkit-border-top-left-radius: 	.6em /*{global-radii-blocks}*/;
