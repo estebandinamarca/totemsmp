@@ -134,7 +134,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 }	
 
 /* some unsets - more probably needed */
-.ui-mobile, .ui-mobile body { height: 99.9%; }
+.ui-mobile, .ui-mobile body { height: 99.9%; background: #b9011b; }
 .ui-mobile fieldset, .ui-page { padding: 0; margin: 0; }
 .ui-mobile a img, .ui-mobile fieldset { border-width: 0; }
 
@@ -142,7 +142,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 .ui-mobile-viewport {  margin: 0; overflow-x: visible; -webkit-text-size-adjust: none; -ms-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 /* Issue #2066 */
 body.ui-mobile-viewport,
-div.ui-mobile-viewport { overflow-x: hidden; }
+div.ui-mobile-viewport { overflow-x: hidden; background: #b9011b; }
 
 /* "page" containers - full-screen views, one should always be in view post-pageload */
 .ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page { top: 0; left: 0; width: 100%; min-height: 100%; position: absolute; display: none; border: 0; }
@@ -175,7 +175,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-mobile-rendering > * { visibility: hidden; }
 
 /*headers, content panels*/
-.ui-bar, .ui-body { position: relative; padding: .4em 15px; overflow: hidden; display: block; clear:both; }
+.ui-bar, .ui-body { position: relative; padding: .4em 15px; overflow: hidden; display: block; clear:both; background: #b9011b; }
 .ui-bar { font-size: 16px; margin: 0; }
 .ui-bar h1, .ui-bar h2, .ui-bar h3, .ui-bar h4, .ui-bar h5, .ui-bar h6 { margin: 0; padding: 0; font-size: 16px; display: inline-block; }
 
@@ -688,74 +688,58 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 }
 
 
-.slidefade.out {
-	-webkit-transform: translateX(-100%);
+.slidefade.out {-webkit-transform: translateX(-100%);
 	-webkit-animation-name: slideouttoleft;
 	-moz-transform: translateX(-100%);
 	-moz-animation-name: slideouttoleft;
 	-webkit-animation-duration: 225ms;
-	-moz-animation-duration: 225ms;
-}
+	-moz-animation-duration: 225ms;}
 
-.slidefade.in {
-	-webkit-transform: translateX(0);
+.slidefade.in {	-webkit-transform: translateX(0);
 	-webkit-animation-name: fadein;
 	-moz-transform: translateX(0);
 	-moz-animation-name: fadein;
 	-webkit-animation-duration: 200ms;
-	-moz-animation-duration: 200ms;
-}
+	-moz-animation-duration: 200ms;}
 
-.slidefade.out.reverse {
-	-webkit-transform: translateX(100%);
+.slidefade.out.reverse {-webkit-transform: translateX(100%);
 	-webkit-animation-name: slideouttoright;
 	-moz-transform: translateX(100%);
 	-moz-animation-name: slideouttoright;
 	-webkit-animation-duration: 200ms;
-	-moz-animation-duration: 200ms;
-}
+	-moz-animation-duration: 200ms;}
 
-.slidefade.in.reverse {
-	-webkit-transform: translateX(0);
+.slidefade.in.reverse {-webkit-transform: translateX(0);
 	-webkit-animation-name: fadein;
 	-moz-transform: translateX(0);
 	-moz-animation-name: fadein;
 	-webkit-animation-duration: 200ms;
-	-moz-animation-duration: 200ms;
-}
+	-moz-animation-duration: 200ms;}
 
 /* slide up */
-.slideup.out {
-	-webkit-animation-name: fadeout;
+.slideup.out {-webkit-animation-name: fadeout;
 	-moz-animation-name: fadeout;
 	-webkit-animation-duration: 100ms;
-	-moz-animation-duration: 100ms;
-}
+	-moz-animation-duration: 100ms;}
 
-.slideup.in {
-	-webkit-transform: translateY(0);
+.slideup.in {-webkit-transform: translateY(0);
 	-webkit-animation-name: slideinfrombottom;
 	-moz-transform: translateY(0);
 	-moz-animation-name: slideinfrombottom;
 	-webkit-animation-duration: 250ms;
-	-moz-animation-duration: 250ms;
-}
+	-moz-animation-duration: 250ms;}
 
-.slideup.in.reverse {
-	-webkit-animation-name: fadein;
+.slideup.in.reverse {-webkit-animation-name: fadein;
 	-moz-animation-name: fadein;
 	-webkit-animation-duration: 150ms;
-	-moz-animation-duration: 150ms;
-}
+	-moz-animation-duration: 150ms;}
 
-.slideup.out.reverse {
-	-webkit-transform: translateY(100%);
+.slideup.out.reverse {-webkit-transform: translateY(100%);
 	-moz-transform: translateY(100%);
 	-webkit-animation-name: slideouttobottom;
 	-moz-animation-name: slideouttobottom;
 	-webkit-animation-duration: 200ms;
-	-moz-animation-duration: 200ms;
-}
+	-moz-animation-duration: 200ms;}
 
 @-webkit-keyframes slideinfrombottom {
     from { -webkit-transform: translateY(100%); }
@@ -782,49 +766,31 @@ div.ui-mobile-viewport { overflow-x: hidden; }
  * value.
  */
 
-.viewport-turn {
-	-webkit-perspective: 1000;
+.viewport-turn {-webkit-perspective: 1000;
 	-moz-perspective: 1000;
-	position: absolute;
-}
-.turn {
-	-webkit-backface-visibility:hidden;
+	position: absolute;}
+.turn {-webkit-backface-visibility:hidden;
 	-webkit-transform:translateX(0); /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
 	-webkit-transform-origin: 0;
-	
 	-moz-backface-visibility:hidden;
 	-moz-transform:translateX(0); /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
-	-moz-transform-origin: 0;
-}
-
-.turn.out {
-	-webkit-transform: rotateY(-90deg) scale(.9);
+	-moz-transform-origin: 0;}
+.turn.out {	-webkit-transform: rotateY(-90deg) scale(.9);
 	-webkit-animation-name: flipouttoleft;
 	-moz-transform: rotateY(-90deg) scale(.9);
 	-moz-animation-name: flipouttoleft;
 	-webkit-animation-duration: 125ms;
-	-moz-animation-duration: 125ms;
-}
-
-.turn.in {
-	-webkit-animation-name: flipintoright;
+	-moz-animation-duration: 125ms;}
+.turn.in {-webkit-animation-name: flipintoright;
 	-moz-animation-name: flipintoright;
 	-webkit-animation-duration: 250ms;
-	-moz-animation-duration: 250ms;
-	
-}
-
-.turn.out.reverse {
-	-webkit-transform: rotateY(90deg) scale(.9);
+	-moz-animation-duration: 250ms;}
+.turn.out.reverse {	-webkit-transform: rotateY(90deg) scale(.9);
 	-webkit-animation-name: flipouttoright;
 	-moz-transform: rotateY(90deg) scale(.9);
-	-moz-animation-name: flipouttoright;
-}
-
-.turn.in.reverse {
-	-webkit-animation-name: flipintoleft;
-	-moz-animation-name: flipintoleft;
-}
+	-moz-animation-name: flipouttoright;}
+.turn.in.reverse {-webkit-animation-name: flipintoleft;
+	-moz-animation-name: flipintoleft;}
 
 @-webkit-keyframes flipouttoleft {
     from { -webkit-transform: rotateY(0); }
