@@ -36,7 +36,7 @@ else
 	switch($opc)
 	{
 		case "desc":
-			$url  = 'http://www.mallplaza.cl/xml/descuentos.php?siteid=mallplaza-alameda';
+			$url  = 'http://www.mallplaza.cl/xml/descuentos.php?siteid=mallplaza-biobio';
 			$path = 'src/xml/descuentosDesc.xml';
 			 
 			$fp = fopen($path, 'w');
@@ -50,7 +50,7 @@ else
 			fclose($fp);
 			break;
 		case "cine":
-			$url  = 'http://www.mallplaza.cl/xml/cine.php?siteid=mallplaza-alameda';
+			$url  = 'http://www.mallplaza.cl/xml/cine.php?siteid=mallplaza-biobio';
 			$path = 'src/xml/cineDesc.xml';
 			 
 			$fp = fopen($path, 'w');
@@ -64,7 +64,7 @@ else
 			fclose($fp);
 			break;
 		case "evento":
-			$url  = 'http://www.mallplaza.cl/xml/eventos.php?siteid=mallplaza-alameda';
+			$url  = 'http://www.mallplaza.cl/xml/eventos.php?siteid=mallplaza-biobio';
 			$path = 'src/xml/eventosDesc.xml';
 			 
 			$fp = fopen($path, 'w');

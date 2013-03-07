@@ -10,14 +10,14 @@ if (isset ($_GET['tipo']))$tipo=$_GET['tipo'];else $tipo=null;
 if (isset ($_GET['facebook']))$face=$_GET['facebook'];else $face=null;
 
 
-$from_name = "Mall Plaza Sur";
+$from_name = "Mall Plaza Bio Bio";
 $from_email = "mensajes.mallplaza@gmail.com";
 $headers = "From: $from_name <$from_email>";
 
 if($face==null)
 {
-  $subject = "Correo desde Mall Plaza Sur ($tipo)";
-  $body = "El siguiente mensaje fue enviado desde el totem T1 en Mall Plaza Sur con el siguiente mensaje:\n
+  $subject = "Correo desde Mall Plaza Bio Bio ($tipo)";
+  $body = "El siguiente correo fue enviado desde el totem T1, ubicado en Mall Plaza Bio Bio:\n
 	   Tipo de Mensaje: $tipo \n
 	   Nombre: $nombre \n
 	   RUT: $rut\n

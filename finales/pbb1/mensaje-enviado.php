@@ -25,13 +25,14 @@ else $msg=null;
     
    	<script>
 	$(document).ready(function() {
-         /*---- ESTADISTICAS POR PAGINA------*/
+        /*---- ESTADISTICAS POR PAGINA------*/
         var ur = window.location.href;
         ur=ur.split("/");
         ur=ur[4].split(".");
         ur=ur[0];
         $.get("addEstadistica.php", { nomPag: ur } );
         /*---- ESTADISTICAS POR PAGINA------*/
+
 		$(".efecto-pagina").css("display", "none");
 		$('.efecto-pagina').fadeIn(800);	
 	});

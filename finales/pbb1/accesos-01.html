@@ -9,6 +9,14 @@
 <body> 
 <div data-role="page" id="accesos" class="mall-inicio-bg">
 	<script>
+		/*---- ESTADISTICAS POR PAGINA------*/
+			var ur =  'accesos-01';
+			//ur=ur.split("/");
+			//ur=ur[4].split(".");
+			//alert(ur);
+			$.get("addEstadistica.php", { nomPag: ur } );
+		/*---- ESTADISTICAS POR PAGINA------*/
+
 	  $(document).ready(function() {
 			$(".click-verde").bind("vclick",function(){
 			  $("div.mapa-vehiculo").toggle("slow");

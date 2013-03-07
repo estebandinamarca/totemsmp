@@ -9,6 +9,6 @@ Y LA BASE DE DATOS CON LA QUE TRABAJAREMOS
 
 $direccion = "127.0.0.1";
 $usuariobd = "root";
-$passwd = "1234567";//"transoceanica1q2w3e";
+$passwd = "";
 $basedatos = "totemMallPlazaPbb";
 ?>
